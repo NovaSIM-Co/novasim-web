@@ -39,10 +39,7 @@ body {
     ),
     var(--bg);
   color: var(--text);
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -58,7 +55,22 @@ button {
 
 ::selection {
   background: rgba(36, 216, 200, 0.25);
-  color: #ffffff;
+  color: #fff;
+}
+
+/* -------------------------------------------------------
+   ICONS
+------------------------------------------------------- */
+
+.inlineIcon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* -------------------------------------------------------
@@ -142,7 +154,7 @@ button {
 }
 
 .desktopNav a:hover {
-  color: #ffffff;
+  color: #fff;
   text-shadow: 0 0 14px rgba(36, 216, 200, 0.22);
 }
 
@@ -220,7 +232,11 @@ button {
   opacity: 0.23;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
   background-size: 52px 52px;
   mask-image: linear-gradient(
     to bottom,
@@ -326,7 +342,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 22px;
   font-size: 13px;
   font-weight: 900;
   transition:
@@ -704,7 +720,6 @@ button {
 }
 
 .categoryIntro h2,
-.howIntro h2,
 .reviewsHeader h2 {
   font-size: clamp(42px, 4.6vw, 62px);
   line-height: 0.98;
@@ -712,10 +727,13 @@ button {
   margin-top: 14px;
 }
 
-.categoryIntro h2 span,
-.howIntro h2 span,
+.categoryIntro h2 span {
+  color: var(--aqua);
+  text-shadow: 0 0 28px rgba(36, 216, 200, 0.055);
+}
+
 .reviewsHeader h2 span {
-  color: #667173;
+  color: #687476;
 }
 
 /* -------------------------------------------------------
@@ -725,7 +743,7 @@ button {
 .categorySection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 92px 0 84px;
+  padding: 84px 0 76px;
 }
 
 .categoryIntro {
@@ -733,7 +751,7 @@ button {
   grid-template-columns: 1fr 0.75fr;
   gap: 80px;
   align-items: end;
-  margin-bottom: 42px;
+  margin-bottom: 38px;
 }
 
 .categoryIntro > p {
@@ -751,7 +769,7 @@ button {
 }
 
 .categoryCard {
-  min-height: 220px;
+  min-height: 210px;
   grid-column: span 2;
   position: relative;
   padding: 22px;
@@ -780,20 +798,20 @@ button {
 .categoryCard::before {
   content: "";
   position: absolute;
-  width: 120px;
-  height: 120px;
-  right: -60px;
-  top: -60px;
+  width: 150px;
+  height: 150px;
+  right: -75px;
+  top: -75px;
   border-radius: 50%;
-  background: rgba(36, 216, 200, 0.035);
-  filter: blur(25px);
+  background: rgba(36, 216, 200, 0.05);
+  filter: blur(28px);
   opacity: 0;
   transition: opacity 180ms ease;
 }
 
 .categoryCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(36, 216, 200, 0.22);
+  border-color: rgba(36, 216, 200, 0.24);
   background:
     radial-gradient(
       circle at 90% 10%,
@@ -803,7 +821,7 @@ button {
     #081011;
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.24),
-    0 0 28px rgba(36, 216, 200, 0.045);
+    0 0 28px rgba(36, 216, 200, 0.05);
 }
 
 .categoryCard:hover::before {
@@ -812,10 +830,17 @@ button {
 
 .categoryCard:active {
   transform: translateY(0) scale(0.985);
-  border-color: rgba(98, 243, 230, 0.52);
+  border-color: rgba(98, 243, 230, 0.55);
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(36, 216, 200, 0.09),
+      transparent 42%
+    ),
+    #081011;
   box-shadow:
     0 0 0 1px rgba(98, 243, 230, 0.1),
-    0 0 30px rgba(36, 216, 200, 0.12);
+    0 0 30px rgba(36, 216, 200, 0.13);
 }
 
 .categoryTop {
@@ -832,34 +857,45 @@ button {
 }
 
 .categoryIcon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--aqua);
-  background: rgba(36, 216, 200, 0.055);
-  border: 1px solid rgba(36, 216, 200, 0.08);
-  font-size: 15px;
+  background: rgba(36, 216, 200, 0.05);
+  border: 1px solid rgba(36, 216, 200, 0.1);
   transition:
     background 180ms ease,
+    border-color 180ms ease,
     box-shadow 180ms ease;
+}
+
+.categoryIcon svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .categoryCard:hover .categoryIcon {
   background: rgba(36, 216, 200, 0.09);
-  box-shadow: 0 0 18px rgba(36, 216, 200, 0.06);
+  border-color: rgba(36, 216, 200, 0.2);
+  box-shadow: 0 0 18px rgba(36, 216, 200, 0.08);
 }
 
 .categoryContent {
-  margin-top: 35px;
+  margin-top: 32px;
   max-width: 90%;
 }
 
 .categoryLabel {
   display: block;
-  color: var(--aqua-dark);
+  color: var(--aqua);
   font-size: 8px;
   font-weight: 900;
   letter-spacing: 1.2px;
@@ -885,51 +921,62 @@ button {
   right: 20px;
   bottom: 18px;
   color: #4d595b;
-  font-size: 16px;
   transition:
     color 180ms ease,
     transform 180ms ease,
-    text-shadow 180ms ease;
+    filter 180ms ease;
+}
+
+.categoryArrow .inlineIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .categoryCard:hover .categoryArrow {
   color: var(--aqua);
   transform: translateX(3px);
-  text-shadow: 0 0 12px rgba(36, 216, 200, 0.3);
+  filter: drop-shadow(0 0 6px rgba(36, 216, 200, 0.35));
 }
 
 /* -------------------------------------------------------
-   HOW NOVASIM WORKS / ACCORDION
+   HOW NOVASIM WORKS
 ------------------------------------------------------- */
 
 .howSection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 88px 0;
+  padding: 68px 0 72px;
   display: grid;
   grid-template-columns: 0.72fr 1.28fr;
-  gap: 90px;
+  gap: 78px;
+  align-items: start;
   border-top: 1px solid rgba(255, 255, 255, 0.055);
 }
 
-.howIntro {
-  align-self: start;
-  position: sticky;
-  top: 40px;
+.howIntro h2 {
+  max-width: 440px;
+  margin-top: 13px;
+  font-size: clamp(36px, 3.8vw, 52px);
+  line-height: 1;
+  letter-spacing: -2.6px;
+}
+
+.howIntro h2 span {
+  color: var(--aqua);
 }
 
 .howIntro > p {
-  max-width: 360px;
+  max-width: 350px;
   color: #707c7e;
-  font-size: 13px;
-  line-height: 1.7;
-  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.65;
+  margin-top: 17px;
 }
 
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .accordionItem {
@@ -969,28 +1016,28 @@ button {
     #081011;
   box-shadow:
     0 0 0 1px rgba(36, 216, 200, 0.025),
-    0 18px 45px rgba(0, 0, 0, 0.18),
-    0 0 32px rgba(36, 216, 200, 0.045);
+    0 15px 40px rgba(0, 0, 0, 0.16),
+    0 0 28px rgba(36, 216, 200, 0.045);
 }
 
 .accordionButton {
   width: 100%;
-  min-height: 94px;
-  padding: 18px 20px;
+  min-height: 82px;
+  padding: 15px 18px;
   border: 0;
   background: transparent;
   color: var(--text);
   display: grid;
-  grid-template-columns: 38px 1fr 38px;
+  grid-template-columns: 34px 1fr 34px;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   text-align: left;
   cursor: pointer;
 }
 
 .accordionNumber {
   color: #455153;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 900;
   letter-spacing: 1px;
 }
@@ -998,24 +1045,24 @@ button {
 .accordionTitle {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .accordionTitle strong {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: -0.3px;
 }
 
 .accordionTitle small {
   color: #697577;
-  font-size: 11px;
-  line-height: 1.45;
+  font-size: 10px;
+  line-height: 1.4;
   font-weight: 400;
 }
 
 .accordionToggle {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   justify-self: end;
   border-radius: 8px;
   display: inline-flex;
@@ -1024,7 +1071,7 @@ button {
   color: var(--aqua);
   background: rgba(36, 216, 200, 0.05);
   border: 1px solid rgba(36, 216, 200, 0.1);
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 300;
   transition:
     background 180ms ease,
@@ -1035,8 +1082,10 @@ button {
 
 .accordionItemOpen .accordionToggle {
   background: rgba(36, 216, 200, 0.11);
-  border-color: rgba(36, 216, 200, 0.3);
-  box-shadow: 0 0 18px rgba(36, 216, 200, 0.1);
+  border-color: rgba(36, 216, 200, 0.32);
+  box-shadow:
+    0 0 0 1px rgba(36, 216, 200, 0.04),
+    0 0 18px rgba(36, 216, 200, 0.1);
   transform: rotate(180deg);
 }
 
@@ -1057,46 +1106,46 @@ button {
 .accordionContentInner {
   min-height: 0;
   overflow: hidden;
-  margin: 0 20px 0 72px;
+  margin: 0 18px 0 64px;
   border-top: 1px solid transparent;
   color: #8a9597;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.65;
   transition:
     padding 260ms ease,
     border-color 260ms ease;
 }
 
 .accordionContent.open .accordionContentInner {
-  padding: 18px 0 22px;
+  padding: 15px 0 18px;
   border-color: rgba(255, 255, 255, 0.055);
 }
 
 .accordionContentInner p + p {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .accordionContentInner strong {
-  color: #dce4e4;
+  color: #e2e8e8;
 }
 
 .accordionLink {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 15px;
+  gap: 12px;
+  margin-top: 13px;
   color: var(--aqua);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
   transition:
     color 160ms ease,
-    text-shadow 160ms ease,
+    filter 160ms ease,
     transform 160ms ease;
 }
 
 .accordionLink:hover {
   color: var(--aqua-bright);
-  text-shadow: 0 0 12px rgba(36, 216, 200, 0.18);
+  filter: drop-shadow(0 0 6px rgba(36, 216, 200, 0.22));
 }
 
 .accordionLink:active {
@@ -1110,7 +1159,7 @@ button {
 .reviewsSection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 88px 0 96px;
+  padding: 72px 0 80px;
   border-top: 1px solid rgba(255, 255, 255, 0.055);
 }
 
@@ -1129,64 +1178,65 @@ button {
   line-height: 1.7;
 }
 
-.reviewsEmpty {
-  min-height: 230px;
-  margin-top: 40px;
-  padding: 36px;
+.reviewsEntry {
+  min-height: 150px;
+  margin-top: 34px;
+  padding: 28px 30px;
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 11px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
   background:
     radial-gradient(
-      circle at 85% 20%,
-      rgba(36, 216, 200, 0.07),
-      transparent 28%
+      circle at 90% 15%,
+      rgba(36, 216, 200, 0.065),
+      transparent 30%
     ),
     linear-gradient(145deg, #081011, #050a0b);
   border: 1px solid rgba(255, 255, 255, 0.07);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.reviewsEmpty::after {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  right: -100px;
-  bottom: -130px;
-  border-radius: 50%;
-  background: rgba(36, 216, 200, 0.045);
-  filter: blur(35px);
+.reviewsEntry:hover {
+  border-color: rgba(36, 216, 200, 0.17);
+  box-shadow: 0 0 30px rgba(36, 216, 200, 0.035);
 }
 
-.reviewsStars {
+.reviewsEntryCopy {
+  position: relative;
+  z-index: 2;
+}
+
+.reviewsMiniLabel {
   color: var(--aqua);
-  font-size: 14px;
-  letter-spacing: 5px;
-  text-shadow: 0 0 14px rgba(36, 216, 200, 0.12);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
 }
 
-.reviewsEmpty h3 {
-  margin-top: 15px;
-  font-size: 22px;
+.reviewsEntryCopy h3 {
+  margin-top: 8px;
+  font-size: 21px;
   letter-spacing: -0.7px;
 }
 
-.reviewsEmpty > p {
-  max-width: 520px;
-  margin-top: 8px;
+.reviewsEntryCopy p {
+  max-width: 450px;
+  margin-top: 6px;
   color: #707c7e;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 11px;
+  line-height: 1.6;
 }
 
 .reviewsActions {
   display: flex;
-  gap: 9px;
-  margin-top: 23px;
+  gap: 8px;
+  flex: 0 0 auto;
   position: relative;
   z-index: 2;
 }
@@ -1195,7 +1245,7 @@ button {
 .reviewPrimaryButton {
   min-height: 44px;
   padding: 0 17px;
-  font-size: 11px;
+  font-size: 10px;
   border-radius: 7px;
 }
 
@@ -1320,7 +1370,7 @@ button {
 
   .howSection {
     grid-template-columns: 0.72fr 1.28fr;
-    gap: 45px;
+    gap: 42px;
   }
 }
 
@@ -1363,7 +1413,7 @@ button {
     font-size: 10px;
   }
 
-  /* HERO MOBILE */
+  /* HERO */
 
   .hero {
     min-height: auto;
@@ -1413,7 +1463,7 @@ button {
     padding: 0 14px;
     font-size: 10px;
     border-radius: 7px;
-    gap: 15px;
+    gap: 12px;
   }
 
   .heroTrust {
@@ -1496,10 +1546,9 @@ button {
     font-size: 5px;
   }
 
-  /* COMMON MOBILE */
+  /* COMMON */
 
   .categoryIntro h2,
-  .howIntro h2,
   .reviewsHeader h2 {
     font-size: 36px;
     line-height: 0.98;
@@ -1511,11 +1560,11 @@ button {
     letter-spacing: 1.35px;
   }
 
-  /* CATEGORIES MOBILE */
+  /* CATEGORIES */
 
   .categorySection {
     width: calc(100% - 28px);
-    padding: 56px 0 54px;
+    padding: 54px 0 50px;
   }
 
   .categoryIntro {
@@ -1538,21 +1587,25 @@ button {
   .categoryCard,
   .categoryCard:nth-child(4) {
     grid-column: span 1;
-    min-height: 154px;
+    min-height: 150px;
     padding: 14px;
     border-radius: 9px;
   }
 
   .categoryCard:nth-child(5) {
     grid-column: 1 / -1;
-    min-height: 130px;
+    min-height: 124px;
   }
 
   .categoryIcon {
-    width: 27px;
-    height: 27px;
-    font-size: 12px;
+    width: 28px;
+    height: 28px;
     border-radius: 7px;
+  }
+
+  .categoryIcon svg {
+    width: 14px;
+    height: 14px;
   }
 
   .categoryNumber {
@@ -1560,7 +1613,7 @@ button {
   }
 
   .categoryContent {
-    margin-top: 19px;
+    margin-top: 18px;
     max-width: 95%;
   }
 
@@ -1585,30 +1638,38 @@ button {
   .categoryArrow {
     right: 13px;
     bottom: 12px;
-    font-size: 13px;
   }
 
-  /* HOW MOBILE */
+  .categoryArrow .inlineIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* HOW */
 
   .howSection {
     width: calc(100% - 28px);
-    padding: 52px 0 56px;
+    padding: 48px 0 50px;
     display: block;
   }
 
-  .howIntro {
-    position: static;
+  .howIntro h2 {
+    max-width: none;
+    margin-top: 10px;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -1.8px;
   }
 
   .howIntro > p {
     max-width: 330px;
-    margin-top: 15px;
-    font-size: 10px;
+    margin-top: 12px;
+    font-size: 9px;
     line-height: 1.55;
   }
 
   .accordion {
-    margin-top: 24px;
+    margin-top: 21px;
     gap: 7px;
   }
 
@@ -1617,10 +1678,10 @@ button {
   }
 
   .accordionButton {
-    min-height: 76px;
-    padding: 13px 14px;
-    grid-template-columns: 26px 1fr 31px;
-    gap: 9px;
+    min-height: 68px;
+    padding: 11px 13px;
+    grid-template-columns: 25px 1fr 29px;
+    gap: 8px;
   }
 
   .accordionNumber {
@@ -1632,41 +1693,47 @@ button {
   }
 
   .accordionTitle strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .accordionTitle small {
-    font-size: 8px;
+    font-size: 7.5px;
     line-height: 1.4;
   }
 
   .accordionToggle {
-    width: 29px;
-    height: 29px;
+    width: 28px;
+    height: 28px;
     border-radius: 7px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .accordionContentInner {
-    margin: 0 14px 0 49px;
-    font-size: 9px;
+    margin: 0 13px 0 46px;
+    font-size: 8.5px;
     line-height: 1.6;
   }
 
   .accordionContent.open .accordionContentInner {
-    padding: 13px 0 16px;
+    padding: 12px 0 14px;
   }
 
   .accordionLink {
-    margin-top: 11px;
-    font-size: 9px;
+    margin-top: 10px;
+    font-size: 8.5px;
+    gap: 8px;
   }
 
-  /* REVIEWS MOBILE */
+  .accordionLink .inlineIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* REVIEWS */
 
   .reviewsSection {
     width: calc(100% - 28px);
-    padding: 54px 0 62px;
+    padding: 50px 0 56px;
   }
 
   .reviewsHeader {
@@ -1675,33 +1742,32 @@ button {
 
   .reviewsHeader > p {
     max-width: 330px;
-    margin-top: 15px;
-    font-size: 10px;
+    margin-top: 14px;
+    font-size: 9px;
     line-height: 1.55;
   }
 
-  .reviewsEmpty {
-    min-height: 205px;
-    margin-top: 24px;
-    padding: 23px 20px;
+  .reviewsEntry {
+    min-height: 0;
+    margin-top: 23px;
+    padding: 20px;
     border-radius: 10px;
+    display: block;
   }
 
-  .reviewsStars {
-    font-size: 11px;
-    letter-spacing: 4px;
+  .reviewsMiniLabel {
+    font-size: 6px;
   }
 
-  .reviewsEmpty h3 {
-    margin-top: 11px;
+  .reviewsEntryCopy h3 {
+    margin-top: 6px;
     font-size: 17px;
   }
 
-  .reviewsEmpty > p {
-    max-width: 300px;
-    margin-top: 6px;
-    font-size: 9px;
-    line-height: 1.55;
+  .reviewsEntryCopy p {
+    max-width: 290px;
+    margin-top: 5px;
+    font-size: 8.5px;
   }
 
   .reviewsActions {
@@ -1716,10 +1782,15 @@ button {
     min-height: 39px;
     padding: 0 10px;
     font-size: 8px;
-    gap: 8px;
+    gap: 7px;
   }
 
-  /* FOOTER MOBILE */
+  .reviewPrimaryButton .inlineIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* FOOTER */
 
   .footer {
     padding: 43px 14px 23px;
@@ -1777,13 +1848,12 @@ button {
   }
 
   .categoryIntro h2,
-  .howIntro h2,
   .reviewsHeader h2 {
     font-size: 33px;
   }
 
   .categoryCard {
-    min-height: 150px;
+    min-height: 146px;
   }
 
   .reviewsActions {
@@ -1802,17 +1872,17 @@ button {
 
   .categoryCard:active {
     transform: scale(0.985);
-    border-color: rgba(98, 243, 230, 0.52);
+    border-color: rgba(98, 243, 230, 0.55);
     background:
       radial-gradient(
         circle at 90% 10%,
-        rgba(36, 216, 200, 0.08),
+        rgba(36, 216, 200, 0.09),
         transparent 42%
       ),
       #081011;
     box-shadow:
       0 0 0 1px rgba(98, 243, 230, 0.08),
-      0 0 26px rgba(36, 216, 200, 0.12);
+      0 0 28px rgba(36, 216, 200, 0.13);
   }
 
   .accordionItem:hover {
