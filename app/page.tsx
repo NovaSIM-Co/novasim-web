@@ -2,14 +2,28 @@
 
 import { useState } from "react";
 
-const categories = [
+type IconName =
+  | "globe"
+  | "calendar"
+  | "business"
+  | "road"
+  | "sim";
+
+const categories: {
+  number: string;
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+  icon: IconName;
+}[] = [
   {
     number: "01",
     label: "TRAVEL",
     title: "eSIM by Country",
     description: "Choose your destination and find the right eSIM.",
     href: "/esim-country",
-    icon: "◎",
+    icon: "globe",
   },
   {
     number: "02",
@@ -17,7 +31,7 @@ const categories = [
     title: "Multi-Month",
     description: "Large-data connectivity for longer periods.",
     href: "/multi-month",
-    icon: "∞",
+    icon: "calendar",
   },
   {
     number: "03",
@@ -25,7 +39,7 @@ const categories = [
     title: "Business & Fleets",
     description: "Connectivity solutions for companies and fleets.",
     href: "/business",
-    icon: "▦",
+    icon: "business",
   },
   {
     number: "04",
@@ -33,7 +47,7 @@ const categories = [
     title: "Truck Drivers & Caravans",
     description: "High-data connectivity for life on the road.",
     href: "/truck-drivers",
-    icon: "↗",
+    icon: "road",
   },
   {
     number: "05",
@@ -41,7 +55,7 @@ const categories = [
     title: "Physical SIM",
     description: "Physical SIM options for compatible devices.",
     href: "/physical-sim",
-    icon: "▣",
+    icon: "sim",
   },
 ];
 
@@ -53,17 +67,18 @@ const howItWorks = [
     content: (
       <>
         <p>
-          Open your phone dialer and enter <strong>*#06#</strong>. If an
-          <strong> EID</strong> number appears, your device supports eSIM.
+          Open your phone dialer and enter <strong>*#06#</strong>. If an{" "}
+          <strong>EID</strong> number appears, your device supports eSIM.
         </p>
 
         <p>
-          Your device must also be unlocked from any carrier restrictions to
-          use an eSIM from another provider.
+          Your device must also be unlocked from carrier restrictions to use
+          an eSIM from another provider.
         </p>
 
         <a href="/compatibility" className="accordionLink">
-          Check compatible devices <span>→</span>
+          Check compatible devices
+          <ArrowIcon />
         </a>
       </>
     ),
@@ -75,12 +90,13 @@ const howItWorks = [
     content: (
       <>
         <p>
-          Choose between destination eSIMs, multi-month connectivity,
-          professional solutions, road-focused plans or physical SIM options.
+          Choose the type of NovaSIM connectivity that fits your trip, longer
+          stay, business needs or life on the road.
         </p>
 
         <a href="#connections" className="accordionLink">
-          View NovaSIM options <span>↑</span>
+          View NovaSIM options
+          <UpIcon />
         </a>
       </>
     ),
@@ -102,7 +118,8 @@ const howItWorks = [
         </p>
 
         <a href="/how-it-works" className="accordionLink">
-          Installation guide <span>→</span>
+          Installation guide
+          <ArrowIcon />
         </a>
       </>
     ),
@@ -131,12 +148,92 @@ function NovaLogo({ small = false }: { small?: boolean }) {
   );
 }
 
+function CategoryIcon({ name }: { name: IconName }) {
+  if (name === "globe") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M4 12h16" />
+        <path d="M12 4c2.3 2.2 3.5 4.9 3.5 8S14.3 17.8 12 20" />
+        <path d="M12 4c-2.3 2.2-3.5 4.9-3.5 8S9.7 17.8 12 20" />
+      </svg>
+    );
+  }
+
+  if (name === "calendar") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="5.5" width="16" height="14" rx="2" />
+        <path d="M8 3.5v4" />
+        <path d="M16 3.5v4" />
+        <path d="M4 9.5h16" />
+        <path d="M8 13h3" />
+        <path d="M13 13h3" />
+        <path d="M8 16h3" />
+      </svg>
+    );
+  }
+
+  if (name === "business") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="5" y="4" width="14" height="16" rx="1.5" />
+        <path d="M9 20v-4h6v4" />
+        <path d="M8 8h2" />
+        <path d="M14 8h2" />
+        <path d="M8 12h2" />
+        <path d="M14 12h2" />
+      </svg>
+    );
+  }
+
+  if (name === "road") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 20 11 4" />
+        <path d="M15 20 13 4" />
+        <path d="M12 6v3" />
+        <path d="M12 12v3" />
+        <path d="M12 18v2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="6" y="3.5" width="12" height="17" rx="2" />
+      <path d="M9 3.5v4h6v-4" />
+      <path d="M9 11h6" />
+      <path d="M9 14h6" />
+      <path d="M9 17h3" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg className="inlineIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 12h14" />
+      <path d="m14 7 5 5-5 5" />
+    </svg>
+  );
+}
+
+function UpIcon() {
+  return (
+    <svg className="inlineIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 19V5" />
+      <path d="m7 10 5-5 5 5" />
+    </svg>
+  );
+}
+
 export default function Home() {
   const [openStep, setOpenStep] = useState<number | null>(null);
 
-  const toggleStep = (index: number) => {
-    setOpenStep(openStep === index ? null : index);
-  };
+  function toggleStep(index: number) {
+    setOpenStep((current) => (current === index ? null : index));
+  }
 
   return (
     <main>
@@ -195,7 +292,7 @@ export default function Home() {
             <div className="heroButtons">
               <a href="/esim-country" className="primaryButton">
                 Explore eSIMs
-                <span>→</span>
+                <ArrowIcon />
               </a>
 
               <a href="/coverage" className="secondaryButton">
@@ -296,7 +393,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONNECTION OPTIONS */}
+      {/* CONNECTIONS */}
       <section className="categorySection" id="connections">
         <div className="categoryIntro">
           <div>
@@ -324,7 +421,10 @@ export default function Home() {
             >
               <div className="categoryTop">
                 <span className="categoryNumber">{category.number}</span>
-                <span className="categoryIcon">{category.icon}</span>
+
+                <span className="categoryIcon">
+                  <CategoryIcon name={category.icon} />
+                </span>
               </div>
 
               <div className="categoryContent">
@@ -333,7 +433,9 @@ export default function Home() {
                 <p>{category.description}</p>
               </div>
 
-              <span className="categoryArrow">→</span>
+              <span className="categoryArrow">
+                <ArrowIcon />
+              </span>
             </a>
           ))}
         </div>
@@ -345,14 +447,12 @@ export default function Home() {
           <span className="sectionLabel">GET CONNECTED</span>
 
           <h2>
-            How NovaSIM
-            <br />
-            <span>works.</span>
+            How NovaSIM <span>works.</span>
           </h2>
 
           <p>
-            Everything you need to check, choose and connect — without
-            unnecessary steps.
+            Check your device, choose your connection and follow the setup
+            instructions.
           </p>
         </div>
 
@@ -362,7 +462,9 @@ export default function Home() {
 
             return (
               <div
-                className={`accordionItem ${isOpen ? "accordionItemOpen" : ""}`}
+                className={`accordionItem ${
+                  isOpen ? "accordionItemOpen" : ""
+                }`}
                 key={step.title}
               >
                 <button
@@ -378,13 +480,17 @@ export default function Home() {
                     <small>{step.description}</small>
                   </span>
 
-                  <span className="accordionToggle">
+                  <span className="accordionToggle" aria-hidden="true">
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
-                <div className={`accordionContent ${isOpen ? "open" : ""}`}>
-                  <div className="accordionContentInner">{step.content}</div>
+                <div
+                  className={`accordionContent ${isOpen ? "open" : ""}`}
+                >
+                  <div className="accordionContentInner">
+                    {step.content}
+                  </div>
                 </div>
               </div>
             );
@@ -399,36 +505,38 @@ export default function Home() {
             <span className="sectionLabel">CUSTOMER REVIEWS</span>
 
             <h2>
-              Real experiences.
+              Your experience
               <br />
-              <span>Real connections.</span>
+              <span>matters.</span>
             </h2>
           </div>
 
           <p>
-            Reviews from NovaSIM customers will appear here after they are
-            submitted and approved.
+            Already used NovaSIM? Share your experience and help other
+            customers choose with confidence.
           </p>
         </div>
 
-        <div className="reviewsEmpty">
-          <div className="reviewsStars">★★★★★</div>
-
-          <h3>NovaSIM customer reviews</h3>
-
-          <p>
-            Customer experiences will be displayed here. Reviews are published
-            only after verification.
-          </p>
+        <div className="reviewsEntry">
+          <div className="reviewsEntryCopy">
+            <span className="reviewsMiniLabel">NOVASIM REVIEWS</span>
+            <h3>Used NovaSIM?</h3>
+            <p>
+              Tell us about your experience with your NovaSIM connection.
+            </p>
+          </div>
 
           <div className="reviewsActions">
             <a href="/reviews" className="secondaryButton">
-              See all reviews
+              See reviews
             </a>
 
-            <a href="/reviews#leave-review" className="reviewPrimaryButton">
+            <a
+              href="/reviews#leave-review"
+              className="reviewPrimaryButton"
+            >
               Leave a review
-              <span>→</span>
+              <ArrowIcon />
             </a>
           </div>
         </div>
