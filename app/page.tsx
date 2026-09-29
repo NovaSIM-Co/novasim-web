@@ -1,7 +1,50 @@
+const categories = [
+  {
+    number: "01",
+    label: "TRAVEL",
+    title: "eSIM by Country",
+    description: "Choose your destination and find the right eSIM.",
+    href: "/esim-country",
+    icon: "◎",
+  },
+  {
+    number: "02",
+    label: "EXTENDED USE",
+    title: "Multi-Month",
+    description: "Large-data connectivity for longer periods.",
+    href: "/multi-month",
+    icon: "∞",
+  },
+  {
+    number: "03",
+    label: "PROFESSIONAL",
+    title: "Business & Fleets",
+    description: "Connectivity solutions built for companies and fleets.",
+    href: "/business",
+    icon: "▦",
+  },
+  {
+    number: "04",
+    label: "ON THE ROAD",
+    title: "Truck Drivers & Caravans",
+    description: "High-data connectivity designed for life on the road.",
+    href: "/truck-drivers",
+    icon: "→",
+  },
+  {
+    number: "05",
+    label: "PHYSICAL CONNECTIVITY",
+    title: "Physical SIM",
+    description: "Physical SIM options for compatible devices.",
+    href: "/physical-sim",
+    icon: "▣",
+  },
+];
+
 export default function Home() {
   return (
     <main>
-      {/* NAVIGATION */}
+      {/* HEADER */}
       <header className="navbar">
         <a href="/" className="brand" aria-label="NovaSIM Home">
           <span className="brandMark">N</span>
@@ -9,11 +52,11 @@ export default function Home() {
         </a>
 
         <nav className="desktopNav" aria-label="Main navigation">
-          <a href="#plans">Plans</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#coverage">Coverage</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#support">Support</a>
+          <a href="/esim-country">Destinations</a>
+          <a href="/multi-month">Multi-Month</a>
+          <a href="/business">Business</a>
+          <a href="/coverage">Coverage</a>
+          <a href="/support">Support</a>
         </nav>
 
         <div className="navActions">
@@ -21,14 +64,14 @@ export default function Home() {
             EN
           </button>
 
-          <a href="#plans" className="navCta">
+          <a href="/esim-country" className="navCta">
             Get eSIM
           </a>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="hero">
+      <section className="hero newHero">
         <div className="heroGrid" />
         <div className="heroGlow heroGlowOne" />
         <div className="heroGlow heroGlowTwo" />
@@ -54,13 +97,13 @@ export default function Home() {
             </p>
 
             <div className="heroButtons">
-              <a href="#plans" className="primaryButton">
-                Explore Plans
+              <a href="/esim-country" className="primaryButton">
+                Explore eSIMs
                 <span aria-hidden="true">→</span>
               </a>
 
-              <a href="#how-it-works" className="secondaryButton">
-                How It Works
+              <a href="/coverage" className="secondaryButton">
+                Europe Coverage
               </a>
             </div>
 
@@ -102,7 +145,6 @@ export default function Home() {
 
                 <div className="phoneContent">
                   <div className="phoneLogo">N</div>
-
                   <p className="phoneLabel">NOVASIM</p>
 
                   <div className="connectionState">
@@ -152,393 +194,143 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div className="scrollIndicator">
-          <span />
-          DISCOVER NOVASIM
-        </div>
       </section>
 
-      {/* INTRO */}
-      <section className="intro section" id="solutions">
-        <div className="sectionLabel">BUILT FOR MORE</div>
-
-        <div className="sectionHeading">
-          <h2>
-            One connection.
-            <br />
-            <span>Built around you.</span>
-          </h2>
-
-          <p>
-            From everyday travel to professional fleets, NovaSIM delivers
-            flexible connectivity designed for the way you actually use data.
-          </p>
-        </div>
-
-        <div className="solutionGrid">
-          <article className="solutionCard featuredCard">
-            <div className="cardTop">
-              <span className="cardNumber">01</span>
-              <span className="cardArrow">↗</span>
-            </div>
-
-            <div>
-              <span className="cardTag">EUROPE</span>
-              <h3>Europe eSIM</h3>
-              <p>
-                High-data connectivity across Europe with fast digital
-                activation and hotspot support.
-              </p>
-            </div>
-
-            <a href="#plans">Explore plans →</a>
-          </article>
-
-          <article className="solutionCard">
-            <div className="cardTop">
-              <span className="cardNumber">02</span>
-              <span className="cardArrow">↗</span>
-            </div>
-
-            <div>
-              <span className="cardTag">EXTENDED USE</span>
-              <h3>Long-Term Data</h3>
-              <p>
-                Large-data packages designed for customers who need reliable
-                connectivity for longer periods.
-              </p>
-            </div>
-
-            <a href="#long-term">Discover →</a>
-          </article>
-
-          <article className="solutionCard">
-            <div className="cardTop">
-              <span className="cardNumber">03</span>
-              <span className="cardArrow">↗</span>
-            </div>
-
-            <div>
-              <span className="cardTag">PROFESSIONAL</span>
-              <h3>Business & Fleets</h3>
-              <p>
-                Flexible connectivity solutions for companies, teams and
-                professional fleets.
-              </p>
-            </div>
-
-            <a href="#business">Business solutions →</a>
-          </article>
-        </div>
-      </section>
-
-      {/* PLANS */}
-      <section className="plans section" id="plans">
-        <div className="plansGlow" />
-
-        <div className="sectionLabel">NOVASIM PLANS</div>
-
-        <div className="sectionHeading plansHeading">
-          <h2>
-            Choose your
-            <br />
-            <span>connection.</span>
-          </h2>
-
-          <p>
-            Flexible options for different data needs. Pick the plan that fits
-            how you travel, work and stay connected.
-          </p>
-        </div>
-
-        <div className="planGrid">
-          <article className="planCard">
-            <div className="planHeader">
-              <span>EUROPE DATA</span>
-              <span>01</span>
-            </div>
-
-            <h3>Flexible Data</h3>
-
-            <p>
-              European eSIM plans for everyday connectivity and travel.
-            </p>
-
-            <ul>
-              <li>High-speed mobile data</li>
-              <li>Fast eSIM activation</li>
-              <li>Hotspot support</li>
-              <li>European coverage</li>
-            </ul>
-
-            <a href="#" className="planButton">
-              View Plans
-            </a>
-          </article>
-
-          <article className="planCard highlightPlan">
-            <div className="popularBadge">POPULAR</div>
-
-            <div className="planHeader">
-              <span>HIGH DATA</span>
-              <span>02</span>
-            </div>
-
-            <h3>Large Data</h3>
-
-            <p>
-              Built for customers who rely heavily on mobile connectivity.
-            </p>
-
-            <ul>
-              <li>Large data allowances</li>
-              <li>4G / 5G connectivity</li>
-              <li>Hotspot support</li>
-              <li>Digital delivery</li>
-            </ul>
-
-            <a href="#" className="planButton primaryPlanButton">
-              Explore Data Plans
-            </a>
-          </article>
-
-          <article className="planCard">
-            <div className="planHeader">
-              <span>LONG TERM</span>
-              <span>03</span>
-            </div>
-
-            <h3>Extended Use</h3>
-
-            <p>
-              Connectivity options designed for longer periods and bigger
-              usage requirements.
-            </p>
-
-            <ul>
-              <li>Extended validity options</li>
-              <li>Large-data packages</li>
-              <li>Simple activation</li>
-              <li>Support when needed</li>
-            </ul>
-
-            <a href="#long-term" className="planButton">
-              Discover
-            </a>
-          </article>
-        </div>
-      </section>
-
-      {/* COVERAGE */}
-      <section className="coverage section" id="coverage">
-        <div className="coverageContent">
+      {/* CATEGORY NAVIGATION */}
+      <section className="categorySection">
+        <div className="categoryIntro">
           <div>
-            <div className="sectionLabel">EUROPE COVERAGE</div>
+            <span className="sectionLabel">CHOOSE YOUR CONNECTION</span>
 
             <h2>
-              Cross borders.
+              What do you
               <br />
-              <span>Keep your connection.</span>
+              <span>need?</span>
+            </h2>
+          </div>
+
+          <p>
+            Choose how you want to stay connected. Each NovaSIM solution has
+            its own dedicated plans and options.
+          </p>
+        </div>
+
+        <div className="categoryGrid">
+          {categories.map((category) => (
+            <a
+              href={category.href}
+              className="categoryCard"
+              key={category.title}
+            >
+              <div className="categoryCardTop">
+                <span>{category.number}</span>
+                <span className="categoryIcon">{category.icon}</span>
+              </div>
+
+              <div className="categoryCardContent">
+                <span className="categoryLabel">{category.label}</span>
+
+                <h3>{category.title}</h3>
+
+                <p>{category.description}</p>
+              </div>
+
+              <div className="categoryOpen">
+                Explore
+                <span>→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* SIMPLE PROCESS */}
+      <section className="homeProcess">
+        <div className="processIntro">
+          <span className="sectionLabel">NOVASIM eSIM</span>
+
+          <h2>
+            Connected.
+            <br />
+            <span>Without the hassle.</span>
+          </h2>
+
+          <p>
+            Choose your plan, install your eSIM and connect on your compatible
+            device.
+          </p>
+        </div>
+
+        <div className="processSteps">
+          <div className="processStep">
+            <span className="processNumber">01</span>
+            <div>
+              <strong>Choose</strong>
+              <p>Find the NovaSIM option that fits your needs.</p>
+            </div>
+          </div>
+
+          <div className="processStep">
+            <span className="processNumber">02</span>
+            <div>
+              <strong>Install</strong>
+              <p>Receive your eSIM and install it on your device.</p>
+            </div>
+          </div>
+
+          <div className="processStep">
+            <span className="processNumber">03</span>
+            <div>
+              <strong>Connect</strong>
+              <p>Activate your eSIM and get online.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BUSINESS TEASER */}
+      <section className="homeBusiness">
+        <div className="homeBusinessGlow" />
+
+        <div className="homeBusinessInner">
+          <div>
+            <span className="sectionLabel">NOVASIM BUSINESS</span>
+
+            <h2>
+              Built for more
+              <br />
+              than one connection.
             </h2>
 
             <p>
-              NovaSIM is designed for people who move across Europe and need
-              mobile data without constantly changing how they connect.
+              Connectivity solutions for companies, teams and professional
+              fleets across Europe.
             </p>
-
-            <a href="#" className="textLink">
-              Explore coverage <span>→</span>
-            </a>
           </div>
 
-          <div className="coverageVisual">
-            <div className="coverageRing ringOne" />
-            <div className="coverageRing ringTwo" />
-            <div className="coverageRing ringThree" />
-
-            <div className="coverageCenter">
-              <strong>N</strong>
-              <span>CONNECTED</span>
-            </div>
-
-            <span className="coveragePoint pointOne" />
-            <span className="coveragePoint pointTwo" />
-            <span className="coveragePoint pointThree" />
-            <span className="coveragePoint pointFour" />
-            <span className="coveragePoint pointFive" />
-          </div>
-        </div>
-      </section>
-
-      {/* LONG TERM */}
-      <section className="splitSection section" id="long-term">
-        <div className="splitNumber">01</div>
-
-        <div className="splitContent">
-          <div className="sectionLabel">LONG-TERM CONNECTIVITY</div>
-
-          <h2>
-            More data.
-            <br />
-            <span>More time.</span>
-          </h2>
-
-          <p>
-            For customers who need more than a short travel plan. NovaSIM
-            long-term options are built around larger data requirements and
-            extended usage.
-          </p>
-
-          <a href="#" className="primaryButton">
-            Explore Long-Term
+          <a href="/business" className="primaryButton">
+            Business & Fleets
             <span>→</span>
           </a>
         </div>
       </section>
 
-      {/* BUSINESS */}
-      <section className="business section" id="business">
-        <div className="businessGrid">
-          <div className="businessCopy">
-            <div className="sectionLabel">NOVASIM BUSINESS</div>
-
-            <h2>
-              Connectivity that
-              <br />
-              <span>moves with your business.</span>
-            </h2>
-
-            <p>
-              Solutions for companies, teams and fleets that need scalable
-              mobile connectivity across Europe.
-            </p>
-
-            <a href="#" className="primaryButton">
-              Business & Fleets
-              <span>→</span>
-            </a>
-          </div>
-
-          <div className="businessPanel">
-            <div className="businessPanelTop">
-              <span>BUSINESS CONNECTIVITY</span>
-              <span className="liveStatus">
-                <i />
-                ONLINE
-              </span>
-            </div>
-
-            <div className="businessStat">
-              <small>SOLUTIONS</small>
-              <strong>Built to scale.</strong>
-            </div>
-
-            <div className="businessLines">
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <div className="businessFeatures">
-              <span>Companies</span>
-              <span>Professional fleets</span>
-              <span>Custom requirements</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="how section" id="how-it-works">
-        <div className="sectionLabel">SIMPLE BY DESIGN</div>
-
-        <div className="sectionHeading">
-          <h2>
-            Connected in
-            <br />
-            <span>three steps.</span>
-          </h2>
-
-          <p>
-            No physical delivery required for eSIM. Choose your connectivity,
-            receive your eSIM and activate it on your compatible device.
-          </p>
-        </div>
-
-        <div className="steps">
-          <article>
-            <span>01</span>
-            <div className="stepIcon">＋</div>
-            <h3>Choose</h3>
-            <p>Select the connectivity option that fits your needs.</p>
-          </article>
-
-          <article>
-            <span>02</span>
-            <div className="stepIcon">QR</div>
-            <h3>Install</h3>
-            <p>Receive your eSIM details and install it on your device.</p>
-          </article>
-
-          <article>
-            <span>03</span>
-            <div className="stepIcon">✓</div>
-            <h3>Connect</h3>
-            <p>Activate your eSIM and get online.</p>
-          </article>
-        </div>
-      </section>
-
-      {/* OTHER SOLUTIONS */}
-      <section className="otherSolutions section">
-        <div className="sectionLabel">MORE FROM NOVASIM</div>
-
-        <div className="otherGrid">
-          <article className="wideCard">
-            <span>BY DESTINATION</span>
-            <h3>eSIM by Country</h3>
-            <p>
-              Find connectivity based on where you are going and choose the
-              option that fits your destination.
-            </p>
-            <a href="#">Explore countries →</a>
-          </article>
-
-          <article className="wideCard">
-            <span>PHYSICAL CONNECTIVITY</span>
-            <h3>Physical SIM</h3>
-            <p>
-              For customers who need a physical SIM instead of digital eSIM
-              activation.
-            </p>
-            <a href="#">Learn more →</a>
-          </article>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="finalCta">
-        <div className="ctaGlow" />
-
+      {/* FINAL CTA */}
+      <section className="compactCta">
         <div className="ctaLogo">N</div>
 
-        <p>NOVASIM</p>
+        <div>
+          <span>NOVASIM</span>
 
-        <h2>
-          Your connection.
-          <br />
-          <span>Wherever you go.</span>
-        </h2>
+          <h2>
+            Ready to
+            <br />
+            <strong>get connected?</strong>
+          </h2>
+        </div>
 
-        <p className="ctaDescription">
-          Explore NovaSIM connectivity and find the option built for you.
-        </p>
-
-        <a href="#plans" className="primaryButton">
-          Explore NovaSIM
+        <a href="/esim-country" className="primaryButton">
+          Explore eSIMs
           <span>→</span>
         </a>
       </section>
@@ -561,30 +353,30 @@ export default function Home() {
         <div className="footerGrid">
           <div>
             <strong>CONNECTIVITY</strong>
-            <a href="#plans">eSIM Plans</a>
-            <a href="#long-term">Long-Term Data</a>
-            <a href="#coverage">Europe Coverage</a>
-            <a href="#">eSIM by Country</a>
+            <a href="/esim-country">eSIM by Country</a>
+            <a href="/multi-month">Multi-Month</a>
+            <a href="/coverage">Europe Coverage</a>
           </div>
 
           <div>
-            <strong>BUSINESS</strong>
-            <a href="#business">Business & Fleets</a>
-            <a href="#">Physical SIM</a>
+            <strong>SOLUTIONS</strong>
+            <a href="/business">Business & Fleets</a>
+            <a href="/truck-drivers">Truck Drivers & Caravans</a>
+            <a href="/physical-sim">Physical SIM</a>
           </div>
 
           <div>
             <strong>HELP</strong>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#">FAQ</a>
-            <a href="#">Support</a>
+            <a href="/how-it-works">How It Works</a>
+            <a href="/faq">FAQ</a>
+            <a href="/support">Support</a>
           </div>
 
           <div>
             <strong>NOVASIM</strong>
-            <a href="#">Why NovaSIM</a>
-            <a href="#">Reviews</a>
-            <a href="#">Contact</a>
+            <a href="/why-novasim">Why NovaSIM</a>
+            <a href="/reviews">Reviews</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
 
@@ -592,8 +384,8 @@ export default function Home() {
           <span>© 2026 NovaSIM. All rights reserved.</span>
 
           <div>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
           </div>
         </div>
       </footer>
