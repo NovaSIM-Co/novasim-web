@@ -56,10 +56,12 @@ const accordionItems = [
           Open your phone dialer and enter <strong>*#06#</strong>. If an{" "}
           <strong>EID</strong> number appears, your device supports eSIM.
         </p>
+
         <p>
           Your device must also be unlocked from carrier restrictions to use an
           eSIM from another provider.
         </p>
+
         <a href="/compatible-devices" className="accordionLink">
           Check compatible devices
           <ArrowRight />
@@ -77,6 +79,7 @@ const accordionItems = [
           Choose the type of NovaSIM connectivity that fits your trip, longer
           stay, business needs or life on the road.
         </p>
+
         <a href="/esim-country" className="accordionLink">
           View NovaSIM options
           <ArrowUpRight />
@@ -94,10 +97,12 @@ const accordionItems = [
           After purchasing your eSIM, you receive the information needed to
           install it on your compatible device.
         </p>
+
         <p>
           Follow the provided setup instructions and connect when your NovaSIM
           plan is ready to use.
         </p>
+
         <a href="/how-it-works" className="accordionLink">
           Installation guide
           <ArrowRight />
@@ -120,6 +125,7 @@ function NovaLogo({ small = false }: { small?: boolean }) {
           className="novaLogoLeft"
           d="M13 49V15h9.5l19 25V15H51v34h-9.5l-19-25v25H13Z"
         />
+
         <path
           className="novaLogoCut"
           d="M22.5 15 51 49h-9.5L13 15h9.5Z"
@@ -219,7 +225,6 @@ export default function Home() {
 
   return (
     <main>
-      {/* HEADER */}
       <header className="navbar">
         <a href="/" className="brand" aria-label="NovaSIM Home">
           <NovaLogo small />
@@ -245,13 +250,12 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="hero heroClean">
+      <section className="hero">
         <div className="heroGrid" />
         <div className="heroGlow heroGlowOne" />
         <div className="heroGlow heroGlowTwo" />
 
-        <div className="heroInner heroInnerClean">
+        <div className="heroInner">
           <div className="heroCopy">
             <div className="eyebrow">
               <span className="statusDot" />
@@ -288,62 +292,24 @@ export default function Home() {
               <span>
                 <i>✓</i> Instant activation
               </span>
+
               <span>
                 <i>✓</i> 4G / 5G
               </span>
+
               <span>
                 <i>✓</i> Hotspot included
               </span>
             </div>
           </div>
-
-          <div className="heroCleanVisual" aria-hidden="true">
-            <div className="cleanGlow" />
-
-            <svg viewBox="0 0 620 520">
-              <g className="cleanLines">
-                <path d="M55 356 Q180 175 325 260" />
-                <path d="M107 413 Q245 205 491 297" />
-                <path d="M162 174 Q284 300 445 391" />
-                <path d="M241 96 Q340 183 524 211" />
-                <path d="M55 356 Q276 389 445 391" />
-              </g>
-
-              <g className="cleanNodes">
-                <circle cx="55" cy="356" r="4" />
-                <circle cx="107" cy="413" r="4" />
-                <circle cx="162" cy="174" r="4" />
-                <circle cx="241" cy="96" r="4" />
-                <circle cx="325" cy="260" r="5" />
-                <circle cx="445" cy="391" r="4" />
-                <circle cx="491" cy="297" r="4" />
-                <circle cx="524" cy="211" r="4" />
-              </g>
-
-              <ellipse
-                className="cleanOrbit"
-                cx="310"
-                cy="270"
-                rx="245"
-                ry="155"
-              />
-              <ellipse
-                className="cleanOrbit cleanOrbitTwo"
-                cx="310"
-                cy="270"
-                rx="185"
-                ry="230"
-              />
-            </svg>
-          </div>
         </div>
       </section>
 
-      {/* CATEGORIES */}
       <section className="categorySection">
         <div className="categoryIntro">
           <div>
             <span className="sectionLabel">CHOOSE YOUR CONNECTION</span>
+
             <h2>
               One NovaSIM.
               <br />
@@ -359,7 +325,11 @@ export default function Home() {
 
         <div className="categoryGrid">
           {categories.map((category) => (
-            <a href={category.href} className="categoryCard" key={category.title}>
+            <a
+              href={category.href}
+              className="categoryCard"
+              key={category.title}
+            >
               <div className="categoryTop">
                 <span className="categoryNumber">{category.number}</span>
 
@@ -382,7 +352,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW NOVASIM WORKS */}
       <section className="howSection">
         <div className="howIntro">
           <span className="sectionLabel">GET CONNECTED</span>
@@ -435,7 +404,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REVIEWS */}
       <section className="reviewsSection">
         <div className="reviewsHeader">
           <div>
@@ -458,7 +426,10 @@ export default function Home() {
           <div className="reviewsEntryCopy">
             <span className="reviewsMiniLabel">NOVASIM REVIEWS</span>
             <h3>Used NovaSIM?</h3>
-            <p>Tell us about your experience with your NovaSIM connection.</p>
+
+            <p>
+              Tell us about your experience with your NovaSIM connection.
+            </p>
           </div>
 
           <div className="reviewsActions">
@@ -474,7 +445,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div className="footerTop">
           <div>
