@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const categories = [
   {
     number: "01",
@@ -41,6 +45,70 @@ const categories = [
   },
 ];
 
+const howItWorks = [
+  {
+    number: "01",
+    title: "Check compatibility",
+    description: "Make sure your device supports eSIM before purchasing.",
+    content: (
+      <>
+        <p>
+          Open your phone dialer and enter <strong>*#06#</strong>. If an
+          <strong> EID</strong> number appears, your device supports eSIM.
+        </p>
+
+        <p>
+          Your device must also be unlocked from any carrier restrictions to
+          use an eSIM from another provider.
+        </p>
+
+        <a href="/compatibility" className="accordionLink">
+          Check compatible devices <span>→</span>
+        </a>
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "Choose your connection",
+    description: "Select the NovaSIM option that fits your needs.",
+    content: (
+      <>
+        <p>
+          Choose between destination eSIMs, multi-month connectivity,
+          professional solutions, road-focused plans or physical SIM options.
+        </p>
+
+        <a href="#connections" className="accordionLink">
+          View NovaSIM options <span>↑</span>
+        </a>
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "Install & connect",
+    description: "Follow the instructions you receive after your purchase.",
+    content: (
+      <>
+        <p>
+          After purchasing your eSIM, you receive the information needed to
+          install it on your compatible device.
+        </p>
+
+        <p>
+          Follow the provided setup instructions and connect when your NovaSIM
+          plan is ready to use.
+        </p>
+
+        <a href="/how-it-works" className="accordionLink">
+          Installation guide <span>→</span>
+        </a>
+      </>
+    ),
+  },
+];
+
 function NovaLogo({ small = false }: { small?: boolean }) {
   return (
     <span className={small ? "novaLogo novaLogoSmall" : "novaLogo"}>
@@ -64,6 +132,12 @@ function NovaLogo({ small = false }: { small?: boolean }) {
 }
 
 export default function Home() {
+  const [openStep, setOpenStep] = useState<number | null>(null);
+
+  const toggleStep = (index: number) => {
+    setOpenStep(openStep === index ? null : index);
+  };
+
   return (
     <main>
       {/* HEADER */}
@@ -144,7 +218,6 @@ export default function Home() {
 
           <div className="heroVisual" aria-hidden="true">
             <div className="visualGlow" />
-
             <div className="orbit orbitOne" />
             <div className="orbit orbitTwo" />
             <div className="orbit orbitThree" />
@@ -223,8 +296,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOLUTION NAVIGATION */}
-      <section className="categorySection">
+      {/* CONNECTION OPTIONS */}
+      <section className="categorySection" id="connections">
         <div className="categoryIntro">
           <div>
             <span className="sectionLabel">CHOOSE YOUR CONNECTION</span>
@@ -266,84 +339,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="homeProcess">
-        <div className="processIntro">
-          <span className="sectionLabel">HOW IT WORKS</span>
+      {/* HOW NOVASIM WORKS */}
+      <section className="howSection">
+        <div className="howIntro">
+          <span className="sectionLabel">GET CONNECTED</span>
 
           <h2>
-            Three steps.
+            How NovaSIM
             <br />
-            <span>You're connected.</span>
+            <span>works.</span>
           </h2>
 
           <p>
-            A simple digital setup designed to get you connected quickly.
+            Everything you need to check, choose and connect — without
+            unnecessary steps.
           </p>
         </div>
 
-        <div className="processSteps">
-          <div className="processStep">
-            <span className="processNumber">01</span>
+        <div className="accordion">
+          {howItWorks.map((step, index) => {
+            const isOpen = openStep === index;
 
-            <div>
-              <strong>Choose</strong>
-              <p>Select the NovaSIM option that fits your needs.</p>
-            </div>
+            return (
+              <div
+                className={`accordionItem ${isOpen ? "accordionItemOpen" : ""}`}
+                key={step.title}
+              >
+                <button
+                  className="accordionButton"
+                  type="button"
+                  onClick={() => toggleStep(index)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="accordionNumber">{step.number}</span>
 
-            <span className="stepIcon">↗</span>
-          </div>
+                  <span className="accordionTitle">
+                    <strong>{step.title}</strong>
+                    <small>{step.description}</small>
+                  </span>
 
-          <div className="processStep">
-            <span className="processNumber">02</span>
+                  <span className="accordionToggle">
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </button>
 
-            <div>
-              <strong>Install</strong>
-              <p>Receive your eSIM and install it on your device.</p>
-            </div>
-
-            <span className="stepIcon">＋</span>
-          </div>
-
-          <div className="processStep">
-            <span className="processNumber">03</span>
-
-            <div>
-              <strong>Connect</strong>
-              <p>Activate your eSIM and get online.</p>
-            </div>
-
-            <span className="stepIcon">✓</span>
-          </div>
+                <div className={`accordionContent ${isOpen ? "open" : ""}`}>
+                  <div className="accordionContentInner">{step.content}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="compactCta">
-        <div className="ctaGlow" />
-
-        <div className="ctaInner">
-          <NovaLogo />
-
-          <div className="ctaCopy">
-            <span className="sectionLabel">NOVASIM</span>
+      {/* REVIEWS */}
+      <section className="reviewsSection">
+        <div className="reviewsHeader">
+          <div>
+            <span className="sectionLabel">CUSTOMER REVIEWS</span>
 
             <h2>
-              Europe is waiting.
+              Real experiences.
               <br />
-              <strong>Stay connected.</strong>
+              <span>Real connections.</span>
             </h2>
-
-            <p>
-              Find the NovaSIM connectivity option built for the way you
-              travel, work or live on the road.
-            </p>
           </div>
 
-          <a href="/esim-country" className="primaryButton ctaButton">
-            Explore NovaSIM
-            <span>→</span>
-          </a>
+          <p>
+            Reviews from NovaSIM customers will appear here after they are
+            submitted and approved.
+          </p>
+        </div>
+
+        <div className="reviewsEmpty">
+          <div className="reviewsStars">★★★★★</div>
+
+          <h3>NovaSIM customer reviews</h3>
+
+          <p>
+            Customer experiences will be displayed here. Reviews are published
+            only after verification.
+          </p>
+
+          <div className="reviewsActions">
+            <a href="/reviews" className="secondaryButton">
+              See all reviews
+            </a>
+
+            <a href="/reviews#leave-review" className="reviewPrimaryButton">
+              Leave a review
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </section>
 
