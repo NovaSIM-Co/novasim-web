@@ -59,7 +59,7 @@ button {
 }
 
 /* -------------------------------------------------------
-   ICONS
+   COMMON ICONS
 ------------------------------------------------------- */
 
 .inlineIcon {
@@ -219,9 +219,9 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.045);
   background:
     radial-gradient(
-      circle at 73% 46%,
-      rgba(36, 216, 200, 0.075),
-      transparent 25%
+      circle at 72% 47%,
+      rgba(36, 216, 200, 0.09),
+      transparent 27%
     ),
     linear-gradient(180deg, #05090a 0%, #030708 100%);
 }
@@ -229,12 +229,12 @@ button {
 .heroGrid {
   position: absolute;
   inset: 0;
-  opacity: 0.23;
+  opacity: 0.18;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.025) 1px,
+      rgba(255, 255, 255, 0.022) 1px,
       transparent 1px
     );
   background-size: 52px 52px;
@@ -255,11 +255,11 @@ button {
 }
 
 .heroGlowOne {
-  width: 360px;
-  height: 360px;
-  right: 12%;
-  top: 23%;
-  background: rgba(36, 216, 200, 0.08);
+  width: 420px;
+  height: 420px;
+  right: 9%;
+  top: 22%;
+  background: rgba(36, 216, 200, 0.085);
 }
 
 .heroGlowTwo {
@@ -275,15 +275,17 @@ button {
   margin: 0 auto;
   padding-top: 76px;
   display: grid;
-  grid-template-columns: 1.03fr 0.97fr;
+  grid-template-columns: 0.98fr 1.02fr;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   position: relative;
   z-index: 2;
 }
 
 .heroCopy {
   max-width: 650px;
+  position: relative;
+  z-index: 10;
 }
 
 .eyebrow {
@@ -306,16 +308,18 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(58px, 5.7vw, 84px);
+  font-size: clamp(58px, 5.35vw, 80px);
   line-height: 0.94;
-  letter-spacing: -4.5px;
+  letter-spacing: -4.2px;
   font-weight: 900;
-  max-width: 760px;
+  max-width: 710px;
 }
 
 .hero h1 span {
   color: var(--aqua);
-  text-shadow: 0 0 32px rgba(36, 216, 200, 0.07);
+  text-shadow:
+    0 0 24px rgba(36, 216, 200, 0.08),
+    0 0 45px rgba(36, 216, 200, 0.025);
 }
 
 .heroDescription {
@@ -413,298 +417,393 @@ button {
 }
 
 /* -------------------------------------------------------
-   HERO VISUAL
+   NEW HERO — EUROPE NETWORK
 ------------------------------------------------------- */
 
-.heroVisual {
-  height: 580px;
+.heroVisualNetwork {
+  height: 620px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
 
-.visualGlow {
+.networkHalo {
   position: absolute;
-  width: 390px;
-  height: 390px;
+  width: 530px;
+  height: 530px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(36, 216, 200, 0.13) 0%,
-    rgba(36, 216, 200, 0.035) 36%,
-    transparent 70%
+    rgba(36, 216, 200, 0.14) 0%,
+    rgba(36, 216, 200, 0.045) 32%,
+    transparent 69%
   );
-  filter: blur(6px);
-}
-
-.orbit {
-  position: absolute;
-  border: 1px solid rgba(36, 216, 200, 0.08);
-  border-radius: 50%;
-}
-
-.orbitOne {
-  width: 490px;
-  height: 490px;
-}
-
-.orbitTwo {
-  width: 390px;
-  height: 390px;
-}
-
-.orbitThree {
-  width: 285px;
-  height: 285px;
-}
-
-.phone {
-  width: 245px;
-  height: 505px;
-  position: relative;
-  z-index: 3;
-  transform: rotate(6deg);
-  filter: drop-shadow(0 35px 50px rgba(0, 0, 0, 0.55));
-}
-
-.phoneFrame {
-  width: 100%;
-  height: 100%;
-  border-radius: 42px;
-  padding: 9px;
-  position: relative;
-  background: linear-gradient(145deg, #303839, #0b0f10 45%, #2b3334);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 0 50px rgba(36, 216, 200, 0.05);
-}
-
-.phoneFrame::after {
-  content: "";
-  position: absolute;
-  inset: 9px;
-  border-radius: 34px;
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(36, 216, 200, 0.11),
-      transparent 31%
-    ),
-    linear-gradient(180deg, #071011 0%, #030707 100%);
+  filter: blur(12px);
   z-index: 0;
 }
 
-.dynamicIsland {
-  width: 78px;
-  height: 23px;
-  background: #000;
-  border-radius: 20px;
+.europeNetwork {
+  width: 650px;
+  height: 550px;
   position: absolute;
-  top: 17px;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
+  top: 50%;
+  transform: translate(-50%, -48%);
+  z-index: 1;
+  opacity: 0.92;
+  pointer-events: none;
 }
 
-.phoneStatus {
-  position: relative;
-  z-index: 4;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 15px 0;
-  font-size: 8px;
-  color: #9ba6a7;
-}
-
-.phoneContent {
-  position: relative;
-  z-index: 4;
-  height: calc(100% - 30px);
-  padding: 80px 18px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.phoneLogo {
-  width: 68px;
-  height: 68px;
-}
-
-.phoneLabel {
-  color: #cbd2d2;
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 800;
-  margin-top: 7px;
-}
-
-.connectionState {
-  margin-top: 28px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--aqua);
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: 1.2px;
-}
-
-.connectionState span {
-  width: 5px;
-  height: 5px;
-  background: var(--aqua);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(36, 216, 200, 0.7);
-}
-
-.networkCard {
+.europeNetwork svg {
   width: 100%;
-  margin-top: 22px;
-  padding: 15px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 100%;
+  overflow: visible;
 }
 
-.networkCard small,
-.phoneStats small {
-  display: block;
-  color: #5d696b;
-  font-size: 7px;
-  letter-spacing: 1px;
-  font-weight: 800;
+.europeOutline {
+  fill: rgba(36, 216, 200, 0.045);
+  stroke: rgba(98, 243, 230, 0.34);
+  stroke-width: 1.1;
+  filter: drop-shadow(0 0 8px rgba(36, 216, 200, 0.15));
 }
 
-.networkCard strong {
-  display: block;
-  margin-top: 5px;
-  font-size: 14px;
+.networkLines {
+  fill: none;
+  stroke: rgba(98, 243, 230, 0.62);
+  stroke-width: 1.25;
 }
 
-.networkLine {
-  display: flex;
-  gap: 4px;
-  margin-top: 14px;
+.networkNodes {
+  fill: var(--aqua-bright);
 }
 
-.networkLine span {
-  height: 2px;
-  flex: 1;
-  background: var(--aqua);
-  border-radius: 10px;
-  box-shadow: 0 0 7px rgba(36, 216, 200, 0.2);
+.networkOrbit {
+  fill: none;
+  stroke: rgba(36, 216, 200, 0.17);
+  stroke-width: 1;
+  stroke-dasharray: 4 8;
+  transform-origin: center;
 }
 
-.phoneStats {
-  width: 100%;
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+.orbitA {
+  transform: rotate(-9deg);
 }
 
-.phoneStats > div {
-  padding: 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.018);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.orbitB {
+  transform: rotate(28deg);
 }
 
-.phoneStats strong {
-  display: block;
-  color: #dfe5e5;
-  font-size: 8px;
-  margin-top: 5px;
-}
+/* -------------------------------------------------------
+   NEW HERO — ESIM CARD
+------------------------------------------------------- */
 
-.simCard {
-  width: 178px;
-  height: 112px;
-  padding: 15px;
-  position: absolute;
+.heroCardWrap {
+  position: relative;
   z-index: 5;
-  right: 3%;
-  bottom: 17%;
-  border-radius: 14px;
-  transform: rotate(-8deg);
+  transform:
+    translate(24px, 3px)
+    perspective(1100px)
+    rotateY(-11deg)
+    rotateZ(7deg);
+  filter:
+    drop-shadow(0 38px 45px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 24px rgba(36, 216, 200, 0.14));
+}
+
+.heroEsimCard {
+  width: 270px;
+  height: 410px;
+  position: relative;
+  overflow: hidden;
+  padding: 28px 27px;
+  border-radius: 31px;
   background:
     radial-gradient(
-      circle at 20% 20%,
-      rgba(98, 243, 230, 0.12),
-      transparent 35%
+      circle at 82% 20%,
+      rgba(36, 216, 200, 0.13),
+      transparent 32%
     ),
-    linear-gradient(145deg, #111a1b, #060a0b);
-  border: 1px solid rgba(98, 243, 230, 0.2);
+    repeating-linear-gradient(
+      118deg,
+      rgba(255, 255, 255, 0.012) 0,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    linear-gradient(145deg, #10191a 0%, #061011 48%, #020708 100%);
+  border: 1px solid rgba(98, 243, 230, 0.58);
   box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(36, 216, 200, 0.06);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.035),
+    inset 0 0 35px rgba(36, 216, 200, 0.035),
+    0 0 0 2px rgba(36, 216, 200, 0.035),
+    0 0 32px rgba(36, 216, 200, 0.22),
+    0 0 85px rgba(36, 216, 200, 0.08);
 }
 
-.simTop,
-.simBottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.simTop span {
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.simTop small,
-.simBottom {
-  color: #6c787a;
-  font-size: 7px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-}
-
-.simLogo {
-  margin-top: 7px;
-}
-
-.simBottom {
-  margin-top: 3px;
-}
-
-.floatingTag {
+.heroEsimCard::after {
+  content: "";
   position: absolute;
-  z-index: 6;
-  border-radius: 7px;
-  padding: 9px 11px;
-  background: rgba(5, 12, 13, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  color: #8f9b9c;
-  font-size: 7px;
-  font-weight: 900;
-  letter-spacing: 0.9px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.28);
+  inset: 5px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  pointer-events: none;
 }
 
-.tagOne {
-  left: 3%;
+.esimCardShine {
+  position: absolute;
+  width: 240px;
+  height: 600px;
+  left: -170px;
+  top: -130px;
+  transform: rotate(22deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.045),
+    transparent
+  );
+}
+
+.esimCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.esimCardHeader .novaLogo {
+  width: 54px;
+  height: 54px;
+}
+
+.esimCardHeader > span {
+  margin-top: 9px;
+  color: var(--aqua);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.esimCardBrand {
+  position: relative;
+  z-index: 3;
+  margin-top: 2px;
+  color: #f2f7f7;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.esimChip {
+  width: 78px;
+  height: 67px;
+  position: relative;
+  z-index: 3;
+  margin-top: 55px;
+  border-radius: 14px;
+  border: 1px solid rgba(98, 243, 230, 0.82);
+  background:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      rgba(98, 243, 230, 0.5) 49%,
+      rgba(98, 243, 230, 0.5) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      transparent 48%,
+      rgba(98, 243, 230, 0.5) 49%,
+      rgba(98, 243, 230, 0.5) 51%,
+      transparent 52%
+    ),
+    rgba(36, 216, 200, 0.025);
+  box-shadow:
+    inset 0 0 18px rgba(36, 216, 200, 0.05),
+    0 0 15px rgba(36, 216, 200, 0.08);
+}
+
+.esimChip::before,
+.esimChip::after {
+  content: "";
+  position: absolute;
+  background: rgba(98, 243, 230, 0.45);
+}
+
+.esimChip::before {
+  width: 100%;
+  height: 1px;
+  left: 0;
   top: 32%;
 }
 
-.tagTwo {
-  right: 4%;
-  top: 29%;
+.esimChip::after {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 67%;
+}
+
+.esimChip span {
+  display: none;
+}
+
+.esimCardMap {
+  width: 108px;
+  height: 125px;
+  position: absolute;
+  right: 19px;
+  top: 125px;
+  opacity: 0.6;
+  background:
+    radial-gradient(circle at 30% 15%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 52% 23%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 72% 34%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 43% 45%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 61% 56%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 35% 67%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 55% 79%, var(--aqua) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 74% 72%, var(--aqua) 0 2px, transparent 2.5px);
+  filter: drop-shadow(0 0 7px rgba(36, 216, 200, 0.35));
+}
+
+.esimCardMap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(
+    36% 0%,
+    52% 7%,
+    64% 18%,
+    82% 24%,
+    88% 40%,
+    78% 51%,
+    84% 66%,
+    70% 74%,
+    65% 91%,
+    48% 100%,
+    39% 86%,
+    25% 82%,
+    19% 66%,
+    6% 55%,
+    15% 39%,
+    10% 24%,
+    25% 16%
+  );
+  background-image: radial-gradient(
+    circle,
+    rgba(36, 216, 200, 0.78) 0 1.4px,
+    transparent 1.7px
+  );
+  background-size: 8px 8px;
+}
+
+.mapDot {
+  display: none;
+}
+
+.esimCardBottom {
+  position: absolute;
+  left: 27px;
+  bottom: 31px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.esimCardBottom strong {
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 2.5px;
+}
+
+.esimCardBottom span {
+  color: var(--aqua);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* -------------------------------------------------------
+   NEW HERO — FEATURE BADGES
+------------------------------------------------------- */
+
+.heroFeatureBadge {
+  position: absolute;
+  z-index: 8;
+  min-width: 130px;
+  min-height: 62px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 12px;
+  color: #eef5f5;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10, 22, 23, 0.93),
+      rgba(4, 10, 11, 0.88)
+    );
+  border: 1px solid rgba(98, 243, 230, 0.26);
+  backdrop-filter: blur(13px);
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(36, 216, 200, 0.035);
+}
+
+.heroFeatureIcon {
+  width: 29px;
+  height: 29px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--aqua);
 }
 
-.tagDot {
-  width: 4px;
-  height: 4px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 5px;
-  background: var(--aqua);
-  box-shadow: 0 0 8px var(--aqua);
+.heroFeatureIcon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 7px rgba(36, 216, 200, 0.3));
+}
+
+.heroFeatureBadge strong {
+  font-size: 9px;
+  line-height: 1.35;
+  letter-spacing: 1.4px;
+}
+
+.badgeInternet {
+  left: 0;
+  top: 24%;
+  transform: rotate(2deg);
+}
+
+.badge5g {
+  right: 0;
+  top: 13%;
+  transform: rotate(3deg);
+}
+
+.badgeEurope {
+  right: -3%;
+  top: 49%;
+  transform: rotate(2deg);
+}
+
+.badgeActivation {
+  right: 3%;
+  bottom: 11%;
+  transform: rotate(3deg);
 }
 
 /* -------------------------------------------------------
@@ -729,7 +828,6 @@ button {
 
 .categoryIntro h2 span {
   color: var(--aqua);
-  text-shadow: 0 0 28px rgba(36, 216, 200, 0.055);
 }
 
 .reviewsHeader h2 span {
@@ -737,13 +835,13 @@ button {
 }
 
 /* -------------------------------------------------------
-   CATEGORY SECTION
+   CATEGORIES
 ------------------------------------------------------- */
 
 .categorySection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 84px 0 76px;
+  padding: 84px 0 68px;
 }
 
 .categoryIntro {
@@ -831,13 +929,6 @@ button {
 .categoryCard:active {
   transform: translateY(0) scale(0.985);
   border-color: rgba(98, 243, 230, 0.55);
-  background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(36, 216, 200, 0.09),
-      transparent 42%
-    ),
-    #081011;
   box-shadow:
     0 0 0 1px rgba(98, 243, 230, 0.1),
     0 0 30px rgba(36, 216, 200, 0.13);
@@ -866,10 +957,6 @@ button {
   color: var(--aqua);
   background: rgba(36, 216, 200, 0.05);
   border: 1px solid rgba(36, 216, 200, 0.1);
-  transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
 }
 
 .categoryIcon svg {
@@ -880,12 +967,6 @@ button {
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.categoryCard:hover .categoryIcon {
-  background: rgba(36, 216, 200, 0.09);
-  border-color: rgba(36, 216, 200, 0.2);
-  box-shadow: 0 0 18px rgba(36, 216, 200, 0.08);
 }
 
 .categoryContent {
@@ -923,19 +1004,12 @@ button {
   color: #4d595b;
   transition:
     color 180ms ease,
-    transform 180ms ease,
-    filter 180ms ease;
-}
-
-.categoryArrow .inlineIcon {
-  width: 18px;
-  height: 18px;
+    transform 180ms ease;
 }
 
 .categoryCard:hover .categoryArrow {
   color: var(--aqua);
   transform: translateX(3px);
-  filter: drop-shadow(0 0 6px rgba(36, 216, 200, 0.35));
 }
 
 /* -------------------------------------------------------
@@ -945,7 +1019,7 @@ button {
 .howSection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 68px 0 72px;
+  padding: 60px 0 64px;
   display: grid;
   grid-template-columns: 0.72fr 1.28fr;
   gap: 78px;
@@ -997,14 +1071,6 @@ button {
     transform 160ms ease;
 }
 
-.accordionItem:hover {
-  border-color: rgba(36, 216, 200, 0.18);
-}
-
-.accordionItem:active {
-  transform: scale(0.995);
-}
-
 .accordionItemOpen {
   border-color: rgba(36, 216, 200, 0.3);
   background:
@@ -1015,7 +1081,6 @@ button {
     ),
     #081011;
   box-shadow:
-    0 0 0 1px rgba(36, 216, 200, 0.025),
     0 15px 40px rgba(0, 0, 0, 0.16),
     0 0 28px rgba(36, 216, 200, 0.045);
 }
@@ -1072,21 +1137,12 @@ button {
   background: rgba(36, 216, 200, 0.05);
   border: 1px solid rgba(36, 216, 200, 0.1);
   font-size: 18px;
-  font-weight: 300;
-  transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
 }
 
 .accordionItemOpen .accordionToggle {
   background: rgba(36, 216, 200, 0.11);
   border-color: rgba(36, 216, 200, 0.32);
-  box-shadow:
-    0 0 0 1px rgba(36, 216, 200, 0.04),
-    0 0 18px rgba(36, 216, 200, 0.1);
-  transform: rotate(180deg);
+  box-shadow: 0 0 18px rgba(36, 216, 200, 0.1);
 }
 
 .accordionContent {
@@ -1111,9 +1167,6 @@ button {
   color: #8a9597;
   font-size: 11px;
   line-height: 1.65;
-  transition:
-    padding 260ms ease,
-    border-color 260ms ease;
 }
 
 .accordionContent.open .accordionContentInner {
@@ -1137,19 +1190,6 @@ button {
   color: var(--aqua);
   font-size: 10px;
   font-weight: 900;
-  transition:
-    color 160ms ease,
-    filter 160ms ease,
-    transform 160ms ease;
-}
-
-.accordionLink:hover {
-  color: var(--aqua-bright);
-  filter: drop-shadow(0 0 6px rgba(36, 216, 200, 0.22));
-}
-
-.accordionLink:active {
-  transform: scale(0.98);
 }
 
 /* -------------------------------------------------------
@@ -1159,7 +1199,7 @@ button {
 .reviewsSection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
-  padding: 72px 0 80px;
+  padding: 60px 0 68px;
   border-top: 1px solid rgba(255, 255, 255, 0.055);
 }
 
@@ -1197,19 +1237,6 @@ button {
     ),
     linear-gradient(145deg, #081011, #050a0b);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  transition:
-    border-color 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.reviewsEntry:hover {
-  border-color: rgba(36, 216, 200, 0.17);
-  box-shadow: 0 0 30px rgba(36, 216, 200, 0.035);
-}
-
-.reviewsEntryCopy {
-  position: relative;
-  z-index: 2;
 }
 
 .reviewsMiniLabel {
@@ -1237,8 +1264,6 @@ button {
   display: flex;
   gap: 8px;
   flex: 0 0 auto;
-  position: relative;
-  z-index: 2;
 }
 
 .reviewsActions .secondaryButton,
@@ -1295,14 +1320,6 @@ button {
 .footerGrid a {
   color: #8a9597;
   font-size: 11px;
-  transition:
-    color 160ms ease,
-    text-shadow 160ms ease;
-}
-
-.footerGrid a:hover {
-  color: var(--aqua);
-  text-shadow: 0 0 12px rgba(36, 216, 200, 0.12);
 }
 
 .footerBottom {
@@ -1318,14 +1335,6 @@ button {
 .footerBottom div {
   display: flex;
   gap: 18px;
-}
-
-.footerBottom a {
-  transition: color 160ms ease;
-}
-
-.footerBottom a:hover {
-  color: #849092;
 }
 
 /* -------------------------------------------------------
@@ -1350,16 +1359,16 @@ button {
   }
 
   .heroInner {
-    grid-template-columns: 1fr 0.8fr;
-    gap: 15px;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 5px;
   }
 
   .hero h1 {
-    font-size: clamp(52px, 7vw, 70px);
+    font-size: clamp(50px, 6.7vw, 68px);
   }
 
-  .heroVisual {
-    transform: scale(0.88);
+  .heroVisualNetwork {
+    transform: scale(0.84);
   }
 
   .categoryIntro,
@@ -1418,7 +1427,7 @@ button {
   .hero {
     min-height: auto;
     display: block;
-    padding: 108px 0 36px;
+    padding: 108px 0 24px;
   }
 
   .heroInner {
@@ -1473,86 +1482,86 @@ button {
     flex-wrap: wrap;
   }
 
-  .heroVisual {
+  /* MOBILE NETWORK VISUAL */
+
+  .heroVisualNetwork {
     width: 100%;
-    height: 305px;
-    margin-top: 20px;
+    height: 350px;
+    margin-top: 11px;
     transform: none;
   }
 
-  .visualGlow {
-    width: 245px;
-    height: 245px;
+  .networkHalo {
+    width: 310px;
+    height: 310px;
   }
 
-  .orbitOne {
-    width: 275px;
-    height: 275px;
+  .europeNetwork {
+    width: 390px;
+    height: 335px;
+    transform: translate(-50%, -49%);
+    opacity: 0.83;
   }
 
-  .orbitTwo {
-    width: 220px;
-    height: 220px;
+  .heroCardWrap {
+    transform:
+      translate(8px, 4px)
+      perspective(900px)
+      rotateY(-10deg)
+      rotateZ(7deg)
+      scale(0.63);
   }
 
-  .orbitThree {
-    width: 165px;
-    height: 165px;
+  .heroEsimCard {
+    width: 270px;
+    height: 410px;
   }
 
-  .phone {
-    transform: rotate(6deg) scale(0.54);
-  }
-
-  .simCard {
-    width: 120px;
-    height: 76px;
-    padding: 10px;
-    right: 5%;
-    bottom: 16%;
-    border-radius: 10px;
-  }
-
-  .simTop span {
-    font-size: 7px;
-  }
-
-  .simTop small,
-  .simBottom {
-    font-size: 5px;
-  }
-
-  .simLogo {
-    margin-top: 3px;
-  }
-
-  .simLogo .novaLogoSmall {
-    width: 24px;
-    height: 24px;
-  }
-
-  .tagOne {
-    left: 1%;
-    top: 34%;
-  }
-
-  .tagTwo {
-    right: 0;
-    top: 25%;
-  }
-
-  .floatingTag {
+  .heroFeatureBadge {
+    min-width: 82px;
+    min-height: 42px;
     padding: 7px 8px;
-    font-size: 5px;
+    gap: 6px;
+    border-radius: 8px;
+  }
+
+  .heroFeatureIcon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .heroFeatureBadge strong {
+    font-size: 5.7px;
+    letter-spacing: 0.75px;
+  }
+
+  .badgeInternet {
+    left: 0;
+    top: 23%;
+  }
+
+  .badge5g {
+    right: 0;
+    top: 12%;
+  }
+
+  .badgeEurope {
+    right: -2px;
+    top: 49%;
+  }
+
+  .badgeActivation {
+    right: 2%;
+    bottom: 9%;
   }
 
   /* COMMON */
 
   .categoryIntro h2,
   .reviewsHeader h2 {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 0.98;
-    letter-spacing: -2px;
+    letter-spacing: -1.9px;
   }
 
   .sectionLabel {
@@ -1564,7 +1573,7 @@ button {
 
   .categorySection {
     width: calc(100% - 28px);
-    padding: 54px 0 50px;
+    padding: 48px 0 44px;
   }
 
   .categoryIntro {
@@ -1640,16 +1649,11 @@ button {
     bottom: 12px;
   }
 
-  .categoryArrow .inlineIcon {
-    width: 14px;
-    height: 14px;
-  }
-
   /* HOW */
 
   .howSection {
     width: calc(100% - 28px);
-    padding: 48px 0 50px;
+    padding: 42px 0 44px;
     display: block;
   }
 
@@ -1662,7 +1666,7 @@ button {
   }
 
   .howIntro > p {
-    max-width: 330px;
+    max-width: 340px;
     margin-top: 12px;
     font-size: 9px;
     line-height: 1.55;
@@ -1724,16 +1728,11 @@ button {
     gap: 8px;
   }
 
-  .accordionLink .inlineIcon {
-    width: 13px;
-    height: 13px;
-  }
-
   /* REVIEWS */
 
   .reviewsSection {
     width: calc(100% - 28px);
-    padding: 50px 0 56px;
+    padding: 44px 0 50px;
   }
 
   .reviewsHeader {
@@ -1741,7 +1740,7 @@ button {
   }
 
   .reviewsHeader > p {
-    max-width: 330px;
+    max-width: 340px;
     margin-top: 14px;
     font-size: 9px;
     line-height: 1.55;
@@ -1783,11 +1782,6 @@ button {
     padding: 0 10px;
     font-size: 8px;
     gap: 7px;
-  }
-
-  .reviewPrimaryButton .inlineIcon {
-    width: 13px;
-    height: 13px;
   }
 
   /* FOOTER */
@@ -1843,13 +1837,26 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .heroTrust {
-    gap: 9px;
+  .heroVisualNetwork {
+    height: 330px;
+  }
+
+  .europeNetwork {
+    width: 360px;
+  }
+
+  .heroCardWrap {
+    transform:
+      translate(5px, 3px)
+      perspective(900px)
+      rotateY(-10deg)
+      rotateZ(7deg)
+      scale(0.58);
   }
 
   .categoryIntro h2,
   .reviewsHeader h2 {
-    font-size: 33px;
+    font-size: 32px;
   }
 
   .categoryCard {
@@ -1862,7 +1869,7 @@ button {
 }
 
 /* -------------------------------------------------------
-   TOUCH DEVICES
+   TOUCH
 ------------------------------------------------------- */
 
 @media (hover: none) {
@@ -1883,13 +1890,5 @@ button {
     box-shadow:
       0 0 0 1px rgba(98, 243, 230, 0.08),
       0 0 28px rgba(36, 216, 200, 0.13);
-  }
-
-  .accordionItem:hover {
-    border-color: rgba(255, 255, 255, 0.065);
-  }
-
-  .accordionItemOpen {
-    border-color: rgba(36, 216, 200, 0.3);
   }
 }
