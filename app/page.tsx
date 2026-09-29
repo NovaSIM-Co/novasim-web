@@ -210,169 +210,6 @@ function CategoryIcon({ type }: { type: string }) {
   );
 }
 
-function WifiIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3.5 9.5a13 13 0 0 1 17 0" />
-      <path d="M6.5 12.5a8.8 8.8 0 0 1 11 0" />
-      <path d="M9.5 15.5a4.5 4.5 0 0 1 5 0" />
-      <circle cx="12" cy="19" r="1" />
-    </svg>
-  );
-}
-
-function SignalIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 18v-4" />
-      <path d="M10 18v-7" />
-      <path d="M15 18V8" />
-      <path d="M20 18V4" />
-    </svg>
-  );
-}
-
-function PinIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" />
-      <circle cx="12" cy="10" r="2" />
-    </svg>
-  );
-}
-
-function BoltIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="m13.5 2-8 12h6L10.5 22l8-12h-6l1-8Z" />
-    </svg>
-  );
-}
-
-function HeroNetwork() {
-  return (
-    <div className="heroNetwork" aria-hidden="true">
-      <svg viewBox="0 0 720 560">
-        <defs>
-          <radialGradient id="europeFill" cx="50%" cy="45%" r="60%">
-            <stop offset="0%" stopColor="#24d8c8" stopOpacity="0.15" />
-            <stop offset="65%" stopColor="#24d8c8" stopOpacity="0.04" />
-            <stop offset="100%" stopColor="#24d8c8" stopOpacity="0" />
-          </radialGradient>
-
-          <filter id="softGlow">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        <ellipse
-          cx="360"
-          cy="285"
-          rx="300"
-          ry="225"
-          fill="url(#europeFill)"
-        />
-
-        <g className="mapShape">
-          <path d="M119 238 138 208 168 199 179 174 208 171 226 150 252 157 270 140 300 150 317 171 347 168 367 187 397 188 411 210 443 219 453 244 484 257 477 281 495 302 480 325 453 321 439 345 413 340 393 364 369 353 351 382 327 365 307 388 284 370 259 378 244 355 218 358 204 334 176 331 165 307 137 302 133 277 109 265 121 244Z" />
-          <path d="M184 165 169 137 183 111 202 119 209 146Z" />
-          <path d="M245 125 250 83 271 53 287 73 282 107 263 135Z" />
-          <path d="M288 128 301 86 322 62 338 83 331 119 310 142Z" />
-          <path d="M362 375 376 402 368 442 351 421 348 392Z" />
-          <path d="M227 371 217 401 201 417 194 395 204 372Z" />
-          <path d="M455 337 480 347 490 367 469 375 451 359Z" />
-        </g>
-
-        <g className="mapConnections" filter="url(#softGlow)">
-          <path d="M140 259 Q245 116 343 241" />
-          <path d="M173 301 Q273 190 423 257" />
-          <path d="M219 341 Q324 238 467 304" />
-          <path d="M190 198 Q282 270 368 376" />
-          <path d="M270 120 Q337 171 423 257" />
-          <path d="M140 259 Q272 323 362 375" />
-          <path d="M343 241 Q408 171 484 257" />
-          <path d="M219 341 Q250 236 270 120" />
-        </g>
-
-        <g className="mapNodes" filter="url(#softGlow)">
-          <circle cx="140" cy="259" r="4.5" />
-          <circle cx="173" cy="301" r="4" />
-          <circle cx="190" cy="198" r="4" />
-          <circle cx="219" cy="341" r="4" />
-          <circle cx="270" cy="120" r="4.5" />
-          <circle cx="343" cy="241" r="5.5" />
-          <circle cx="368" cy="376" r="4" />
-          <circle cx="423" cy="257" r="4.5" />
-          <circle cx="467" cy="304" r="4" />
-          <circle cx="484" cy="257" r="4" />
-        </g>
-
-        <ellipse className="mapOrbit orbitOne" cx="345" cy="275" rx="300" ry="185" />
-        <ellipse className="mapOrbit orbitTwo" cx="345" cy="275" rx="225" ry="250" />
-      </svg>
-    </div>
-  );
-}
-
-function HeroCard() {
-  return (
-    <div className="premiumEsimCard" aria-hidden="true">
-      <div className="cardLight" />
-
-      <div className="cardTop">
-        <div className="cardBrand">
-          <NovaLogo small />
-          <strong>NovaSIM</strong>
-        </div>
-        <span>eSIM</span>
-      </div>
-
-      <div className="cardChip">
-        <i />
-        <i />
-        <i />
-        <i />
-      </div>
-
-      <div className="cardNetworkMini">
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-
-      <div className="cardBottom">
-        <small>PREMIUM CONNECTIVITY</small>
-        <strong>EUROPE</strong>
-        <span>4G / 5G</span>
-      </div>
-    </div>
-  );
-}
-
-function HeroBadge({
-  className,
-  icon,
-  children,
-}: {
-  className: string;
-  icon: React.ReactNode;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className={`heroBadge ${className}`}>
-      <span className="heroBadgeIcon">{icon}</span>
-      <span className="heroBadgeText">{children}</span>
-    </div>
-  );
-}
-
 export default function Home() {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
@@ -382,6 +219,7 @@ export default function Home() {
 
   return (
     <main>
+      {/* HEADER */}
       <header className="navbar">
         <a href="/" className="brand" aria-label="NovaSIM Home">
           <NovaLogo small />
@@ -407,12 +245,13 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero">
+      {/* HERO */}
+      <section className="hero heroClean">
         <div className="heroGrid" />
         <div className="heroGlow heroGlowOne" />
         <div className="heroGlow heroGlowTwo" />
 
-        <div className="heroInner">
+        <div className="heroInner heroInnerClean">
           <div className="heroCopy">
             <div className="eyebrow">
               <span className="statusDot" />
@@ -458,33 +297,49 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="heroVisual">
-            <div className="visualAura" />
-            <HeroNetwork />
+          <div className="heroCleanVisual" aria-hidden="true">
+            <div className="cleanGlow" />
 
-            <div className="heroCardPosition">
-              <HeroCard />
-            </div>
+            <svg viewBox="0 0 620 520">
+              <g className="cleanLines">
+                <path d="M55 356 Q180 175 325 260" />
+                <path d="M107 413 Q245 205 491 297" />
+                <path d="M162 174 Q284 300 445 391" />
+                <path d="M241 96 Q340 183 524 211" />
+                <path d="M55 356 Q276 389 445 391" />
+              </g>
 
-            <HeroBadge className="badgeFast" icon={<WifiIcon />}>
-              FAST INTERNET
-            </HeroBadge>
+              <g className="cleanNodes">
+                <circle cx="55" cy="356" r="4" />
+                <circle cx="107" cy="413" r="4" />
+                <circle cx="162" cy="174" r="4" />
+                <circle cx="241" cy="96" r="4" />
+                <circle cx="325" cy="260" r="5" />
+                <circle cx="445" cy="391" r="4" />
+                <circle cx="491" cy="297" r="4" />
+                <circle cx="524" cy="211" r="4" />
+              </g>
 
-            <HeroBadge className="badgeReady" icon={<SignalIcon />}>
-              5G READY
-            </HeroBadge>
-
-            <HeroBadge className="badgeCoverage" icon={<PinIcon />}>
-              EUROPE COVERAGE
-            </HeroBadge>
-
-            <HeroBadge className="badgeInstant" icon={<BoltIcon />}>
-              INSTANT ACTIVATION
-            </HeroBadge>
+              <ellipse
+                className="cleanOrbit"
+                cx="310"
+                cy="270"
+                rx="245"
+                ry="155"
+              />
+              <ellipse
+                className="cleanOrbit cleanOrbitTwo"
+                cx="310"
+                cy="270"
+                rx="185"
+                ry="230"
+              />
+            </svg>
           </div>
         </div>
       </section>
 
+      {/* CATEGORIES */}
       <section className="categorySection">
         <div className="categoryIntro">
           <div>
@@ -507,6 +362,7 @@ export default function Home() {
             <a href={category.href} className="categoryCard" key={category.title}>
               <div className="categoryTop">
                 <span className="categoryNumber">{category.number}</span>
+
                 <span className="categoryIcon">
                   <CategoryIcon type={category.icon} />
                 </span>
@@ -526,6 +382,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW NOVASIM WORKS */}
       <section className="howSection">
         <div className="howIntro">
           <span className="sectionLabel">GET CONNECTED</span>
@@ -578,6 +435,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* REVIEWS */}
       <section className="reviewsSection">
         <div className="reviewsHeader">
           <div>
@@ -616,6 +474,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="footerTop">
           <div>
