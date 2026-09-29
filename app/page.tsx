@@ -249,18 +249,19 @@ function BoltIcon() {
   );
 }
 
-function EuropeNetwork() {
+function HeroNetwork() {
   return (
-    <div className="europeNetwork" aria-hidden="true">
-      <svg viewBox="0 0 620 520">
+    <div className="heroNetwork" aria-hidden="true">
+      <svg viewBox="0 0 720 560">
         <defs>
-          <radialGradient id="mapGlow">
-            <stop offset="0%" stopColor="#24d8c8" stopOpacity="0.18" />
+          <radialGradient id="europeFill" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stopColor="#24d8c8" stopOpacity="0.15" />
+            <stop offset="65%" stopColor="#24d8c8" stopOpacity="0.04" />
             <stop offset="100%" stopColor="#24d8c8" stopOpacity="0" />
           </radialGradient>
 
-          <filter id="networkGlow">
-            <feGaussianBlur stdDeviation="3.5" result="blur" />
+          <filter id="softGlow">
+            <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -269,82 +270,85 @@ function EuropeNetwork() {
         </defs>
 
         <ellipse
-          cx="310"
-          cy="275"
-          rx="260"
-          ry="205"
-          fill="url(#mapGlow)"
+          cx="360"
+          cy="285"
+          rx="300"
+          ry="225"
+          fill="url(#europeFill)"
         />
 
-        <g className="europeOutline">
-          <path d="M117 208 142 182 168 181 184 160 211 167 226 151 247 157 266 144 291 155 304 175 330 174 345 191 369 190 383 211 411 218 420 241 447 254 439 278 456 298 442 315 418 311 404 333 381 326 362 347 342 338 328 360 306 348 292 366 273 350 253 356 240 337 218 340 207 319 181 316 170 294 144 290 139 267 119 256 128 235 111 225Z" />
-          <path d="M179 144 169 123 181 104 198 113 202 133Z" />
-          <path d="M233 114 239 78 256 54 271 70 268 99 252 121Z" />
-          <path d="M270 117 282 81 301 61 315 79 309 111 292 132Z" />
-          <path d="M335 354 347 379 341 412 327 395 324 369Z" />
-          <path d="M226 354 216 382 202 396 196 377 204 356Z" />
-          <path d="M421 320 442 329 451 347 433 354 418 341Z" />
+        <g className="mapShape">
+          <path d="M119 238 138 208 168 199 179 174 208 171 226 150 252 157 270 140 300 150 317 171 347 168 367 187 397 188 411 210 443 219 453 244 484 257 477 281 495 302 480 325 453 321 439 345 413 340 393 364 369 353 351 382 327 365 307 388 284 370 259 378 244 355 218 358 204 334 176 331 165 307 137 302 133 277 109 265 121 244Z" />
+          <path d="M184 165 169 137 183 111 202 119 209 146Z" />
+          <path d="M245 125 250 83 271 53 287 73 282 107 263 135Z" />
+          <path d="M288 128 301 86 322 62 338 83 331 119 310 142Z" />
+          <path d="M362 375 376 402 368 442 351 421 348 392Z" />
+          <path d="M227 371 217 401 201 417 194 395 204 372Z" />
+          <path d="M455 337 480 347 490 367 469 375 451 359Z" />
         </g>
 
-        <g className="networkLines" filter="url(#networkGlow)">
-          <path d="M125 248 Q220 105 316 230" />
-          <path d="M151 284 Q252 177 390 244" />
-          <path d="M205 320 Q301 220 430 289" />
-          <path d="M175 188 Q260 256 342 338" />
-          <path d="M256 111 Q312 160 390 244" />
-          <path d="M125 248 Q248 306 335 354" />
-          <path d="M316 230 Q374 165 448 255" />
+        <g className="mapConnections" filter="url(#softGlow)">
+          <path d="M140 259 Q245 116 343 241" />
+          <path d="M173 301 Q273 190 423 257" />
+          <path d="M219 341 Q324 238 467 304" />
+          <path d="M190 198 Q282 270 368 376" />
+          <path d="M270 120 Q337 171 423 257" />
+          <path d="M140 259 Q272 323 362 375" />
+          <path d="M343 241 Q408 171 484 257" />
+          <path d="M219 341 Q250 236 270 120" />
         </g>
 
-        <g className="networkNodes" filter="url(#networkGlow)">
-          <circle cx="125" cy="248" r="4" />
-          <circle cx="151" cy="284" r="4" />
-          <circle cx="175" cy="188" r="4" />
-          <circle cx="205" cy="320" r="4" />
-          <circle cx="256" cy="111" r="4" />
-          <circle cx="316" cy="230" r="5" />
-          <circle cx="342" cy="338" r="4" />
-          <circle cx="390" cy="244" r="4" />
-          <circle cx="430" cy="289" r="4" />
-          <circle cx="448" cy="255" r="4" />
+        <g className="mapNodes" filter="url(#softGlow)">
+          <circle cx="140" cy="259" r="4.5" />
+          <circle cx="173" cy="301" r="4" />
+          <circle cx="190" cy="198" r="4" />
+          <circle cx="219" cy="341" r="4" />
+          <circle cx="270" cy="120" r="4.5" />
+          <circle cx="343" cy="241" r="5.5" />
+          <circle cx="368" cy="376" r="4" />
+          <circle cx="423" cy="257" r="4.5" />
+          <circle cx="467" cy="304" r="4" />
+          <circle cx="484" cy="257" r="4" />
         </g>
 
-        <ellipse className="networkOrbit orbitA" cx="310" cy="270" rx="255" ry="170" />
-        <ellipse className="networkOrbit orbitB" cx="310" cy="270" rx="205" ry="225" />
+        <ellipse className="mapOrbit orbitOne" cx="345" cy="275" rx="300" ry="185" />
+        <ellipse className="mapOrbit orbitTwo" cx="345" cy="275" rx="225" ry="250" />
       </svg>
     </div>
   );
 }
 
-function HeroEsimCard() {
+function HeroCard() {
   return (
-    <div className="heroEsimCard" aria-hidden="true">
-      <div className="esimCardShine" />
+    <div className="premiumEsimCard" aria-hidden="true">
+      <div className="cardLight" />
 
-      <div className="esimCardHeader">
-        <NovaLogo />
+      <div className="cardTop">
+        <div className="cardBrand">
+          <NovaLogo small />
+          <strong>NovaSIM</strong>
+        </div>
         <span>eSIM</span>
       </div>
 
-      <div className="esimCardBrand">NovaSIM</div>
+      <div className="cardChip">
+        <i />
+        <i />
+        <i />
+        <i />
+      </div>
 
-      <div className="esimChip">
+      <div className="cardNetworkMini">
+        <span />
+        <span />
         <span />
         <span />
         <span />
         <span />
       </div>
 
-      <div className="esimCardMap">
-        <span className="mapDot dot1" />
-        <span className="mapDot dot2" />
-        <span className="mapDot dot3" />
-        <span className="mapDot dot4" />
-        <span className="mapDot dot5" />
-        <span className="mapDot dot6" />
-      </div>
-
-      <div className="esimCardBottom">
+      <div className="cardBottom">
+        <small>PREMIUM CONNECTIVITY</small>
         <strong>EUROPE</strong>
         <span>4G / 5G</span>
       </div>
@@ -362,9 +366,9 @@ function HeroBadge({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`heroFeatureBadge ${className}`}>
-      <span className="heroFeatureIcon">{icon}</span>
-      <strong>{children}</strong>
+    <div className={`heroBadge ${className}`}>
+      <span className="heroBadgeIcon">{icon}</span>
+      <span className="heroBadgeText">{children}</span>
     </div>
   );
 }
@@ -378,7 +382,6 @@ export default function Home() {
 
   return (
     <main>
-      {/* HEADER */}
       <header className="navbar">
         <a href="/" className="brand" aria-label="NovaSIM Home">
           <NovaLogo small />
@@ -404,7 +407,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="hero">
         <div className="heroGrid" />
         <div className="heroGlow heroGlowOne" />
@@ -456,43 +458,33 @@ export default function Home() {
             </div>
           </div>
 
-          {/* NEW HERO VISUAL */}
-          <div className="heroVisual heroVisualNetwork">
-            <div className="networkHalo" />
-            <EuropeNetwork />
+          <div className="heroVisual">
+            <div className="visualAura" />
+            <HeroNetwork />
 
-            <div className="heroCardWrap">
-              <HeroEsimCard />
+            <div className="heroCardPosition">
+              <HeroCard />
             </div>
 
-            <HeroBadge className="badgeInternet" icon={<WifiIcon />}>
-              FAST
-              <br />
-              INTERNET
+            <HeroBadge className="badgeFast" icon={<WifiIcon />}>
+              FAST INTERNET
             </HeroBadge>
 
-            <HeroBadge className="badge5g" icon={<SignalIcon />}>
-              5G
-              <br />
-              READY
+            <HeroBadge className="badgeReady" icon={<SignalIcon />}>
+              5G READY
             </HeroBadge>
 
-            <HeroBadge className="badgeEurope" icon={<PinIcon />}>
-              ACROSS
-              <br />
-              EUROPE
+            <HeroBadge className="badgeCoverage" icon={<PinIcon />}>
+              EUROPE COVERAGE
             </HeroBadge>
 
-            <HeroBadge className="badgeActivation" icon={<BoltIcon />}>
-              INSTANT
-              <br />
-              ACTIVATION
+            <HeroBadge className="badgeInstant" icon={<BoltIcon />}>
+              INSTANT ACTIVATION
             </HeroBadge>
           </div>
         </div>
       </section>
 
-      {/* CATEGORIES */}
       <section className="categorySection">
         <div className="categoryIntro">
           <div>
@@ -515,7 +507,6 @@ export default function Home() {
             <a href={category.href} className="categoryCard" key={category.title}>
               <div className="categoryTop">
                 <span className="categoryNumber">{category.number}</span>
-
                 <span className="categoryIcon">
                   <CategoryIcon type={category.icon} />
                 </span>
@@ -535,7 +526,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW NOVASIM WORKS */}
       <section className="howSection">
         <div className="howIntro">
           <span className="sectionLabel">GET CONNECTED</span>
@@ -588,7 +578,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REVIEWS */}
       <section className="reviewsSection">
         <div className="reviewsHeader">
           <div>
@@ -627,7 +616,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div className="footerTop">
           <div>
