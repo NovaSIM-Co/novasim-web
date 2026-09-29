@@ -19,7 +19,7 @@ const categories = [
     number: "03",
     label: "PROFESSIONAL",
     title: "Business & Fleets",
-    description: "Connectivity solutions built for companies and fleets.",
+    description: "Connectivity solutions for companies and fleets.",
     href: "/business",
     icon: "▦",
   },
@@ -27,9 +27,9 @@ const categories = [
     number: "04",
     label: "ON THE ROAD",
     title: "Truck Drivers & Caravans",
-    description: "High-data connectivity designed for life on the road.",
+    description: "High-data connectivity for life on the road.",
     href: "/truck-drivers",
-    icon: "→",
+    icon: "↗",
   },
   {
     number: "05",
@@ -41,13 +41,35 @@ const categories = [
   },
 ];
 
+function NovaLogo({ small = false }: { small?: boolean }) {
+  return (
+    <span className={small ? "novaLogo novaLogoSmall" : "novaLogo"}>
+      <svg
+        viewBox="0 0 64 64"
+        role="img"
+        aria-label="NovaSIM"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="novaLogoLeft"
+          d="M13 49V15h9.5l19 25V15H51v34h-9.5l-19-25v25H13Z"
+        />
+        <path
+          className="novaLogoCut"
+          d="M22.5 15 51 49h-9.5L13 15h9.5Z"
+        />
+      </svg>
+    </span>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       {/* HEADER */}
       <header className="navbar">
         <a href="/" className="brand" aria-label="NovaSIM Home">
-          <span className="brandMark">N</span>
+          <NovaLogo small />
           <span className="brandName">NovaSIM</span>
         </a>
 
@@ -71,7 +93,7 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="hero newHero">
+      <section className="hero">
         <div className="heroGrid" />
         <div className="heroGlow heroGlowOne" />
         <div className="heroGlow heroGlowTwo" />
@@ -99,7 +121,7 @@ export default function Home() {
             <div className="heroButtons">
               <a href="/esim-country" className="primaryButton">
                 Explore eSIMs
-                <span aria-hidden="true">→</span>
+                <span>→</span>
               </a>
 
               <a href="/coverage" className="secondaryButton">
@@ -144,7 +166,10 @@ export default function Home() {
                 </div>
 
                 <div className="phoneContent">
-                  <div className="phoneLogo">N</div>
+                  <div className="phoneLogo">
+                    <NovaLogo />
+                  </div>
+
                   <p className="phoneLabel">NOVASIM</p>
 
                   <div className="connectionState">
@@ -185,7 +210,9 @@ export default function Home() {
                 <small>eSIM</small>
               </div>
 
-              <div className="simLogo">N</div>
+              <div className="simLogo">
+                <NovaLogo small />
+              </div>
 
               <div className="simBottom">
                 <span>EUROPE</span>
@@ -196,22 +223,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CATEGORY NAVIGATION */}
+      {/* SOLUTION NAVIGATION */}
       <section className="categorySection">
         <div className="categoryIntro">
           <div>
             <span className="sectionLabel">CHOOSE YOUR CONNECTION</span>
 
             <h2>
-              What do you
+              One NovaSIM.
               <br />
-              <span>need?</span>
+              <span>Your way.</span>
             </h2>
           </div>
 
           <p>
-            Choose how you want to stay connected. Each NovaSIM solution has
-            its own dedicated plans and options.
+            From short trips to long-term connectivity, professional fleets
+            and life on the road — choose what fits you.
           </p>
         </div>
 
@@ -222,132 +249,119 @@ export default function Home() {
               className="categoryCard"
               key={category.title}
             >
-              <div className="categoryCardTop">
-                <span>{category.number}</span>
+              <div className="categoryTop">
+                <span className="categoryNumber">{category.number}</span>
                 <span className="categoryIcon">{category.icon}</span>
               </div>
 
-              <div className="categoryCardContent">
+              <div className="categoryContent">
                 <span className="categoryLabel">{category.label}</span>
-
                 <h3>{category.title}</h3>
-
                 <p>{category.description}</p>
               </div>
 
-              <div className="categoryOpen">
-                Explore
-                <span>→</span>
-              </div>
+              <span className="categoryArrow">→</span>
             </a>
           ))}
         </div>
       </section>
 
-      {/* SIMPLE PROCESS */}
+      {/* HOW IT WORKS */}
       <section className="homeProcess">
         <div className="processIntro">
-          <span className="sectionLabel">NOVASIM eSIM</span>
+          <span className="sectionLabel">HOW IT WORKS</span>
 
           <h2>
-            Connected.
+            Three steps.
             <br />
-            <span>Without the hassle.</span>
+            <span>You're connected.</span>
           </h2>
 
           <p>
-            Choose your plan, install your eSIM and connect on your compatible
-            device.
+            A simple digital setup designed to get you connected quickly.
           </p>
         </div>
 
         <div className="processSteps">
           <div className="processStep">
             <span className="processNumber">01</span>
+
             <div>
               <strong>Choose</strong>
-              <p>Find the NovaSIM option that fits your needs.</p>
+              <p>Select the NovaSIM option that fits your needs.</p>
             </div>
+
+            <span className="stepIcon">↗</span>
           </div>
 
           <div className="processStep">
             <span className="processNumber">02</span>
+
             <div>
               <strong>Install</strong>
               <p>Receive your eSIM and install it on your device.</p>
             </div>
+
+            <span className="stepIcon">＋</span>
           </div>
 
           <div className="processStep">
             <span className="processNumber">03</span>
+
             <div>
               <strong>Connect</strong>
               <p>Activate your eSIM and get online.</p>
             </div>
+
+            <span className="stepIcon">✓</span>
           </div>
-        </div>
-      </section>
-
-      {/* BUSINESS TEASER */}
-      <section className="homeBusiness">
-        <div className="homeBusinessGlow" />
-
-        <div className="homeBusinessInner">
-          <div>
-            <span className="sectionLabel">NOVASIM BUSINESS</span>
-
-            <h2>
-              Built for more
-              <br />
-              than one connection.
-            </h2>
-
-            <p>
-              Connectivity solutions for companies, teams and professional
-              fleets across Europe.
-            </p>
-          </div>
-
-          <a href="/business" className="primaryButton">
-            Business & Fleets
-            <span>→</span>
-          </a>
         </div>
       </section>
 
       {/* FINAL CTA */}
       <section className="compactCta">
-        <div className="ctaLogo">N</div>
+        <div className="ctaGlow" />
 
-        <div>
-          <span>NOVASIM</span>
+        <div className="ctaInner">
+          <NovaLogo />
 
-          <h2>
-            Ready to
-            <br />
-            <strong>get connected?</strong>
-          </h2>
+          <div className="ctaCopy">
+            <span className="sectionLabel">NOVASIM</span>
+
+            <h2>
+              Europe is waiting.
+              <br />
+              <strong>Stay connected.</strong>
+            </h2>
+
+            <p>
+              Find the NovaSIM connectivity option built for the way you
+              travel, work or live on the road.
+            </p>
+          </div>
+
+          <a href="/esim-country" className="primaryButton ctaButton">
+            Explore NovaSIM
+            <span>→</span>
+          </a>
         </div>
-
-        <a href="/esim-country" className="primaryButton">
-          Explore eSIMs
-          <span>→</span>
-        </a>
       </section>
 
       {/* FOOTER */}
-      <footer className="footer" id="support">
+      <footer className="footer">
         <div className="footerTop">
-          <a href="/" className="brand">
-            <span className="brandMark">N</span>
-            <span className="brandName">NovaSIM</span>
-          </a>
+          <div>
+            <a href="/" className="brand">
+              <NovaLogo small />
+              <span className="brandName">NovaSIM</span>
+            </a>
 
-          <p>
-            Premium mobile connectivity
-            <br />
-            designed for Europe.
-          </p>
+            <p>
+              Premium mobile connectivity
+              <br />
+              designed for Europe.
+            </p>
+          </div>
         </div>
 
         <div className="footerGrid">
