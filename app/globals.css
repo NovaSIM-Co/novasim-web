@@ -3,17 +3,16 @@
   --bg-deep: #020506;
   --surface: #081011;
   --surface-light: #0b1415;
-
   --text: #f5f7f7;
   --muted: #829092;
   --muted-dark: #526063;
-
   --line: rgba(255, 255, 255, 0.085);
 
-  --aqua: #24d8c8;
-  --aqua-bright: #62f3e6;
-  --aqua-dark: #109e93;
-  --aqua-soft: rgba(36, 216, 200, 0.1);
+  /* NovaSIM Premium Turquoise */
+  --aqua: #36c9be;
+  --aqua-bright: #62d8cf;
+  --aqua-dark: #249a92;
+  --aqua-soft: rgba(54, 201, 190, 0.1);
 
   --max-width: 1240px;
 }
@@ -34,7 +33,7 @@ body {
   background:
     radial-gradient(
       circle at 50% -10%,
-      rgba(36, 216, 200, 0.05),
+      rgba(54, 201, 190, 0.045),
       transparent 32%
     ),
     var(--bg);
@@ -54,13 +53,9 @@ button {
 }
 
 ::selection {
-  background: rgba(36, 216, 200, 0.25);
+  background: rgba(54, 201, 190, 0.24);
   color: #fff;
 }
-
-/* -------------------------------------------------------
-   COMMON ICONS
-------------------------------------------------------- */
 
 .inlineIcon {
   width: 16px;
@@ -73,9 +68,9 @@ button {
   stroke-linejoin: round;
 }
 
-/* -------------------------------------------------------
-   LOGO
-------------------------------------------------------- */
+/* =========================
+   NOVASIM LOGO
+========================= */
 
 .novaLogo {
   width: 62px;
@@ -84,7 +79,7 @@ button {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  filter: drop-shadow(0 0 18px rgba(36, 216, 200, 0.18));
+  filter: drop-shadow(0 0 18px rgba(54, 201, 190, 0.14));
 }
 
 .novaLogoSmall {
@@ -106,9 +101,9 @@ button {
   fill: #07211f;
 }
 
-/* -------------------------------------------------------
-   HEADER
-------------------------------------------------------- */
+/* =========================
+   OLD / SHARED NAVIGATION
+========================= */
 
 .navbar {
   width: min(calc(100% - 64px), var(--max-width));
@@ -155,7 +150,7 @@ button {
 
 .desktopNav a:hover {
   color: #fff;
-  text-shadow: 0 0 14px rgba(36, 216, 200, 0.22);
+  text-shadow: 0 0 14px rgba(54, 201, 190, 0.18);
 }
 
 .navActions {
@@ -185,7 +180,7 @@ button {
   color: #02100f;
   font-size: 12px;
   font-weight: 900;
-  box-shadow: 0 8px 30px rgba(36, 216, 200, 0.12);
+  box-shadow: 0 8px 30px rgba(54, 201, 190, 0.1);
   transition:
     transform 160ms ease,
     background 160ms ease,
@@ -195,20 +190,20 @@ button {
 .navCta:hover {
   background: var(--aqua-bright);
   box-shadow:
-    0 8px 34px rgba(36, 216, 200, 0.2),
-    0 0 22px rgba(36, 216, 200, 0.08);
+    0 8px 34px rgba(54, 201, 190, 0.16),
+    0 0 22px rgba(54, 201, 190, 0.06);
 }
 
 .navCta:active {
   transform: scale(0.97);
   box-shadow:
-    0 0 0 1px rgba(98, 243, 230, 0.42),
-    0 0 25px rgba(36, 216, 200, 0.2);
+    0 0 0 1px rgba(98, 216, 207, 0.38),
+    0 0 25px rgba(54, 201, 190, 0.16);
 }
 
-/* -------------------------------------------------------
-   HERO — CLEAN
-------------------------------------------------------- */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 760px;
@@ -217,16 +212,15 @@ button {
   align-items: center;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.045);
-
   background:
     radial-gradient(
       ellipse at 74% 45%,
-      rgba(36, 216, 200, 0.095),
+      rgba(54, 201, 190, 0.075),
       transparent 30%
     ),
     radial-gradient(
       ellipse at 92% 62%,
-      rgba(36, 216, 200, 0.035),
+      rgba(54, 201, 190, 0.025),
       transparent 25%
     ),
     linear-gradient(180deg, #05090a 0%, #030708 100%);
@@ -240,10 +234,10 @@ button {
   right: -120px;
   top: 110px;
   border-radius: 50%;
-  border: 1px solid rgba(36, 216, 200, 0.045);
+  border: 1px solid rgba(54, 201, 190, 0.035);
   box-shadow:
-    inset 0 0 100px rgba(36, 216, 200, 0.018),
-    0 0 100px rgba(36, 216, 200, 0.018);
+    inset 0 0 100px rgba(54, 201, 190, 0.014),
+    0 0 100px rgba(54, 201, 190, 0.014);
   pointer-events: none;
 }
 
@@ -258,12 +252,12 @@ button {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(36, 216, 200, 0.12),
+    rgba(54, 201, 190, 0.09),
     transparent
   );
   box-shadow:
-    40px 70px 0 rgba(36, 216, 200, 0.035),
-    -20px -90px 0 rgba(36, 216, 200, 0.025);
+    40px 70px 0 rgba(54, 201, 190, 0.025),
+    -20px -90px 0 rgba(54, 201, 190, 0.018);
   pointer-events: none;
 }
 
@@ -271,20 +265,14 @@ button {
   position: absolute;
   inset: 0;
   opacity: 0.16;
-
   background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.022) 1px,
-      transparent 1px
-    ),
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.022) 1px,
       transparent 1px
     );
-
   background-size: 52px 52px;
-
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
@@ -306,7 +294,7 @@ button {
   height: 420px;
   right: 9%;
   top: 22%;
-  background: rgba(36, 216, 200, 0.07);
+  background: rgba(54, 201, 190, 0.055);
 }
 
 .heroGlowTwo {
@@ -314,7 +302,7 @@ button {
   height: 260px;
   left: 5%;
   bottom: 8%;
-  background: rgba(36, 216, 200, 0.025);
+  background: rgba(54, 201, 190, 0.02);
 }
 
 .heroInner {
@@ -347,7 +335,7 @@ button {
   height: 6px;
   border-radius: 50%;
   background: var(--aqua);
-  box-shadow: 0 0 14px rgba(36, 216, 200, 0.65);
+  box-shadow: 0 0 12px rgba(54, 201, 190, 0.48);
 }
 
 .hero h1 {
@@ -361,8 +349,8 @@ button {
 .hero h1 span {
   color: var(--aqua);
   text-shadow:
-    0 0 24px rgba(36, 216, 200, 0.08),
-    0 0 45px rgba(36, 216, 200, 0.025);
+    0 0 24px rgba(54, 201, 190, 0.06),
+    0 0 45px rgba(54, 201, 190, 0.018);
 }
 
 .heroDescription {
@@ -392,7 +380,6 @@ button {
   gap: 22px;
   font-size: 13px;
   font-weight: 900;
-
   transition:
     transform 160ms ease,
     border-color 160ms ease,
@@ -406,7 +393,7 @@ button {
   background: var(--aqua);
   color: #02100f;
   border: 1px solid var(--aqua);
-  box-shadow: 0 10px 32px rgba(36, 216, 200, 0.1);
+  box-shadow: 0 10px 32px rgba(54, 201, 190, 0.08);
 }
 
 .secondaryButton {
@@ -419,27 +406,25 @@ button {
 .reviewPrimaryButton:hover {
   background: var(--aqua-bright);
   border-color: var(--aqua-bright);
-
   box-shadow:
-    0 10px 35px rgba(36, 216, 200, 0.18),
-    0 0 24px rgba(36, 216, 200, 0.07);
+    0 10px 35px rgba(54, 201, 190, 0.14),
+    0 0 24px rgba(54, 201, 190, 0.05);
 }
 
 .secondaryButton:hover {
-  border-color: rgba(36, 216, 200, 0.3);
-  background: rgba(36, 216, 200, 0.035);
-  box-shadow: 0 0 24px rgba(36, 216, 200, 0.05);
+  border-color: rgba(54, 201, 190, 0.26);
+  background: rgba(54, 201, 190, 0.03);
+  box-shadow: 0 0 24px rgba(54, 201, 190, 0.04);
 }
 
 .primaryButton:active,
 .secondaryButton:active,
 .reviewPrimaryButton:active {
   transform: scale(0.975);
-  border-color: rgba(98, 243, 230, 0.7);
-
+  border-color: rgba(98, 216, 207, 0.65);
   box-shadow:
-    0 0 0 1px rgba(98, 243, 230, 0.18),
-    0 0 28px rgba(36, 216, 200, 0.16);
+    0 0 0 1px rgba(98, 216, 207, 0.14),
+    0 0 28px rgba(54, 201, 190, 0.12);
 }
 
 .heroTrust {
@@ -462,9 +447,9 @@ button {
   color: var(--aqua);
 }
 
-/* -------------------------------------------------------
-   COMMON SECTION TEXT
-------------------------------------------------------- */
+/* =========================
+   SHARED SECTION HEADINGS
+========================= */
 
 .sectionLabel {
   color: var(--aqua);
@@ -490,9 +475,9 @@ button {
   color: #687476;
 }
 
-/* -------------------------------------------------------
-   CATEGORIES
-------------------------------------------------------- */
+/* =========================
+   CATEGORY CARDS
+========================= */
 
 .categorySection {
   width: min(calc(100% - 64px), var(--max-width));
@@ -529,17 +514,14 @@ button {
   padding: 22px;
   overflow: hidden;
   border-radius: 10px;
-
   background:
     radial-gradient(
       circle at 90% 10%,
-      rgba(36, 216, 200, 0.025),
+      rgba(54, 201, 190, 0.02),
       transparent 35%
     ),
     #070c0d;
-
   border: 1px solid rgba(255, 255, 255, 0.065);
-
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -560,7 +542,7 @@ button {
   right: -75px;
   top: -75px;
   border-radius: 50%;
-  background: rgba(36, 216, 200, 0.05);
+  background: rgba(54, 201, 190, 0.04);
   filter: blur(28px);
   opacity: 0;
   transition: opacity 180ms ease;
@@ -568,19 +550,17 @@ button {
 
 .categoryCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(36, 216, 200, 0.24);
-
+  border-color: rgba(54, 201, 190, 0.2);
   background:
     radial-gradient(
       circle at 90% 10%,
-      rgba(36, 216, 200, 0.055),
+      rgba(54, 201, 190, 0.045),
       transparent 40%
     ),
     #081011;
-
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.24),
-    0 0 28px rgba(36, 216, 200, 0.05);
+    0 0 28px rgba(54, 201, 190, 0.04);
 }
 
 .categoryCard:hover::before {
@@ -589,11 +569,10 @@ button {
 
 .categoryCard:active {
   transform: translateY(0) scale(0.985);
-  border-color: rgba(98, 243, 230, 0.55);
-
+  border-color: rgba(98, 216, 207, 0.5);
   box-shadow:
-    0 0 0 1px rgba(98, 243, 230, 0.1),
-    0 0 30px rgba(36, 216, 200, 0.13);
+    0 0 0 1px rgba(98, 216, 207, 0.08),
+    0 0 30px rgba(54, 201, 190, 0.1);
 }
 
 .categoryTop {
@@ -617,8 +596,8 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--aqua);
-  background: rgba(36, 216, 200, 0.05);
-  border: 1px solid rgba(36, 216, 200, 0.1);
+  background: rgba(54, 201, 190, 0.04);
+  border: 1px solid rgba(54, 201, 190, 0.09);
 }
 
 .categoryIcon svg {
@@ -664,7 +643,6 @@ button {
   right: 20px;
   bottom: 18px;
   color: #4d595b;
-
   transition:
     color 180ms ease,
     transform 180ms ease;
@@ -675,20 +653,18 @@ button {
   transform: translateX(3px);
 }
 
-/* -------------------------------------------------------
-   HOW NOVASIM WORKS
-------------------------------------------------------- */
+/* =========================
+   HOW IT WORKS
+========================= */
 
 .howSection {
   width: min(calc(100% - 64px), var(--max-width));
   margin: 0 auto;
   padding: 60px 0 64px;
-
   display: grid;
   grid-template-columns: 0.72fr 1.28fr;
   gap: 78px;
   align-items: start;
-
   border-top: 1px solid rgba(255, 255, 255, 0.055);
 }
 
@@ -722,15 +698,13 @@ button {
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.065);
-
   background:
     radial-gradient(
       circle at 100% 0%,
-      rgba(36, 216, 200, 0.015),
+      rgba(54, 201, 190, 0.012),
       transparent 30%
     ),
     #070c0d;
-
   transition:
     border-color 200ms ease,
     background 200ms ease,
@@ -739,19 +713,17 @@ button {
 }
 
 .accordionItemOpen {
-  border-color: rgba(36, 216, 200, 0.3);
-
+  border-color: rgba(54, 201, 190, 0.25);
   background:
     radial-gradient(
       circle at 100% 0%,
-      rgba(36, 216, 200, 0.07),
+      rgba(54, 201, 190, 0.055),
       transparent 40%
     ),
     #081011;
-
   box-shadow:
     0 15px 40px rgba(0, 0, 0, 0.16),
-    0 0 28px rgba(36, 216, 200, 0.045);
+    0 0 28px rgba(54, 201, 190, 0.035);
 }
 
 .accordionButton {
@@ -761,12 +733,10 @@ button {
   border: 0;
   background: transparent;
   color: var(--text);
-
   display: grid;
   grid-template-columns: 34px 1fr 34px;
   align-items: center;
   gap: 12px;
-
   text-align: left;
   cursor: pointer;
 }
@@ -801,29 +771,25 @@ button {
   height: 32px;
   justify-self: end;
   border-radius: 8px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   color: var(--aqua);
-  background: rgba(36, 216, 200, 0.05);
-  border: 1px solid rgba(36, 216, 200, 0.1);
-
+  background: rgba(54, 201, 190, 0.04);
+  border: 1px solid rgba(54, 201, 190, 0.09);
   font-size: 18px;
 }
 
 .accordionItemOpen .accordionToggle {
-  background: rgba(36, 216, 200, 0.11);
-  border-color: rgba(36, 216, 200, 0.32);
-  box-shadow: 0 0 18px rgba(36, 216, 200, 0.1);
+  background: rgba(54, 201, 190, 0.085);
+  border-color: rgba(54, 201, 190, 0.26);
+  box-shadow: 0 0 18px rgba(54, 201, 190, 0.075);
 }
 
 .accordionContent {
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
-
   transition:
     grid-template-rows 260ms ease,
     opacity 200ms ease;
@@ -867,9 +833,9 @@ button {
   font-weight: 900;
 }
 
-/* -------------------------------------------------------
+/* =========================
    REVIEWS
-------------------------------------------------------- */
+========================= */
 
 .reviewsSection {
   width: min(calc(100% - 64px), var(--max-width));
@@ -900,20 +866,17 @@ button {
   position: relative;
   overflow: hidden;
   border-radius: 11px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 35px;
-
   background:
     radial-gradient(
       circle at 90% 15%,
-      rgba(36, 216, 200, 0.065),
+      rgba(54, 201, 190, 0.05),
       transparent 30%
     ),
     linear-gradient(145deg, #081011, #050a0b);
-
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -952,18 +915,14 @@ button {
   border-radius: 7px;
 }
 
-/* -------------------------------------------------------
+/* =========================
    FOOTER
-------------------------------------------------------- */
+========================= */
 
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.065);
   background: #020506;
-
-  padding:
-    62px
-    max(32px, calc((100vw - var(--max-width)) / 2))
-    28px;
+  padding: 62px max(32px, calc((100vw - var(--max-width)) / 2)) 28px;
 }
 
 .footerTop {
@@ -1007,11 +966,9 @@ button {
 .footerBottom {
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.055);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   color: #465153;
   font-size: 9px;
 }
@@ -1021,9 +978,9 @@ button {
   gap: 18px;
 }
 
-/* -------------------------------------------------------
+/* =========================
    TABLET
-------------------------------------------------------- */
+========================= */
 
 @media (max-width: 980px) {
   .navbar,
@@ -1058,9 +1015,9 @@ button {
   }
 }
 
-/* -------------------------------------------------------
+/* =========================
    MOBILE
-------------------------------------------------------- */
+========================= */
 
 @media (max-width: 720px) {
   .navbar {
@@ -1096,8 +1053,6 @@ button {
     border-radius: 7px;
     font-size: 10px;
   }
-
-  /* HERO */
 
   .hero {
     min-height: auto;
@@ -1172,8 +1127,6 @@ button {
     flex-wrap: wrap;
   }
 
-  /* COMMON */
-
   .categoryIntro h2,
   .reviewsHeader h2 {
     font-size: 34px;
@@ -1185,8 +1138,6 @@ button {
     font-size: 8px;
     letter-spacing: 1.35px;
   }
-
-  /* CATEGORIES */
 
   .categorySection {
     width: calc(100% - 28px);
@@ -1266,8 +1217,6 @@ button {
     bottom: 12px;
   }
 
-  /* HOW */
-
   .howSection {
     width: calc(100% - 28px);
     padding: 42px 0 44px;
@@ -1345,8 +1294,6 @@ button {
     gap: 8px;
   }
 
-  /* REVIEWS */
-
   .reviewsSection {
     width: calc(100% - 28px);
     padding: 44px 0 50px;
@@ -1401,8 +1348,6 @@ button {
     gap: 7px;
   }
 
-  /* FOOTER */
-
   .footer {
     padding: 43px 14px 23px;
   }
@@ -1441,10 +1386,6 @@ button {
   }
 }
 
-/* -------------------------------------------------------
-   SMALL MOBILE
-------------------------------------------------------- */
-
 @media (max-width: 390px) {
   .hero h1 {
     font-size: 36px;
@@ -1468,10 +1409,6 @@ button {
   }
 }
 
-/* -------------------------------------------------------
-   TOUCH
-------------------------------------------------------- */
-
 @media (hover: none) {
   .categoryCard:hover {
     transform: none;
@@ -1479,18 +1416,16 @@ button {
 
   .categoryCard:active {
     transform: scale(0.985);
-    border-color: rgba(98, 243, 230, 0.55);
-
+    border-color: rgba(98, 216, 207, 0.5);
     background:
       radial-gradient(
         circle at 90% 10%,
-        rgba(36, 216, 200, 0.09),
+        rgba(54, 201, 190, 0.07),
         transparent 42%
       ),
       #081011;
-
     box-shadow:
-      0 0 0 1px rgba(98, 243, 230, 0.08),
-      0 0 28px rgba(36, 216, 200, 0.13);
+      0 0 0 1px rgba(98, 216, 207, 0.065),
+      0 0 28px rgba(54, 201, 190, 0.1);
   }
 }
