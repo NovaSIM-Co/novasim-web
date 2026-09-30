@@ -20,6 +20,50 @@ type PlanId = "200" | "500" | "unlimited";
 const WHATSAPP_URL =
   "https://wa.me/40742387131?text=Hello%2C%20I%20need%20help%20with%20my%20NovaSIM.";
 
+const COUNTRIES = [
+  "Austria",
+  "Belgium",
+  "Bulgaria",
+  "Croatia",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Estonia",
+  "Faroe Islands",
+  "Finland",
+  "France",
+  "French Caribbean",
+  "French Guiana",
+  "Germany",
+  "Gibraltar",
+  "Greece",
+  "Guernsey",
+  "Hungary",
+  "Iceland",
+  "Ireland",
+  "Isle of Man",
+  "Italy",
+  "Jersey",
+  "Latvia",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Malta",
+  "Monaco",
+  "Netherlands",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Reunion",
+  "Romania",
+  "Slovak Republic",
+  "Slovenia",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "United Kingdom",
+];
+
 const truckPlans = [
   {
     id: "200" as PlanId,
@@ -68,79 +112,136 @@ const multiPlans = [
 const copy = {
   en: {
     myNova: "My NovaSIM",
-    menuAccountSub: "Your NovaSIM access",
     esimPlans: "eSIM Plans",
-    menuPlansSub: "Explore NovaSIM connectivity",
     loyalty: "NovaSIM Loyalty",
-    menuLoyaltySub: "Savings for returning customers",
     support: "Support",
-    menuSupportSub: "Talk directly with NovaSIM support",
     terms: "Terms & Conditions",
-    legalInfo: "Legal information",
-
     back: "Back",
     backHome: "Back to home",
     allPlans: "All eSIM plans",
+
+    menuAccountSub: "Your NovaSIM access",
+    menuPlansSub: "Explore NovaSIM connectivity",
+    menuLoyaltySub: "Savings for returning customers",
+    menuSupportSub: "Talk directly with NovaSIM support",
+    legalInfo: "Legal information",
+
+    heroEyebrow: "PREMIUM CONNECTIVITY ACROSS EUROPE",
+    hero1: "EUROPE eSIM.",
+    hero2: "STAY",
+    hero3: "CONNECTED.",
+    hero4: "EVERYWHERE.",
+    heroText:
+      "High-speed 4G/5G mobile data across Europe. Instant eSIM activation. Hotspot included.",
+    explore: "Explore eSIMs",
 
     plansEyebrow: "ESIM PLANS",
     plansTitle1: "Choose your",
     plansTitle2: "connection.",
     plansDescription:
-      "Three ways to stay connected with NovaSIM. Choose the option that matches how you travel and how much data you need.",
+      "Choose the NovaSIM connection that matches how you travel and how much data you need.",
 
     travel: "TRAVEL",
     country: "eSIM by Country",
     countryShort: "Choose your destination and find the right NovaSIM eSIM.",
-    exploreDestinations: "Explore destinations",
 
     road: "ON THE ROAD",
     truck: "Truck Drivers & Caravans",
     truckShort: "Large-data connectivity designed for life on the road.",
-    viewPlans: "View current plans",
 
     longer: "LONGER CONNECTION",
     multi: "Multi-Month",
-    multiShort: "More data over 60 or 90 days.",
-    exploreMulti: "Explore Multi-Month",
+    multiShort: "500 GB cycles for 60 or 90 days.",
 
     truckEyebrow: "TRUCK DRIVERS & CARAVANS",
     truckTitle1: "Data for life",
     truckTitle2: "on the road.",
     truckDescription:
       "Large-data NovaSIM plans for customers who need serious connectivity while travelling across Europe.",
+
     popular: "POPULAR",
-    selectPlan: "Select plan",
     planDetails: "Plan details",
+    selectPlan: "Select plan",
     existingCustomer: "Existing customer?",
-    saveLoyalty: "Save 5% with NovaSIM Loyalty",
-    per30: "/ 30 days",
-    fup: "750 GB FUP",
+    loyaltySave: "Save 5% with NovaSIM Loyalty",
+
+    overview: "Overview",
+    features: "Features",
+    more: "More information",
+    close: "Close",
+
+    highSpeed: "High Speed Data",
+    validity: "Validity",
+    planType: "Plan type",
+    data: "Data",
+    callsText: "Calls & Text",
+    notAvailable: "N/A",
+    network: "Network",
+    operator: "Operator",
+    networkType: "Network Type",
+    activation: "Activation",
+    automaticActivation: "Automatic activation",
+    activationMethod: "Activation Method",
+    qrCode: "QR Code",
+    hotspot: "Hotspot",
+    hotspotValue: "Share your connection",
+    compatibility: "Compatibility",
+    compatibilityValue: "eSIM enabled devices",
+    deviceSupport: "Device Support",
+    roaming: "Plan Coverage",
+    roamingValue: "Roaming",
+    validFrom: "Valid From",
+    validFromValue: "Begins upon purchase",
+    internationalCalls: "International Calls",
+    coverage: "Supported destinations",
+    countriesAvailable: "Supported destinations",
+
+    packageDetails: "Package details",
+    operatesNetworks: "Operates on the Multi-Networks in Europe.",
+    startsImmediately: "Validity starts immediately after purchase.",
+    internetRequired:
+      "Internet connectivity is required for eSIM activation.",
+    usageRestrictions:
+      "Supports use in the listed destinations. Make sure the APN is set correctly.",
+    customerSupport:
+      "NovaSIM customer support is available if you need help with installation or connection.",
+
+    apnTitle: "Internet settings (APN)",
+    apnIntro:
+      "If mobile data does not start automatically after installation, check the APN settings below.",
+    apnImportant:
+      "Important: the APN must be entered exactly as shown below.",
+    apnSteps:
+      "Open Mobile Data / Cellular settings → select the NovaSIM eSIM → Mobile Data Network / APN → enter:",
+    roamingTitle: "Data Roaming",
+    roamingText:
+      "Make sure Data Roaming is enabled for the NovaSIM eSIM.",
+
+    fupInfo: "750 GB Fair Usage Policy.",
 
     countryEyebrow: "ESIM BY COUNTRY",
     countryTitle1: "Your destination.",
     countryTitle2: "Your NovaSIM.",
     countryDescription:
       "Choose a destination and get connected with a NovaSIM eSIM designed for your trip.",
-    destinations: "DESTINATIONS",
-    countryPlans: "Country eSIM plans",
-    countryComing:
+    coming:
       "The destination catalogue will be added here with the final available packages and pricing.",
 
     multiEyebrow: "MULTI-MONTH",
     multiTitle1: "More time.",
     multiTitle2: "More data.",
     multiDescription:
-      "Choose 500 GB per cycle for 60 or 90 days and save compared with purchasing each cycle separately.",
-    totalData: "TOTAL DATA",
+      "Choose 500 GB per cycle for 60 or 90 days.",
     regularPrice: "Regular price",
     multiPrice: "Multi-Month price",
-    multiNote: "Multi-Month prices cannot be combined with other discounts.",
+    multiNote:
+      "Multi-Month prices cannot be combined with other discounts.",
 
     loyaltyEyebrow: "NOVASIM LOYALTY",
     loyaltyTitle1: "Welcome back.",
     loyaltyTitle2: "You save 5%.",
     loyaltyDescription:
-      "Enter the email address used for a previous NovaSIM purchase. Eligible returning customers unlock 5% Loyalty prices.",
+      "Enter the same email address used for your previous NovaSIM purchase.",
     email: "EMAIL ADDRESS",
     emailPlaceholder: "you@example.com",
     unlock: "Unlock Loyalty prices",
@@ -149,12 +250,11 @@ const copy = {
     loyaltyPrice: "NovaSIM Loyalty price",
     loyaltyRule:
       "Loyalty discount cannot be combined with other promotional offers.",
-    normalPrice: "Standard price",
 
     accountEyebrow: "MY NOVASIM",
     accountTitle: "Your NovaSIM access.",
     accountDescription:
-      "Use the email address from your previous NovaSIM purchase to access returning-customer benefits.",
+      "Use the email address from your previous NovaSIM purchase.",
     continueEmail: "Continue with email",
     secureLater: "Secure email verification will be connected here.",
 
@@ -172,156 +272,195 @@ const copy = {
     legal: "LEGAL",
     termsTitle1: "Terms &",
     termsTitle2: "Conditions.",
-    termsDescription: "NovaSIM legal information and service terms.",
+    termsDescription:
+      "Important information about NovaSIM digital services, compatibility, activation, refunds and customer responsibilities.",
 
-    getConnected: "GET CONNECTED",
-    simple1: "Simple from the",
-    simple2: "first step.",
-    simpleDescription:
-      "Check your device, choose your NovaSIM and follow the installation instructions.",
-    compatibility: "Check compatibility",
-    compatibilityText:
-      "Dial *#06#. If your device shows an EID number, it supports eSIM.",
-    chooseConnection: "Choose your connection",
-    chooseConnectionText:
-      "Select the NovaSIM option that matches your destination, data needs and travel duration.",
-    install: "Install & connect",
-    installText:
-      "Follow the eSIM installation information received after your purchase and get connected.",
-    exploreNova: "Explore NovaSIM plans",
+    legalCompatibility: "Device compatibility",
+    legalCompatibilityText:
+      "Before purchasing, the customer is responsible for checking that the device supports eSIM, is network-unlocked and can use the required mobile network settings. Dial *#06# and check whether an EID is displayed. For modems or routers, compatibility must be checked with the device manufacturer or specifications before purchase.",
+
+    legalDigital: "Digital product & activation",
+    legalDigitalText:
+      "NovaSIM eSIM plans are digital products. The eSIM and activation information are delivered electronically. The customer must have an internet connection available to install and activate the eSIM.",
+
+    legalRefund: "Refund eligibility",
+    legalRefundText:
+      "A refund is not available where the service cannot be used because the customer's device is incompatible, network-locked, incorrectly configured, does not support eSIM, or because the customer did not check compatibility before purchase. This does not limit any mandatory rights that apply under applicable consumer law.",
+
+    legalConfig: "APN & device configuration",
+    legalConfigText:
+      "The customer is responsible for following the installation instructions, enabling Data Roaming where required and entering the APN exactly as provided by NovaSIM. Incorrect device or APN configuration is not a service failure.",
+
+    legalCoverage: "Coverage & network availability",
+    legalCoverageText:
+      "Mobile coverage, signal quality, 4G/5G availability and network speed depend on local partner networks, location, device capability, congestion and other technical conditions. Availability may therefore vary by location.",
+
+    legalUsage: "Service use",
+    legalUsageText:
+      "Plans may only be used in supported destinations and in accordance with the technical conditions and Fair Usage Policy applicable to the selected plan.",
+
+    legalSupport: "Support before requesting a refund",
+    legalSupportText:
+      "If a connection problem occurs, the customer should contact NovaSIM support and allow reasonable troubleshooting of installation, APN, roaming and device settings before the service is considered unusable.",
+
+    legalNote:
+      "These terms are intended to clearly explain the service conditions and do not exclude or restrict statutory consumer rights that cannot legally be waived.",
+
+    howEyebrow: "GET CONNECTED",
+    howTitle1: "Start with",
+    howTitle2: "compatibility.",
+    howText:
+      "Before buying, make sure your device supports eSIM and is network-unlocked.",
+    checkCompatibility: "Check compatibility",
+    checkText:
+      "Dial *#06#. If your phone shows an EID number, it supports eSIM. For a modem or router, check its technical specifications for eSIM support.",
+    seeTerms: "Compatibility & refund policy",
 
     fastData: "Fast mobile data",
     digitalActivation: "Digital activation",
-    hotspotIncluded: "Included",
+    included: "Included",
     directAssistance: "Direct assistance",
-
-    premiumConnectivity: "PREMIUM CONNECTIVITY ACROSS EUROPE",
-    hero1: "EUROPE eSIM.",
-    hero2: "STAY",
-    hero3: "CONNECTED.",
-    hero4: "EVERYWHERE.",
-    heroDescription:
-      "High-speed 4G/5G mobile data across Europe. Instant eSIM activation. Hotspot included.",
-    exploreEsims: "Explore eSIMs",
-    instantActivation: "Instant activation",
-
-    connectivity: "NOVASIM CONNECTIVITY",
-    chooseHow1: "Choose how you",
-    chooseHow2: "stay connected.",
-    chooseHowDescription:
-      "Travel by country, stay connected on the road or choose a longer-duration NovaSIM plan.",
-    countryHome: "Connectivity for your destination.",
-    truckHome: "Large-data plans for life on the road.",
-    multiHome: "500 GB cycles for 60 or 90 days.",
-
-    existingNova: "EXISTING NOVASIM CUSTOMER?",
-    comeBack: "Come back and save 5% on eligible NovaSIM plans.",
 
     connect: "CONNECT",
     nova: "NOVASIM",
     legalFooter: "LEGAL",
     rights: "© 2026 NovaSIM. All rights reserved.",
     stayConnected: "Stay connected.",
-
-    overview: "Overview",
-    features: "Features",
-    more: "More information",
-    close: "Close",
-    highSpeed: "High Speed Data",
-    validity: "Validity",
-    coverage: "Coverage",
-    network: "Network",
-    activation: "Activation",
-    dataOnly: "Data only",
-    qrActivation: "QR Code eSIM",
-    hotspot: "Hotspot",
-    iosAndroid: "iOS & Android",
-    apn: "APN",
-    automatic: "Automatic",
-    countries: "countries",
-    unlimitedInfo:
-      "Unlimited plan with 750 GB Fair Usage Policy.",
-    fupInfo:
-      "750 GB Fair Usage Policy. After the high-speed allowance is used, the plan continues according to the provider's Fair Usage Policy.",
-    deviceInfo:
-      "NovaSIM eSIM plans can also be used with compatible eSIM modems and routers.",
   },
 
   ro: {
     myNova: "My NovaSIM",
-    menuAccountSub: "Accesul tău NovaSIM",
     esimPlans: "Planuri eSIM",
-    menuPlansSub: "Descoperă conexiunile NovaSIM",
     loyalty: "NovaSIM Loyalty",
-    menuLoyaltySub: "Reduceri pentru clienții care revin",
     support: "Suport",
-    menuSupportSub: "Vorbește direct cu suportul NovaSIM",
     terms: "Termeni și condiții",
-    legalInfo: "Informații legale",
-
     back: "Înapoi",
     backHome: "Înapoi la pagina principală",
     allPlans: "Toate planurile eSIM",
+
+    menuAccountSub: "Accesul tău NovaSIM",
+    menuPlansSub: "Descoperă conexiunile NovaSIM",
+    menuLoyaltySub: "Reduceri pentru clienții care revin",
+    menuSupportSub: "Vorbește direct cu suportul NovaSIM",
+    legalInfo: "Informații legale",
+
+    heroEyebrow: "CONECTIVITATE PREMIUM ÎN EUROPA",
+    hero1: "eSIM EUROPA.",
+    hero2: "RĂMÂI",
+    hero3: "CONECTAT.",
+    hero4: "ORIUNDE.",
+    heroText:
+      "Date mobile 4G/5G de mare viteză în Europa. Activare rapidă eSIM. Hotspot inclus.",
+    explore: "Descoperă eSIM-urile",
 
     plansEyebrow: "PLANURI ESIM",
     plansTitle1: "Alege",
     plansTitle2: "conexiunea ta.",
     plansDescription:
-      "Trei moduri de a rămâne conectat cu NovaSIM. Alege opțiunea potrivită călătoriei și consumului tău de date.",
+      "Alege conexiunea NovaSIM potrivită modului în care călătorești și consumului tău de date.",
 
     travel: "CĂLĂTORII",
     country: "eSIM după țară",
     countryShort: "Alege destinația și găsește eSIM-ul NovaSIM potrivit.",
-    exploreDestinations: "Vezi destinațiile",
 
     road: "PE DRUM",
     truck: "Șoferi de camion & rulote",
     truckShort: "Planuri cu trafic mare de date pentru viața pe drum.",
-    viewPlans: "Vezi planurile",
 
     longer: "CONEXIUNE PE TERMEN LUNG",
     multi: "Multi-Month",
-    multiShort: "Mai multe date pentru 60 sau 90 de zile.",
-    exploreMulti: "Vezi Multi-Month",
+    multiShort: "Cicluri de 500 GB pentru 60 sau 90 de zile.",
 
     truckEyebrow: "ȘOFERI DE CAMION & RULOTE",
     truckTitle1: "Internet pentru viața",
     truckTitle2: "pe drum.",
     truckDescription:
       "Planuri NovaSIM cu trafic mare de date pentru cei care au nevoie de conexiune serioasă în timp ce călătoresc prin Europa.",
+
     popular: "POPULAR",
-    selectPlan: "Alege planul",
     planDetails: "Detalii plan",
+    selectPlan: "Alege planul",
     existingCustomer: "Ești deja client?",
-    saveLoyalty: "Economisești 5% cu NovaSIM Loyalty",
-    per30: "/ 30 zile",
-    fup: "750 GB FUP",
+    loyaltySave: "Economisești 5% cu NovaSIM Loyalty",
+
+    overview: "Prezentare",
+    features: "Caracteristici",
+    more: "Mai multe informații",
+    close: "Închide",
+
+    highSpeed: "Date la viteză mare",
+    validity: "Valabilitate",
+    planType: "Tip plan",
+    data: "Date",
+    callsText: "Apeluri & SMS",
+    notAvailable: "N/A",
+    network: "Rețea",
+    operator: "Operator",
+    networkType: "Tip rețea",
+    activation: "Activare",
+    automaticActivation: "Activare automată",
+    activationMethod: "Metodă activare",
+    qrCode: "Cod QR",
+    hotspot: "Hotspot",
+    hotspotValue: "Partajează conexiunea",
+    compatibility: "Compatibilitate",
+    compatibilityValue: "Dispozitive compatibile eSIM",
+    deviceSupport: "Suport dispozitive",
+    roaming: "Acoperire plan",
+    roamingValue: "Roaming",
+    validFrom: "Valabil de la",
+    validFromValue: "Începe la achiziție",
+    internationalCalls: "Apeluri internaționale",
+    coverage: "Destinații acceptate",
+    countriesAvailable: "Destinații acceptate",
+
+    packageDetails: "Detalii pachet",
+    operatesNetworks: "Funcționează pe rețele multiple în Europa.",
+    startsImmediately:
+      "Valabilitatea începe imediat după achiziție.",
+    internetRequired:
+      "Este necesară o conexiune la internet pentru activarea eSIM.",
+    usageRestrictions:
+      "Poate fi utilizat în destinațiile listate. Asigură-te că APN-ul este configurat corect.",
+    customerSupport:
+      "Suportul NovaSIM este disponibil dacă ai nevoie de ajutor cu instalarea sau conexiunea.",
+
+    apnTitle: "Setări internet (APN)",
+    apnIntro:
+      "Dacă datele mobile nu pornesc automat după instalare, verifică setările APN de mai jos.",
+    apnImportant:
+      "Important: APN-ul trebuie introdus exact așa cum apare mai jos.",
+    apnSteps:
+      "Deschide Date mobile / Cellular → selectează eSIM-ul NovaSIM → Rețea date mobile / APN → introdu:",
+    roamingTitle: "Roaming de date",
+    roamingText:
+      "Asigură-te că Data Roaming / Roaming de date este activat pentru eSIM-ul NovaSIM.",
+
+    fupInfo: "Fair Usage Policy de 750 GB.",
 
     countryEyebrow: "ESIM DUPĂ ȚARĂ",
     countryTitle1: "Destinația ta.",
     countryTitle2: "NovaSIM-ul tău.",
     countryDescription:
       "Alege destinația și conectează-te cu un eSIM NovaSIM potrivit călătoriei tale.",
-    destinations: "DESTINAȚII",
-    countryPlans: "Planuri eSIM pe țări",
-    countryComing:
+    coming:
       "Catalogul de destinații va fi adăugat aici împreună cu pachetele și prețurile finale.",
 
     multiEyebrow: "MULTI-MONTH",
     multiTitle1: "Mai mult timp.",
     multiTitle2: "Mai multe date.",
     multiDescription:
-      "Alege 500 GB pentru fiecare ciclu, timp de 60 sau 90 de zile, la un preț mai bun decât achiziția separată a fiecărui ciclu.",
-    totalData: "DATE TOTALE",
+      "Alege 500 GB pentru fiecare ciclu, timp de 60 sau 90 de zile.",
     regularPrice: "Preț normal",
     multiPrice: "Preț Multi-Month",
-    multiNote: "Prețurile Multi-Month nu se cumulează cu alte reduceri.",
+    multiNote:
+      "Prețurile Multi-Month nu se cumulează cu alte reduceri.",
 
     loyaltyEyebrow: "NOVASIM LOYALTY",
     loyaltyTitle1: "Bine ai revenit.",
     loyaltyTitle2: "Economisești 5%.",
     loyaltyDescription:
-      "Introdu adresa de email folosită la o achiziție NovaSIM anterioară. Clienții eligibili care revin deblochează prețurile Loyalty cu 5% reducere.",
+      "Introdu aceeași adresă de email folosită la achiziția NovaSIM anterioară.",
     email: "ADRESĂ DE EMAIL",
     emailPlaceholder: "tu@exemplu.ro",
     unlock: "Deblochează prețurile Loyalty",
@@ -330,12 +469,11 @@ const copy = {
     loyaltyPrice: "Preț NovaSIM Loyalty",
     loyaltyRule:
       "Reducerea Loyalty nu se cumulează cu alte oferte promoționale.",
-    normalPrice: "Preț standard",
 
     accountEyebrow: "MY NOVASIM",
     accountTitle: "Accesul tău NovaSIM.",
     accountDescription:
-      "Folosește adresa de email de la achiziția NovaSIM anterioară pentru a accesa beneficiile dedicate clienților care revin.",
+      "Folosește adresa de email de la achiziția NovaSIM anterioară.",
     continueEmail: "Continuă cu emailul",
     secureLater: "Verificarea securizată prin email va fi conectată aici.",
 
@@ -347,91 +485,72 @@ const copy = {
     directSupport: "SUPORT DIRECT",
     whatsappSupport: "Suport NovaSIM pe WhatsApp",
     whatsappCopy:
-      "Deschide o conversație cu echipa noastră de suport și spune-ne cu ce te putem ajuta.",
+      "Deschide o conversație cu echipa noastră și spune-ne cu ce te putem ajuta.",
     whatsappButton: "Contactează-ne pe WhatsApp",
 
     legal: "LEGAL",
     termsTitle1: "Termeni și",
     termsTitle2: "condiții.",
-    termsDescription: "Informații legale și condițiile serviciilor NovaSIM.",
+    termsDescription:
+      "Informații importante despre serviciile digitale NovaSIM, compatibilitate, activare, rambursări și responsabilitățile clientului.",
 
-    getConnected: "CONECTEAZĂ-TE",
-    simple1: "Simplu chiar de la",
-    simple2: "primul pas.",
-    simpleDescription:
-      "Verifică dispozitivul, alege NovaSIM și urmează instrucțiunile de instalare.",
-    compatibility: "Verifică compatibilitatea",
-    compatibilityText:
-      "Tastează *#06#. Dacă dispozitivul afișează un număr EID, acesta suportă eSIM.",
-    chooseConnection: "Alege conexiunea",
-    chooseConnectionText:
-      "Alege opțiunea NovaSIM potrivită destinației, consumului de date și duratei călătoriei.",
-    install: "Instalează și conectează-te",
-    installText:
-      "Urmează informațiile de instalare eSIM primite după achiziție și conectează-te.",
-    exploreNova: "Vezi planurile NovaSIM",
+    legalCompatibility: "Compatibilitatea dispozitivului",
+    legalCompatibilityText:
+      "Înainte de achiziție, clientul este responsabil să verifice dacă dispozitivul suportă eSIM, este deblocat în rețea și permite configurarea setărilor mobile necesare. Pe telefon se poate tasta *#06# și verifica existența unui EID. Pentru modemuri sau routere, compatibilitatea trebuie verificată în specificațiile dispozitivului înainte de achiziție.",
+
+    legalDigital: "Produs digital și activare",
+    legalDigitalText:
+      "Planurile eSIM NovaSIM sunt produse digitale. eSIM-ul și informațiile de activare sunt livrate electronic. Clientul trebuie să aibă acces la internet pentru instalarea și activarea eSIM-ului.",
+
+    legalRefund: "Eligibilitatea pentru rambursare",
+    legalRefundText:
+      "Rambursarea nu este disponibilă atunci când serviciul nu poate fi utilizat din cauza incompatibilității dispozitivului clientului, a blocării în rețea, a configurării incorecte, a lipsei suportului eSIM sau pentru că verificarea compatibilității nu a fost efectuată înainte de achiziție. Această regulă nu limitează drepturile obligatorii ale consumatorului prevăzute de legislația aplicabilă.",
+
+    legalConfig: "Configurarea APN și a dispozitivului",
+    legalConfigText:
+      "Clientul este responsabil să urmeze instrucțiunile de instalare, să activeze Roaming de date atunci când este necesar și să introducă APN-ul exact așa cum este furnizat de NovaSIM. Configurarea incorectă a dispozitivului sau a APN-ului nu reprezintă o defecțiune a serviciului.",
+
+    legalCoverage: "Acoperire și disponibilitatea rețelei",
+    legalCoverageText:
+      "Acoperirea mobilă, calitatea semnalului, disponibilitatea 4G/5G și viteza depind de rețelele partenere locale, locație, compatibilitatea dispozitivului, congestie și alte condiții tehnice. Disponibilitatea poate varia în funcție de locație.",
+
+    legalUsage: "Utilizarea serviciului",
+    legalUsageText:
+      "Planurile pot fi utilizate numai în destinațiile acceptate și în conformitate cu condițiile tehnice și politica Fair Usage aplicabilă planului ales.",
+
+    legalSupport: "Suport înaintea unei solicitări de rambursare",
+    legalSupportText:
+      "Dacă apare o problemă de conexiune, clientul trebuie să contacteze suportul NovaSIM și să permită verificarea rezonabilă a instalării, APN-ului, roamingului și setărilor dispozitivului înainte ca serviciul să fie considerat nefuncțional.",
+
+    legalNote:
+      "Acești termeni au rolul de a explica în mod clar condițiile serviciului și nu exclud sau limitează drepturile legale ale consumatorului care nu pot fi înlăturate prin contract.",
+
+    howEyebrow: "ÎNAINTE DE ACHIZIȚIE",
+    howTitle1: "Începe cu",
+    howTitle2: "compatibilitatea.",
+    howText:
+      "Înainte să cumperi, verifică dacă dispozitivul suportă eSIM și este deblocat în rețea.",
+    checkCompatibility: "Verifică compatibilitatea",
+    checkText:
+      "Tastează *#06#. Dacă telefonul afișează un număr EID, suportă eSIM. Pentru modem sau router, verifică specificațiile tehnice pentru suport eSIM.",
+    seeTerms: "Compatibilitate & politica de rambursare",
 
     fastData: "Date mobile rapide",
     digitalActivation: "Activare digitală",
-    hotspotIncluded: "Inclus",
+    included: "Inclus",
     directAssistance: "Asistență directă",
-
-    premiumConnectivity: "CONECTIVITATE PREMIUM ÎN EUROPA",
-    hero1: "eSIM EUROPA.",
-    hero2: "RĂMÂI",
-    hero3: "CONECTAT.",
-    hero4: "ORIUNDE.",
-    heroDescription:
-      "Date mobile 4G/5G de mare viteză în Europa. Activare rapidă eSIM. Hotspot inclus.",
-    exploreEsims: "Descoperă eSIM-urile",
-    instantActivation: "Activare rapidă",
-
-    connectivity: "CONECTIVITATE NOVASIM",
-    chooseHow1: "Alege cum vrei",
-    chooseHow2: "să rămâi conectat.",
-    chooseHowDescription:
-      "Călătorește pe țări, rămâi conectat pe drum sau alege un plan NovaSIM pentru o perioadă mai lungă.",
-    countryHome: "Conectivitate pentru destinația ta.",
-    truckHome: "Planuri cu trafic mare pentru viața pe drum.",
-    multiHome: "Cicluri de 500 GB pentru 60 sau 90 de zile.",
-
-    existingNova: "EȘTI DEJA CLIENT NOVASIM?",
-    comeBack: "Revino și economisește 5% la planurile NovaSIM eligibile.",
 
     connect: "CONECTARE",
     nova: "NOVASIM",
     legalFooter: "LEGAL",
     rights: "© 2026 NovaSIM. Toate drepturile rezervate.",
     stayConnected: "Rămâi conectat.",
-
-    overview: "Prezentare",
-    features: "Caracteristici",
-    more: "Mai multe informații",
-    close: "Închide",
-    highSpeed: "Date la viteză mare",
-    validity: "Valabilitate",
-    coverage: "Acoperire",
-    network: "Rețea",
-    activation: "Activare",
-    dataOnly: "Doar date",
-    qrActivation: "eSIM prin cod QR",
-    hotspot: "Hotspot",
-    iosAndroid: "iOS & Android",
-    apn: "APN",
-    automatic: "Automată",
-    countries: "țări",
-    unlimitedInfo:
-      "Plan Unlimited cu Fair Usage Policy de 750 GB.",
-    fupInfo:
-      "Fair Usage Policy de 750 GB. După consumarea traficului la viteză mare, planul continuă conform politicii Fair Usage a furnizorului.",
-    deviceInfo:
-      "Planurile eSIM NovaSIM pot fi utilizate și cu modemuri și routere eSIM compatibile.",
   },
 };
 
 function ArrowRight() {
   return (
-    <svg className="inlineIcon" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="inlineIcon" viewBox="0 0 24 24">
       <path d="M5 12h14" />
       <path d="m14 7 5 5-5 5" />
     </svg>
@@ -440,7 +559,7 @@ function ArrowRight() {
 
 function ArrowLeft() {
   return (
-    <svg className="inlineIcon" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="inlineIcon" viewBox="0 0 24 24">
       <path d="M19 12H5" />
       <path d="m10 7-5 5 5 5" />
     </svg>
@@ -449,16 +568,10 @@ function ArrowLeft() {
 
 function NovaLogo() {
   return (
-    <span className="novaLogo novaLogoSmall">
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <path
-          className="novaLogoLeft"
-          d="M13 49V15h9.5l19 25V15H51v34h-9.5l-19-25v25H13Z"
-        />
-        <path
-          className="novaLogoCut"
-          d="M22.5 15 51 49h-9.5L13 15h9.5Z"
-        />
+    <span className="novaLogo">
+      <svg viewBox="0 0 64 64">
+        <path d="M13 49V15h9.5l19 25V15H51v34h-9.5l-19-25v25H13Z" />
+        <path className="logoCut" d="M22.5 15 51 49h-9.5L13 15h9.5Z" />
       </svg>
     </span>
   );
@@ -466,37 +579,33 @@ function NovaLogo() {
 
 function GlobeIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="8" />
-      <path d="M4 12h16" />
-      <path d="M12 4c2.2 2.2 3.4 5 3.4 8S14.2 17.8 12 20" />
-      <path d="M12 4c-2.2 2.2-3.4 5-3.4 8s1.2 5.8 3.4 8" />
+      <path d="M4 12h16M12 4c2.2 2.2 3.4 5 3.4 8S14.2 17.8 12 20M12 4c-2.2 2.2-3.4 5-3.4 8s1.2 5.8 3.4 8" />
     </svg>
   );
 }
 
 function RoadIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M9 20 11 4h2l2 16" />
-      <path d="M12 7v2M12 12v2M12 17v2" />
+    <svg viewBox="0 0 24 24">
+      <path d="M9 20 11 4h2l2 16M12 7v2M12 12v2M12 17v2" />
     </svg>
   );
 }
 
 function CalendarIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <rect x="4" y="5.5" width="16" height="14" rx="2" />
       <path d="M8 3.5v4M16 3.5v4M4 9.5h16" />
-      <path d="M8 13h3M13 13h3M8 16h3" />
     </svg>
   );
 }
 
 function UserIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <circle cx="12" cy="8" r="3.5" />
       <path d="M5.5 20c.7-4 3-6 6.5-6s5.8 2 6.5 6" />
     </svg>
@@ -505,17 +614,16 @@ function UserIcon() {
 
 function GiftIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <rect x="4" y="9" width="16" height="11" rx="2" />
-      <path d="M3 9h18M12 9v11M12 9H8.5a2.5 2.5 0 1 1 2.1-3.8L12 9Z" />
-      <path d="M12 9h3.5a2.5 2.5 0 1 0-2.1-3.8L12 9Z" />
+      <path d="M3 9h18M12 9v11M12 9H8.5a2.5 2.5 0 1 1 2.1-3.8L12 9ZM12 9h3.5a2.5 2.5 0 1 0-2.1-3.8L12 9Z" />
     </svg>
   );
 }
 
 function MenuIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <path d="M5 8h14M5 16h14" />
     </svg>
   );
@@ -523,19 +631,9 @@ function MenuIcon() {
 
 function WhatsAppIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
       <path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z" />
       <path d="M9 8.5c.5 2.6 2 4.1 4.7 5" />
-      <path d="M9.1 8.4 10 10" />
-      <path d="m13.8 13.5 1.6.7" />
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="m6 12 4 4 8-9" />
     </svg>
   );
 }
@@ -550,30 +648,30 @@ function AppHeader({
 }: any) {
   return (
     <>
-      <header className="newHeader">
-        <button className="newBrand" onClick={() => go("home")}>
+      <header className="header">
+        <button className="brand" onClick={() => go("home")}>
           <NovaLogo />
-          <span>NovaSIM</span>
+          <strong>NovaSIM</strong>
         </button>
 
-        <div className="newHeaderActions">
-          <div className="languageSwitch">
+        <div className="headerActions">
+          <div className="language">
             <button
-              className={language === "en" ? "languageActive" : ""}
+              className={language === "en" ? "active" : ""}
               onClick={() => setLanguage("en")}
             >
               EN
             </button>
             <span>/</span>
             <button
-              className={language === "ro" ? "languageActive" : ""}
+              className={language === "ro" ? "active" : ""}
               onClick={() => setLanguage("ro")}
             >
               RO
             </button>
           </div>
 
-          <button className="newAccount" onClick={() => go("account")}>
+          <button className="accountTop" onClick={() => go("account")}>
             <UserIcon />
             <span>{t.myNova}</span>
           </button>
@@ -581,62 +679,33 @@ function AppHeader({
           <button
             className="menuButton"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {menuOpen ? <span className="menuX">×</span> : <MenuIcon />}
+            {menuOpen ? "×" : <MenuIcon />}
           </button>
         </div>
       </header>
 
       {menuOpen && (
         <div className="menuOverlay">
-          <div className="menuInner">
-            <span className="menuLabel">NOVASIM</span>
+          <div className="menu">
+            <span className="eyebrow">NOVASIM</span>
 
-            <button onClick={() => go("account")}>
-              <span className="menuItemIcon"><UserIcon /></span>
-              <span>
-                <strong>{t.myNova}</strong>
-                <small>{t.menuAccountSub}</small>
-              </span>
-              <ArrowRight />
-            </button>
-
-            <button onClick={() => go("plans")}>
-              <span className="menuItemIcon"><GlobeIcon /></span>
-              <span>
-                <strong>{t.esimPlans}</strong>
-                <small>{t.menuPlansSub}</small>
-              </span>
-              <ArrowRight />
-            </button>
-
-            <button onClick={() => go("loyalty")}>
-              <span className="menuItemIcon"><GiftIcon /></span>
-              <span>
-                <strong>{t.loyalty}</strong>
-                <small>{t.menuLoyaltySub}</small>
-              </span>
-              <ArrowRight />
-            </button>
-
-            <button onClick={() => go("support")}>
-              <span className="menuItemIcon"><WhatsAppIcon /></span>
-              <span>
-                <strong>{t.support}</strong>
-                <small>{t.menuSupportSub}</small>
-              </span>
-              <ArrowRight />
-            </button>
-
-            <button onClick={() => go("terms")}>
-              <span className="menuItemIcon">§</span>
-              <span>
-                <strong>{t.terms}</strong>
-                <small>{t.legalInfo}</small>
-              </span>
-              <ArrowRight />
-            </button>
+            {[
+              ["account", <UserIcon />, t.myNova, t.menuAccountSub],
+              ["plans", <GlobeIcon />, t.esimPlans, t.menuPlansSub],
+              ["loyalty", <GiftIcon />, t.loyalty, t.menuLoyaltySub],
+              ["support", <WhatsAppIcon />, t.support, t.menuSupportSub],
+              ["terms", "§", t.terms, t.legalInfo],
+            ].map(([view, icon, title, subtitle]: any) => (
+              <button key={view} onClick={() => go(view)}>
+                <span className="menuIcon">{icon}</span>
+                <span>
+                  <strong>{title}</strong>
+                  <small>{subtitle}</small>
+                </span>
+                <ArrowRight />
+              </button>
+            ))}
           </div>
         </div>
       )}
@@ -644,11 +713,10 @@ function AppHeader({
   );
 }
 
-function BackButton({ onClick, label }: { onClick: () => void; label: string }) {
+function BackButton({ onClick, label }: any) {
   return (
-    <button className="viewBack" onClick={onClick}>
-      <ArrowLeft />
-      {label}
+    <button className="back" onClick={onClick}>
+      <ArrowLeft /> {label}
     </button>
   );
 }
@@ -666,158 +734,263 @@ function PlanDetailsModal({
 }) {
   const [tab, setTab] = useState<DetailTab>("overview");
 
-  const data =
+  const planInfo =
     plan === "200"
       ? {
           title: "200 GB",
-          highSpeed: "200 GB",
-          validity: "30 days",
-          coverage: "Europe",
+          data: "200 GB",
+          package:
+            language === "ro"
+              ? "eSIM 4G/5G doar pentru date."
+              : "4G/5G Data-only eSIM.",
         }
       : plan === "500"
       ? {
           title: "500 GB",
-          highSpeed: "500 GB",
-          validity: "30 days",
-          coverage: "36 countries",
+          data: "500 GB",
+          package:
+            language === "ro"
+              ? "500 GB date la viteză mare."
+              : "500 GB High Speed Data.",
         }
       : {
           title: "UNLIMITED",
-          highSpeed: "750 GB FUP",
-          validity: "30 days",
-          coverage: "Europe",
+          data: "750 GB FUP",
+          package:
+            language === "ro"
+              ? "750 GB Fair Usage Policy."
+              : "750 GB Fair Usage Policy.",
         };
 
   return (
     <div className="modalBackdrop" onClick={close}>
-      <div className="planModal" onClick={(e) => e.stopPropagation()}>
-        <div className="modalHeader">
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <div className="modalHead">
           <div>
-            <span className="newEyebrow">NOVASIM ESIM</span>
-            <h2>{data.title}</h2>
-            {plan === "unlimited" && <small>{t.unlimitedInfo}</small>}
+            <span className="eyebrow">NOVASIM ESIM</span>
+            <h2>{planInfo.title}</h2>
+            {plan === "unlimited" && <small>{t.fupInfo}</small>}
           </div>
 
-          <button className="modalClose" onClick={close}>×</button>
+          <button className="modalClose" onClick={close}>
+            ×
+          </button>
         </div>
 
-        <div className="detailTabs">
+        <div className="tabs">
           <button
-            className={tab === "overview" ? "detailTabActive" : ""}
+            className={tab === "overview" ? "activeTab" : ""}
             onClick={() => setTab("overview")}
           >
             {t.overview}
           </button>
+
           <button
-            className={tab === "features" ? "detailTabActive" : ""}
+            className={tab === "features" ? "activeTab" : ""}
             onClick={() => setTab("features")}
           >
             {t.features}
           </button>
+
           <button
-            className={tab === "more" ? "detailTabActive" : ""}
+            className={tab === "more" ? "activeTab" : ""}
             onClick={() => setTab("more")}
           >
             {t.more}
           </button>
         </div>
 
-        <div className="detailContent">
+        <div className="modalContent">
           {tab === "overview" && (
-            <div className="detailGrid">
-              <div>
-                <span>{t.highSpeed}</span>
-                <strong>{data.highSpeed}</strong>
+            <>
+              <div className="detailGrid">
+                <Detail label={t.highSpeed} value={planInfo.data} />
+                <Detail
+                  label={t.validity}
+                  value={language === "ro" ? "30 zile" : "30 days"}
+                />
+                <Detail label={t.planType} value={t.data} />
+                <Detail label={t.callsText} value={t.notAvailable} />
+                <Detail label={t.operator} value="Vodafone" />
+                <Detail label={t.networkType} value="4G / 5G" />
+                <Detail
+                  label={t.activation}
+                  value={t.automaticActivation}
+                />
+                <Detail label={t.roaming} value={t.roamingValue} />
+                <Detail label={t.validFrom} value={t.validFromValue} />
+                <Detail
+                  label={t.internationalCalls}
+                  value={t.notAvailable}
+                />
               </div>
-              <div>
-                <span>{t.validity}</span>
-                <strong>{data.validity}</strong>
+
+              <div className="countrySection">
+                <div className="countryTitle">
+                  <span>{t.coverage}</span>
+                  <strong>{COUNTRIES.length}</strong>
+                </div>
+
+                <div className="countryGrid">
+                  {COUNTRIES.map((country) => (
+                    <span key={country}>
+                      <i>✓</i>
+                      {country}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div>
-                <span>{t.network}</span>
-                <strong>Vodafone · 4G / 5G</strong>
-              </div>
-              <div>
-                <span>{t.coverage}</span>
-                <strong>{data.coverage}</strong>
-              </div>
-            </div>
+            </>
           )}
 
           {tab === "features" && (
-            <div className="detailList">
-              <span>✓ {t.dataOnly}</span>
-              <span>✓ 4G / 5G</span>
-              <span>✓ {t.hotspot}</span>
-              <span>✓ {t.qrActivation}</span>
-              <span>✓ {t.iosAndroid}</span>
-              <span>✓ {t.activation}: {t.automatic}</span>
+            <div className="detailGrid">
+              <Detail label={t.activationMethod} value={t.qrCode} />
+              <Detail label={t.hotspot} value={t.hotspotValue} />
+              <Detail
+                label={t.compatibility}
+                value={t.compatibilityValue}
+              />
+              <Detail label={t.deviceSupport} value="iOS & Android" />
+              <Detail label={t.operator} value="Vodafone" />
+              <Detail label={t.networkType} value="4G / 5G" />
             </div>
           )}
 
           {tab === "more" && (
-            <div className="moreInformation">
-              <div>
-                <span>{t.apn}</span>
-                <strong>netmon.vodafone.it</strong>
+            <div className="moreInfo">
+              <div className="packageInfo">
+                <span className="sectionLabel">{t.packageDetails}</span>
+                <strong>{planInfo.package}</strong>
+                <p>{t.operatesNetworks}</p>
+                <p>{t.startsImmediately}</p>
+                <p>{t.internetRequired}</p>
+                <p>{t.usageRestrictions}</p>
+                <p>{t.customerSupport}</p>
               </div>
 
-              <p>{t.deviceInfo}</p>
+              <div className="apnPanel">
+                <span className="sectionLabel">{t.apnTitle}</span>
+                <p>{t.apnIntro}</p>
 
-              {plan === "unlimited" && <p>{t.fupInfo}</p>}
+                <div className="apnValue">
+                  <span>APN</span>
+                  <strong>netmon.vodafone.it</strong>
+                </div>
+
+                <p className="apnWarning">{t.apnImportant}</p>
+                <p>{t.apnSteps}</p>
+
+                <div className="apnCode">netmon.vodafone.it</div>
+              </div>
+
+              <div className="roamingPanel">
+                <span className="sectionLabel">{t.roamingTitle}</span>
+                <p>{t.roamingText}</p>
+              </div>
+
+              {plan === "unlimited" && (
+                <div className="fupPanel">
+                  <strong>750 GB FUP</strong>
+                  <p>{t.fupInfo}</p>
+                </div>
+              )}
+
+              <div className="countrySection">
+                <div className="countryTitle">
+                  <span>{t.countriesAvailable}</span>
+                  <strong>{COUNTRIES.length}</strong>
+                </div>
+
+                <div className="countryGrid">
+                  {COUNTRIES.map((country) => (
+                    <span key={country}>
+                      <i>✓</i>
+                      {country}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
         </div>
 
-        <button className="modalDone" onClick={close}>{t.close}</button>
+        <button className="modalDone" onClick={close}>
+          {t.close}
+        </button>
       </div>
+    </div>
+  );
+}
+
+function Detail({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="detail">
+      <span>{label}</span>
+      <strong>{value}</strong>
     </div>
   );
 }
 
 function PlansView({ go, t }: any) {
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("home")} label={t.backHome} />
 
-      <div className="viewHeading">
-        <span className="newEyebrow">{t.plansEyebrow}</span>
-        <h1>{t.plansTitle1}<br /><span>{t.plansTitle2}</span></h1>
+      <div className="pageHeading">
+        <span className="eyebrow">{t.plansEyebrow}</span>
+        <h1>
+          {t.plansTitle1}
+          <br />
+          <em>{t.plansTitle2}</em>
+        </h1>
         <p>{t.plansDescription}</p>
       </div>
 
-      <div className="mainCategoryGrid">
-        <button className="mainCategory" onClick={() => go("country")}>
-          <span className="mainCategoryIcon"><GlobeIcon /></span>
-          <span className="mainCategoryTag">{t.travel}</span>
-          <h2>{t.country}</h2>
-          <p>{t.countryShort}</p>
-          <span className="mainCategoryAction">
-            {t.exploreDestinations} <ArrowRight />
-          </span>
-        </button>
+      <div className="categoryGrid">
+        <Category
+          icon={<GlobeIcon />}
+          tag={t.travel}
+          title={t.country}
+          text={t.countryShort}
+          onClick={() => go("country")}
+        />
 
-        <button className="mainCategory mainCategoryFeatured" onClick={() => go("truck")}>
-          <span className="mainCategoryIcon"><RoadIcon /></span>
-          <span className="mainCategoryTag">{t.road}</span>
-          <h2>{t.truck}</h2>
-          <p>{t.truckShort}</p>
-          <span className="mainCategoryAction">
-            {t.viewPlans} <ArrowRight />
-          </span>
-        </button>
+        <Category
+          icon={<RoadIcon />}
+          tag={t.road}
+          title={t.truck}
+          text={t.truckShort}
+          onClick={() => go("truck")}
+          featured
+        />
 
-        <button className="mainCategory" onClick={() => go("multi")}>
-          <span className="mainCategoryIcon"><CalendarIcon /></span>
-          <span className="mainCategoryTag">{t.longer}</span>
-          <h2>{t.multi}</h2>
-          <p>{t.multiShort}</p>
-          <span className="mainCategoryAction">
-            {t.exploreMulti} <ArrowRight />
-          </span>
-        </button>
+        <Category
+          icon={<CalendarIcon />}
+          tag={t.longer}
+          title={t.multi}
+          text={t.multiShort}
+          onClick={() => go("multi")}
+        />
       </div>
     </section>
+  );
+}
+
+function Category({ icon, tag, title, text, onClick, featured }: any) {
+  return (
+    <button
+      className={`category ${featured ? "categoryFeatured" : ""}`}
+      onClick={onClick}
+    >
+      <span className="categoryIcon">{icon}</span>
+      <small>{tag}</small>
+      <strong>{title}</strong>
+      <p>{text}</p>
+      <span className="categoryArrow">
+        <ArrowRight />
+      </span>
+    </button>
   );
 }
 
@@ -826,57 +999,75 @@ function TruckView({ go, t, language }: any) {
 
   return (
     <>
-      <section className="viewPage">
+      <section className="page">
         <BackButton onClick={() => go("plans")} label={t.allPlans} />
 
-        <div className="viewHeading">
-          <span className="newEyebrow">{t.truckEyebrow}</span>
-          <h1>{t.truckTitle1}<br /><span>{t.truckTitle2}</span></h1>
+        <div className="pageHeading">
+          <span className="eyebrow">{t.truckEyebrow}</span>
+          <h1>
+            {t.truckTitle1}
+            <br />
+            <em>{t.truckTitle2}</em>
+          </h1>
           <p>{t.truckDescription}</p>
         </div>
 
-        <div className="realPlansGrid">
+        <div className="plansGrid">
           {truckPlans.map((plan) => (
             <article
-              className={`realPlan ${plan.popular ? "realPlanPopular" : ""}`}
               key={plan.id}
+              className={`planCard plan-${plan.id} ${
+                plan.popular ? "planPopular" : ""
+              }`}
             >
-              {plan.popular && <span className="popularBadge">{t.popular}</span>}
+              {plan.popular && (
+                <span className="popular">{t.popular}</span>
+              )}
 
-              <span className="planDuration">{plan.duration.toUpperCase()}</span>
+              <span className="planDays">
+                {language === "ro" ? "30 ZILE" : "30 DAYS"}
+              </span>
 
               <h2>{plan.data}</h2>
-              {plan.subtitle && <span className="planSubtitle">{plan.subtitle}</span>}
 
-              <div className="planPrice">
+              {plan.subtitle && (
+                <span className="planSubtitle">{plan.subtitle}</span>
+              )}
+
+              <div className="price">
                 <strong>{plan.price}</strong>
-                <span>{t.per30}</span>
+                <span>{language === "ro" ? "/ 30 zile" : "/ 30 days"}</span>
               </div>
 
-              <div className="planLine" />
+              <div className="divider" />
 
-              <div className="planFeatures">
-                <span>✓ {t.dataOnly}</span>
+              <div className="miniFeatures">
+                <span>✓ {t.data}</span>
                 <span>✓ 4G / 5G</span>
                 <span>✓ {t.hotspot}</span>
-                <span>✓ {t.qrActivation}</span>
+                <span>✓ {t.qrCode}</span>
+                <span>✓ {COUNTRIES.length} {t.coverage}</span>
               </div>
 
               <button
                 className="detailsButton"
-                type="button"
                 onClick={() => setDetailPlan(plan.id)}
               >
-                {t.planDetails} <ArrowRight />
+                {t.planDetails}
+                <ArrowRight />
               </button>
 
-              <button className="selectPlan" type="button">
-                {t.selectPlan} <ArrowRight />
+              <button className="selectPlan">
+                {t.selectPlan}
+                <ArrowRight />
               </button>
 
-              <button className="loyaltyHint" onClick={() => go("loyalty")}>
+              <button
+                className="loyaltyHint"
+                onClick={() => go("loyalty")}
+              >
                 {t.existingCustomer}{" "}
-                <strong>{t.saveLoyalty}</strong>
+                <strong>{t.loyaltySave}</strong>
               </button>
             </article>
           ))}
@@ -897,20 +1088,23 @@ function TruckView({ go, t, language }: any) {
 
 function CountryView({ go, t }: any) {
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("plans")} label={t.allPlans} />
 
-      <div className="viewHeading">
-        <span className="newEyebrow">{t.countryEyebrow}</span>
-        <h1>{t.countryTitle1}<br /><span>{t.countryTitle2}</span></h1>
+      <div className="pageHeading">
+        <span className="eyebrow">{t.countryEyebrow}</span>
+        <h1>
+          {t.countryTitle1}
+          <br />
+          <em>{t.countryTitle2}</em>
+        </h1>
         <p>{t.countryDescription}</p>
       </div>
 
       <div className="comingCard">
         <GlobeIcon />
-        <span>{t.destinations}</span>
-        <h2>{t.countryPlans}</h2>
-        <p>{t.countryComing}</p>
+        <h2>{t.country}</h2>
+        <p>{t.coming}</p>
       </div>
     </section>
   );
@@ -918,19 +1112,23 @@ function CountryView({ go, t }: any) {
 
 function MultiView({ go, t }: any) {
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("plans")} label={t.allPlans} />
 
-      <div className="viewHeading">
-        <span className="newEyebrow">{t.multiEyebrow}</span>
-        <h1>{t.multiTitle1}<br /><span>{t.multiTitle2}</span></h1>
+      <div className="pageHeading">
+        <span className="eyebrow">{t.multiEyebrow}</span>
+        <h1>
+          {t.multiTitle1}
+          <br />
+          <em>{t.multiTitle2}</em>
+        </h1>
         <p>{t.multiDescription}</p>
       </div>
 
-      <div className="multiPlansGrid">
+      <div className="multiGrid">
         {multiPlans.map((plan) => (
-          <article className="multiPlanCard" key={plan.duration}>
-            <div className="multiPlanTop">
+          <article className="multiCard" key={plan.duration}>
+            <div className="multiTop">
               <span>{plan.duration}</span>
               <small>{plan.cycles}</small>
             </div>
@@ -938,26 +1136,27 @@ function MultiView({ go, t }: any) {
             <h2>{plan.data}</h2>
             <strong className="multiTotal">{plan.total}</strong>
 
-            <div className="multiPlanDivider" />
+            <div className="divider" />
 
-            <div className="multiRegular">
+            <div className="priceLine">
               <span>{t.regularPrice}</span>
               <del>{plan.regular}</del>
             </div>
 
-            <div className="multiFinal">
+            <div className="priceLine finalPrice">
               <span>{t.multiPrice}</span>
               <strong>{plan.price}</strong>
             </div>
 
-            <button className="selectPlan" type="button">
-              {t.selectPlan} <ArrowRight />
+            <button className="selectPlan">
+              {t.selectPlan}
+              <ArrowRight />
             </button>
           </article>
         ))}
       </div>
 
-      <p className="multiNote">{t.multiNote}</p>
+      <p className="smallNote">{t.multiNote}</p>
     </section>
   );
 }
@@ -966,47 +1165,54 @@ function LoyaltyView({ go, t }: any) {
   const [email, setEmail] = useState("");
 
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("home")} label={t.back} />
 
       <div className="loyaltyHero">
-        <span className="loyaltyGift"><GiftIcon /></span>
-        <span className="newEyebrow">{t.loyaltyEyebrow}</span>
+        <span className="bigIcon">
+          <GiftIcon />
+        </span>
 
-        <h1>{t.loyaltyTitle1}<br /><span>{t.loyaltyTitle2}</span></h1>
+        <span className="eyebrow">{t.loyaltyEyebrow}</span>
+
+        <h1>
+          {t.loyaltyTitle1}
+          <br />
+          <em>{t.loyaltyTitle2}</em>
+        </h1>
+
         <p>{t.loyaltyDescription}</p>
 
-        <div className="loyaltyUnlock">
-          <label>
-            {t.email}
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              placeholder={t.emailPlaceholder}
-            />
-          </label>
+        <div className="emailBox">
+          <label>{t.email}</label>
 
-          <button type="button" disabled>
-            {t.unlock} <ArrowRight />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={t.emailPlaceholder}
+          />
+
+          <button disabled>
+            {t.unlock}
+            <ArrowRight />
           </button>
 
           <small>{t.loyaltyDemo}</small>
         </div>
       </div>
 
-      <div className="loyaltyPrices">
+      <div className="loyaltyGrid">
         {truckPlans.map((plan) => (
-          <div className="loyaltyPriceCard" key={plan.id}>
-            <div className="loyaltyCardTop">
-              <span>
-                {plan.data}
-                {plan.subtitle && <small>{plan.subtitle}</small>}
-              </span>
-              <span className="discountBadge">-5%</span>
+          <div className="loyaltyCard" key={plan.id}>
+            <div>
+              <strong>{plan.data}</strong>
+              {plan.subtitle && <small>{plan.subtitle}</small>}
             </div>
 
-            <div className="loyaltyPriceRow">
+            <span className="discount">-5%</span>
+
+            <div className="loyaltyPrices">
               <del>{plan.price}</del>
               <strong>{plan.loyalty}</strong>
             </div>
@@ -1016,29 +1222,31 @@ function LoyaltyView({ go, t }: any) {
         ))}
       </div>
 
-      <p className="loyaltyRule">{t.loyaltyRule}</p>
+      <p className="smallNote">{t.loyaltyRule}</p>
     </section>
   );
 }
 
 function AccountView({ go, t }: any) {
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("home")} label={t.back} />
 
       <div className="accountBox">
-        <span className="accountIcon"><UserIcon /></span>
-        <span className="newEyebrow">{t.accountEyebrow}</span>
+        <span className="bigIcon">
+          <UserIcon />
+        </span>
+
+        <span className="eyebrow">{t.accountEyebrow}</span>
         <h1>{t.accountTitle}</h1>
         <p>{t.accountDescription}</p>
 
-        <label>
-          {t.email}
-          <input type="email" placeholder={t.emailPlaceholder} disabled />
-        </label>
+        <label>{t.email}</label>
+        <input type="email" placeholder={t.emailPlaceholder} disabled />
 
-        <button className="accountContinue" disabled>
-          {t.continueEmail} <ArrowRight />
+        <button disabled>
+          {t.continueEmail}
+          <ArrowRight />
         </button>
 
         <small>{t.secureLater}</small>
@@ -1049,85 +1257,108 @@ function AccountView({ go, t }: any) {
 
 function SupportView({ go, t }: any) {
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("home")} label={t.back} />
 
-      <div className="viewHeading">
-        <span className="newEyebrow">{t.supportEyebrow}</span>
-        <h1>{t.supportTitle1}<br /><span>{t.supportTitle2}</span></h1>
+      <div className="pageHeading">
+        <span className="eyebrow">{t.supportEyebrow}</span>
+        <h1>
+          {t.supportTitle1}
+          <br />
+          <em>{t.supportTitle2}</em>
+        </h1>
         <p>{t.supportDescription}</p>
       </div>
 
       <div className="supportCard">
-        <span className="supportIcon"><WhatsAppIcon /></span>
+        <span className="bigIcon">
+          <WhatsAppIcon />
+        </span>
 
-        <div className="supportCardCopy">
-          <span>{t.directSupport}</span>
+        <div>
+          <span className="eyebrow">{t.directSupport}</span>
           <h2>{t.whatsappSupport}</h2>
           <p>{t.whatsappCopy}</p>
-        </div>
 
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsappButton"
-        >
-          {t.whatsappButton} <ArrowRight />
-        </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.whatsappButton}
+            <ArrowRight />
+          </a>
+        </div>
       </div>
     </section>
   );
 }
 
 function TermsView({ go, t }: any) {
+  const sections = [
+    [t.legalCompatibility, t.legalCompatibilityText],
+    [t.legalDigital, t.legalDigitalText],
+    [t.legalRefund, t.legalRefundText],
+    [t.legalConfig, t.legalConfigText],
+    [t.legalCoverage, t.legalCoverageText],
+    [t.legalUsage, t.legalUsageText],
+    [t.legalSupport, t.legalSupportText],
+  ];
+
   return (
-    <section className="viewPage">
+    <section className="page">
       <BackButton onClick={() => go("home")} label={t.back} />
-      <div className="viewHeading">
-        <span className="newEyebrow">{t.legal}</span>
-        <h1>{t.termsTitle1}<br /><span>{t.termsTitle2}</span></h1>
+
+      <div className="pageHeading">
+        <span className="eyebrow">{t.legal}</span>
+        <h1>
+          {t.termsTitle1}
+          <br />
+          <em>{t.termsTitle2}</em>
+        </h1>
         <p>{t.termsDescription}</p>
       </div>
+
+      <div className="termsGrid">
+        {sections.map(([title, text], index) => (
+          <article className="termCard" key={title}>
+            <span>0{index + 1}</span>
+            <h2>{title}</h2>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+
+      <div className="legalNotice">{t.legalNote}</div>
     </section>
   );
 }
 
-function HowItWorks({ go, t }: any) {
+function CompatibilitySection({ go, t }: any) {
   return (
-    <section className="homeHow">
-      <div className="homeHowHeading">
-        <span className="newEyebrow">{t.getConnected}</span>
-        <h2>{t.simple1}<br /><span>{t.simple2}</span></h2>
-        <p>{t.simpleDescription}</p>
+    <section className="compatibilitySection">
+      <div className="compatIntro">
+        <span className="eyebrow">{t.howEyebrow}</span>
+
+        <h2>
+          {t.howTitle1}
+          <br />
+          <em>{t.howTitle2}</em>
+        </h2>
+
+        <p>{t.howText}</p>
       </div>
 
-      <div className="homeHowSteps">
-        <div className="homeHowStep">
-          <span className="howNumber">01</span>
-          <span className="howCheck"><CheckIcon /></span>
-          <h3>{t.compatibility}</h3>
-          <p>{t.compatibilityText}</p>
-        </div>
+      <div className="compatCard">
+        <span className="compatNumber">01</span>
+        <h3>{t.checkCompatibility}</h3>
+        <p>{t.checkText}</p>
 
-        <div className="homeHowStep">
-          <span className="howNumber">02</span>
-          <span className="howCheck"><CheckIcon /></span>
-          <h3>{t.chooseConnection}</h3>
-          <p>{t.chooseConnectionText}</p>
-        </div>
-
-        <div className="homeHowStep">
-          <span className="howNumber">03</span>
-          <span className="howCheck"><CheckIcon /></span>
-          <h3>{t.install}</h3>
-          <p>{t.installText}</p>
-        </div>
+        <button onClick={() => go("terms")}>
+          {t.seeTerms}
+          <ArrowRight />
+        </button>
       </div>
-
-      <button className="howExplore" onClick={() => go("plans")}>
-        {t.exploreNova} <ArrowRight />
-      </button>
     </section>
   );
 }
@@ -1135,28 +1366,44 @@ function HowItWorks({ go, t }: any) {
 function TrustBar({ go, t }: any) {
   return (
     <section className="trustBar">
-      <div><strong>4G / 5G</strong><span>{t.fastData}</span></div>
-      <div><strong>eSIM</strong><span>{t.digitalActivation}</span></div>
-      <div><strong>HOTSPOT</strong><span>{t.hotspotIncluded}</span></div>
+      <div>
+        <strong>4G / 5G</strong>
+        <span>{t.fastData}</span>
+      </div>
+
+      <div>
+        <strong>eSIM</strong>
+        <span>{t.digitalActivation}</span>
+      </div>
+
+      <div>
+        <strong>HOTSPOT</strong>
+        <span>{t.included}</span>
+      </div>
+
       <button onClick={() => go("support")}>
         <strong>{t.support.toUpperCase()}</strong>
         <span>{t.directAssistance}</span>
-        <ArrowRight />
       </button>
     </section>
   );
 }
 
-function HomeFooter({ go, t }: any) {
+function Footer({ go, t, language }: any) {
   return (
-    <footer className="premiumFooter">
+    <footer className="footer">
       <div className="footerMain">
-        <div className="footerIdentity">
-          <button onClick={() => go("home")} className="footerBrand">
+        <div>
+          <button className="brand" onClick={() => go("home")}>
             <NovaLogo />
             <strong>NovaSIM</strong>
           </button>
-          <p>Premium mobile connectivity<br />designed for Europe.</p>
+
+          <p>
+            {language === "ro"
+              ? "Conectivitate mobilă premium pentru Europa."
+              : "Premium mobile connectivity designed for Europe."}
+          </p>
         </div>
 
         <div className="footerLinks">
@@ -1181,7 +1428,7 @@ function HomeFooter({ go, t }: any) {
         </div>
       </div>
 
-      <div className="footerBottomNew">
+      <div className="footerBottom">
         <span>{t.rights}</span>
         <span>{t.stayConnected}</span>
       </div>
@@ -1189,99 +1436,111 @@ function HomeFooter({ go, t }: any) {
   );
 }
 
-function HomeView({ go, t }: any) {
+function HomeView({ go, t, language }: any) {
   return (
     <>
       <section className="hero">
         <div className="heroGrid" />
-        <div className="heroGlow heroGlowOne" />
-        <div className="heroGlow heroGlowTwo" />
+        <div className="heroGlow" />
 
         <div className="heroInner">
-          <div className="heroCopy">
-            <div className="eyebrow">
-              <span className="statusDot" />
-              {t.premiumConnectivity}
-            </div>
+          <span className="heroEyebrow">
+            <i />
+            {t.heroEyebrow}
+          </span>
 
-            <h1>
-              {t.hero1}<br />
-              <span>{t.hero2}</span><br />
-              <span>{t.hero3}</span><br />
-              {t.hero4}
-            </h1>
+          <h1>
+            {t.hero1}
+            <br />
+            <em>{t.hero2}</em>
+            <br />
+            <em>{t.hero3}</em>
+            <br />
+            {t.hero4}
+          </h1>
 
-            <p className="heroDescription">{t.heroDescription}</p>
+          <p>{t.heroText}</p>
 
-            <div className="heroButtons">
-              <button className="primaryButton" onClick={() => go("plans")}>
-                {t.exploreEsims} <ArrowRight />
-              </button>
-              <button className="secondaryButton" onClick={() => go("plans")}>
-                {t.viewPlans}
-              </button>
-            </div>
+          <button className="heroButton" onClick={() => go("plans")}>
+            {t.explore}
+            <ArrowRight />
+          </button>
 
-            <div className="heroTrust">
-              <span><i>✓</i> {t.instantActivation}</span>
-              <span><i>✓</i> 4G / 5G</span>
-              <span><i>✓</i> Hotspot</span>
-            </div>
+          <div className="heroTrust">
+            <span>✓ eSIM</span>
+            <span>✓ 4G / 5G</span>
+            <span>✓ Hotspot</span>
           </div>
         </div>
       </section>
 
-      <section className="newChoiceSection">
-        <div className="newChoiceIntro">
-          <span className="newEyebrow">{t.connectivity}</span>
-          <h2>{t.chooseHow1}<br /><span>{t.chooseHow2}</span></h2>
-          <p>{t.chooseHowDescription}</p>
+      <section className="choiceSection">
+        <div className="choiceHeading">
+          <span className="eyebrow">NOVASIM CONNECTIVITY</span>
+          <h2>
+            {language === "ro" ? "Alege cum vrei" : "Choose how you"}
+            <br />
+            <em>
+              {language === "ro"
+                ? "să rămâi conectat."
+                : "stay connected."}
+            </em>
+          </h2>
         </div>
 
-        <div className="homeChoices">
-          <button onClick={() => go("country")}>
-            <span className="choiceNumber">01</span>
-            <span className="choiceIcon"><GlobeIcon /></span>
-            <small>{t.travel}</small>
-            <strong>{t.country}</strong>
-            <p>{t.countryHome}</p>
-            <span className="choiceArrow"><ArrowRight /></span>
-          </button>
+        <div className="categoryGrid">
+          <Category
+            icon={<GlobeIcon />}
+            tag={t.travel}
+            title={t.country}
+            text={t.countryShort}
+            onClick={() => go("country")}
+          />
 
-          <button onClick={() => go("truck")}>
-            <span className="choiceNumber">02</span>
-            <span className="choiceIcon"><RoadIcon /></span>
-            <small>{t.road}</small>
-            <strong>{t.truck}</strong>
-            <p>{t.truckHome}</p>
-            <span className="choiceArrow"><ArrowRight /></span>
-          </button>
+          <Category
+            icon={<RoadIcon />}
+            tag={t.road}
+            title={t.truck}
+            text={t.truckShort}
+            onClick={() => go("truck")}
+            featured
+          />
 
-          <button onClick={() => go("multi")}>
-            <span className="choiceNumber">03</span>
-            <span className="choiceIcon"><CalendarIcon /></span>
-            <small>{t.longer}</small>
-            <strong>{t.multi}</strong>
-            <p>{t.multiHome}</p>
-            <span className="choiceArrow"><ArrowRight /></span>
-          </button>
+          <Category
+            icon={<CalendarIcon />}
+            tag={t.longer}
+            title={t.multi}
+            text={t.multiShort}
+            onClick={() => go("multi")}
+          />
         </div>
 
         <button className="loyaltyStrip" onClick={() => go("loyalty")}>
-          <span className="loyaltyStripIcon"><GiftIcon /></span>
-          <span className="loyaltyStripText">
-            <small>{t.existingNova}</small>
-            <strong>NovaSIM Loyalty</strong>
-            <p>{t.comeBack}</p>
+          <span className="bigIcon">
+            <GiftIcon />
           </span>
-          <span className="loyaltyTen">-5%</span>
-          <ArrowRight />
+
+          <span>
+            <small>
+              {language === "ro"
+                ? "EȘTI DEJA CLIENT NOVASIM?"
+                : "EXISTING NOVASIM CUSTOMER?"}
+            </small>
+            <strong>NovaSIM Loyalty</strong>
+            <p>
+              {language === "ro"
+                ? "Revino și economisește 5% la planurile eligibile."
+                : "Come back and save 5% on eligible plans."}
+            </p>
+          </span>
+
+          <b>-5%</b>
         </button>
       </section>
 
-      <HowItWorks go={go} t={t} />
+      <CompatibilitySection go={go} t={t} />
       <TrustBar go={go} t={t} />
-      <HomeFooter go={go} t={t} />
+      <Footer go={go} t={t} language={language} />
     </>
   );
 }
@@ -1305,1516 +1564,652 @@ export default function Home() {
   return (
     <main className="novaApp">
       <style>{`
-        .novaApp {
-          min-height: 100vh;
-          background: #040809;
+        .novaApp{
+          min-height:100vh;
+          background:#040809;
+          color:#fff;
+          --aqua:#36c9be;
         }
 
-        .novaApp button {
-          font-family: inherit;
+        .novaApp *{box-sizing:border-box}
+        .novaApp button,.novaApp input{font-family:inherit}
+        .novaApp button{cursor:pointer}
+        .novaApp svg{
+          width:18px;height:18px;
+          fill:none;
+          stroke:currentColor;
+          stroke-width:1.5;
+          stroke-linecap:round;
+          stroke-linejoin:round
         }
 
-        .newHeader {
-          width: min(calc(100% - 64px), var(--max-width));
-          height: 88px;
-          margin: 0 auto;
-          position: relative;
-          z-index: 1001;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          border-bottom: 1px solid rgba(255,255,255,.055);
+        .inlineIcon{width:15px!important;height:15px!important}
+        .eyebrow{color:var(--aqua);font-size:9px;font-weight:900;letter-spacing:1.5px}
+        em{font-style:normal;color:var(--aqua)}
+
+        .header{
+          width:min(calc(100% - 64px),1180px);
+          height:88px;margin:auto;
+          display:flex;align-items:center;justify-content:space-between;
+          border-bottom:1px solid rgba(255,255,255,.055);
+          position:relative;z-index:1001
         }
 
-        .newBrand,
-        .footerBrand {
-          padding: 0;
-          border: 0;
-          background: transparent;
-          color: white;
-          display: flex;
-          align-items: center;
-          gap: 9px;
-          cursor: pointer;
+        .brand{
+          border:0;background:none;color:white;padding:0;
+          display:flex;align-items:center;gap:9px
         }
 
-        .newBrand > span:last-child {
-          font-size: 21px;
-          font-weight: 900;
-          letter-spacing: -.7px;
+        .brand strong{font-size:21px;letter-spacing:-.7px}
+        .novaLogo{width:31px;height:31px;display:block}
+        .novaLogo svg{width:100%;height:100%;fill:var(--aqua);stroke:none}
+        .novaLogo .logoCut{fill:#040809}
+
+        .headerActions{display:flex;align-items:center;gap:9px}
+
+        .language{
+          height:40px;padding:0 10px;border:1px solid rgba(255,255,255,.07);
+          border-radius:8px;display:flex;align-items:center;gap:5px;color:#465153
         }
 
-        .newHeaderActions {
-          display: flex;
-          align-items: center;
-          gap: 10px;
+        .language button{border:0;background:none;color:#667274;font-size:9px;font-weight:900;padding:0}
+        .language button.active{color:var(--aqua)}
+
+        .accountTop,.menuButton{
+          height:40px;border:1px solid rgba(255,255,255,.075);
+          border-radius:8px;background:rgba(255,255,255,.02);color:#a2acad
         }
 
-        .languageSwitch {
-          height: 40px;
-          padding: 0 10px;
-          border: 1px solid rgba(255,255,255,.07);
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          color: #465153;
+        .accountTop{padding:0 14px;display:flex;align-items:center;gap:8px;font-size:10px;font-weight:800}
+        .accountTop svg{color:var(--aqua)}
+
+        .menuButton{
+          width:40px;color:var(--aqua);
+          display:flex;align-items:center;justify-content:center;
+          font-size:22px
         }
 
-        .languageSwitch button {
-          padding: 0;
-          border: 0;
-          background: transparent;
-          color: #667274;
-          font-size: 9px;
-          font-weight: 900;
-          cursor: pointer;
+        .menuOverlay{
+          position:absolute;z-index:1000;top:88px;left:0;width:100%;
+          min-height:calc(100vh - 88px);
+          background:rgba(3,7,8,.985);
+          backdrop-filter:blur(16px)
         }
 
-        .languageSwitch .languageActive {
-          color: var(--aqua);
+        .menu{width:min(calc(100% - 64px),700px);margin:auto;padding:60px 0}
+        .menu>.eyebrow{display:block;margin-bottom:18px;color:#566164}
+
+        .menu>button{
+          width:100%;min-height:82px;padding:14px 8px;border:0;
+          border-bottom:1px solid rgba(255,255,255,.06);
+          background:none;color:white;display:grid;
+          grid-template-columns:44px 1fr 20px;align-items:center;gap:14px;text-align:left
         }
 
-        .newAccount {
-          min-height: 40px;
-          padding: 0 14px;
-          border-radius: 8px;
-          border: 1px solid rgba(255,255,255,.075);
-          background: rgba(255,255,255,.02);
-          color: #a2acad;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          cursor: pointer;
-          font-size: 10px;
-          font-weight: 800;
+        .menuIcon,.bigIcon,.categoryIcon{
+          display:flex;align-items:center;justify-content:center;
+          color:var(--aqua);border:1px solid rgba(54,201,190,.13);
+          background:rgba(54,201,190,.04)
         }
 
-        .newAccount svg,
-        .menuButton svg,
-        .menuItemIcon svg,
-        .mainCategoryIcon svg,
-        .choiceIcon svg,
-        .loyaltyStripIcon svg,
-        .loyaltyGift svg,
-        .accountIcon svg,
-        .supportIcon svg,
-        .comingCard svg,
-        .howCheck svg {
-          width: 18px;
-          height: 18px;
-          fill: none;
-          stroke: currentColor;
-          stroke-width: 1.5;
-          stroke-linecap: round;
-          stroke-linejoin: round;
+        .menuIcon{width:40px;height:40px;border-radius:9px}
+        .menu strong{display:block;font-size:15px}
+        .menu small{display:block;margin-top:4px;color:#667274;font-size:9px}
+
+        .hero{
+          min-height:660px;position:relative;overflow:hidden;
+          border-bottom:1px solid rgba(255,255,255,.055)
         }
 
-        .newAccount svg {
-          color: var(--aqua);
-          width: 15px;
-          height: 15px;
+        .heroGrid{
+          position:absolute;inset:0;
+          background-image:
+            linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+            linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+          background-size:52px 52px;
+          mask-image:linear-gradient(to bottom,black,transparent)
         }
 
-        .menuButton {
-          width: 40px;
-          height: 40px;
-          padding: 0;
-          border-radius: 8px;
-          border: 1px solid rgba(54,201,190,.14);
-          background: rgba(54,201,190,.04);
-          color: var(--aqua);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
+        .heroGlow{
+          position:absolute;width:650px;height:650px;right:-180px;top:-180px;
+          background:radial-gradient(circle,rgba(54,201,190,.12),transparent 65%);
+          filter:blur(10px)
         }
 
-        .menuX {
-          font-size: 22px;
+        .heroInner{
+          width:min(calc(100% - 64px),1180px);margin:auto;
+          padding:100px 0 90px;position:relative
         }
 
-        .menuOverlay {
-          position: absolute;
-          z-index: 1000;
-          top: 88px;
-          left: 0;
-          width: 100%;
-          min-height: calc(100vh - 88px);
+        .heroEyebrow{
+          color:var(--aqua);font-size:9px;font-weight:900;letter-spacing:1.4px;
+          display:flex;align-items:center;gap:8px
+        }
+
+        .heroEyebrow i{
+          width:6px;height:6px;border-radius:50%;background:var(--aqua);
+          box-shadow:0 0 16px var(--aqua)
+        }
+
+        .hero h1{
+          margin:20px 0 0;font-size:clamp(55px,7.4vw,100px);
+          line-height:.87;letter-spacing:-5px
+        }
+
+        .hero p{
+          max-width:540px;margin-top:28px;color:#7b8789;
+          font-size:13px;line-height:1.7
+        }
+
+        .heroButton,.selectPlan,.supportCard a{
+          min-height:48px;border:1px solid var(--aqua);border-radius:7px;
+          background:var(--aqua);color:#02100f;font-weight:900;font-size:9px;
+          display:flex;align-items:center;justify-content:space-between;
+          text-decoration:none
+        }
+
+        .heroButton{margin-top:30px;width:190px;padding:0 17px}
+
+        .heroTrust{margin-top:25px;display:flex;gap:22px;color:#657174;font-size:8px}
+        .heroTrust span:first-letter{color:var(--aqua)}
+
+        .choiceSection,.compatibilitySection,.trustBar,.footer,.page{
+          width:min(calc(100% - 64px),1180px);margin-left:auto;margin-right:auto
+        }
+
+        .choiceSection{padding:75px 0 65px}
+        .choiceHeading h2,.compatIntro h2{
+          margin:13px 0 0;font-size:clamp(42px,4.7vw,62px);
+          line-height:.98;letter-spacing:-3px
+        }
+
+        .categoryGrid,.plansGrid,.loyaltyGrid{
+          margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px
+        }
+
+        .category{
+          min-height:240px;padding:23px;position:relative;border-radius:12px;
+          border:1px solid rgba(255,255,255,.07);background:#070c0d;
+          color:white;text-align:left
+        }
+
+        .categoryFeatured{border-color:rgba(54,201,190,.24)}
+        .categoryIcon{width:40px;height:40px;border-radius:9px}
+        .category small{display:block;margin-top:37px;color:var(--aqua);font-size:7px;font-weight:900;letter-spacing:1px}
+        .category>strong{display:block;margin-top:8px;font-size:20px}
+        .category p{margin-top:9px;color:#687476;font-size:10px;line-height:1.5}
+        .categoryArrow{position:absolute;right:20px;bottom:20px;color:#657174}
+
+        .loyaltyStrip{
+          width:100%;min-height:110px;margin-top:10px;padding:20px 24px;
+          border:1px solid rgba(54,201,190,.16);border-radius:12px;
+          background:#071011;color:white;
+          display:grid;grid-template-columns:50px 1fr auto;gap:16px;align-items:center;text-align:left
+        }
+
+        .bigIcon{width:48px;height:48px;border-radius:10px}
+        .loyaltyStrip small{color:var(--aqua);font-size:7px;font-weight:900}
+        .loyaltyStrip strong{display:block;margin-top:5px;font-size:17px}
+        .loyaltyStrip p{margin:4px 0 0;color:#6e7a7c;font-size:9px}
+        .loyaltyStrip b{color:var(--aqua);font-size:26px}
+
+        .compatibilitySection{
+          padding:65px 0;border-top:1px solid rgba(255,255,255,.055);
+          display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center
+        }
+
+        .compatIntro p{max-width:500px;color:#758183;font-size:11px;line-height:1.7}
+        .compatCard{
+          min-height:220px;padding:28px;border:1px solid rgba(54,201,190,.15);
+          border-radius:12px;background:#070c0d
+        }
+
+        .compatNumber{color:#566164;font-size:8px;font-weight:900}
+        .compatCard h3{margin-top:38px;font-size:21px}
+        .compatCard p{color:#778385;font-size:10px;line-height:1.65}
+        .compatCard button{
+          margin-top:20px;padding:0;border:0;background:none;color:var(--aqua);
+          display:flex;align-items:center;gap:10px;font-size:9px;font-weight:900
+        }
+
+        .trustBar{
+          min-height:110px;border-top:1px solid rgba(255,255,255,.055);
+          border-bottom:1px solid rgba(255,255,255,.055);
+          display:grid;grid-template-columns:repeat(4,1fr)
+        }
+
+        .trustBar>div,.trustBar>button{
+          min-height:110px;padding:25px;border:0;border-right:1px solid rgba(255,255,255,.055);
+          background:none;color:white;text-align:left;display:flex;flex-direction:column;justify-content:center
+        }
+
+        .trustBar strong{color:var(--aqua);font-size:9px}
+        .trustBar span{margin-top:5px;color:#687476;font-size:8px}
+
+        .footer{padding:60px 0 25px}
+        .footerMain{display:grid;grid-template-columns:1fr 1.5fr;gap:70px;padding-bottom:50px}
+        .footerMain p{color:#596567;font-size:10px;line-height:1.6}
+
+        .footerLinks{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+        .footerLinks>div{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+        .footerLinks span{color:#4e5a5c;font-size:7px;font-weight:900}
+        .footerLinks button{padding:0;border:0;background:none;color:#899496;font-size:9px}
+        .footerBottom{padding-top:22px;border-top:1px solid rgba(255,255,255,.055);display:flex;justify-content:space-between;color:#465153;font-size:7px}
+
+        .page{min-height:calc(100vh - 88px);padding:48px 0 80px}
+        .back{padding:8px 0;border:0;background:none;color:#778385;display:flex;align-items:center;gap:9px;font-size:10px;font-weight:800}
+
+        .pageHeading{max-width:760px;margin-top:58px}
+        .pageHeading h1,.loyaltyHero h1{
+          margin:15px 0 0;font-size:clamp(48px,6vw,76px);line-height:.94;letter-spacing:-4px
+        }
+
+        .pageHeading>p,.loyaltyHero>p{
+          max-width:570px;margin-top:22px;color:#788486;font-size:13px;line-height:1.65
+        }
+
+        .planCard{
+          min-height:465px;padding:26px;position:relative;border-radius:13px;
+          border:1px solid rgba(255,255,255,.08);
+          display:flex;flex-direction:column;overflow:hidden
+        }
+
+        .plan-200{
           background:
-            radial-gradient(circle at 80% 10%,rgba(54,201,190,.065),transparent 28%),
-            rgba(3,7,8,.985);
-          backdrop-filter: blur(16px);
+            radial-gradient(circle at 100% 0,rgba(65,181,255,.15),transparent 34%),
+            linear-gradient(145deg,#071014,#070c0d)
         }
 
-        .menuInner {
-          width: min(calc(100% - 64px),700px);
-          margin: 0 auto;
-          padding: 60px 0;
-        }
-
-        .menuLabel {
-          display: block;
-          margin-bottom: 18px;
-          color: #465153;
-          font-size: 8px;
-          font-weight: 900;
-          letter-spacing: 1.5px;
-        }
-
-        .menuInner > button {
-          width: 100%;
-          min-height: 82px;
-          padding: 14px 8px;
-          border: 0;
-          border-bottom: 1px solid rgba(255,255,255,.06);
-          background: transparent;
-          color: white;
-          display: grid;
-          grid-template-columns: 44px 1fr 20px;
-          align-items: center;
-          gap: 14px;
-          text-align: left;
-          cursor: pointer;
-        }
-
-        .menuItemIcon,
-        .mainCategoryIcon,
-        .choiceIcon,
-        .loyaltyStripIcon,
-        .loyaltyGift,
-        .accountIcon,
-        .supportIcon,
-        .howCheck {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--aqua);
-          background: rgba(54,201,190,.04);
-          border: 1px solid rgba(54,201,190,.11);
-        }
-
-        .menuItemIcon {
-          width: 40px;
-          height: 40px;
-          border-radius: 9px;
-        }
-
-        .menuInner strong {
-          display: block;
-          font-size: 15px;
-        }
-
-        .menuInner small {
-          display: block;
-          margin-top: 4px;
-          color: #667274;
-          font-size: 9px;
-        }
-
-        .newChoiceSection,
-        .homeHow,
-        .trustBar,
-        .premiumFooter {
-          width: min(calc(100% - 64px),var(--max-width));
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .newChoiceSection {
-          padding: 80px 0 64px;
-        }
-
-        .newEyebrow {
-          color: var(--aqua);
-          font-size: 9px;
-          font-weight: 900;
-          letter-spacing: 1.6px;
-        }
-
-        .newChoiceIntro h2,
-        .homeHowHeading h2 {
-          margin-top: 13px;
-          font-size: clamp(42px,4.7vw,62px);
-          line-height: .98;
-          letter-spacing: -3px;
-        }
-
-        .newChoiceIntro h2 span,
-        .homeHowHeading h2 span {
-          color: var(--aqua);
-        }
-
-        .newChoiceIntro > p,
-        .homeHowHeading > p {
-          max-width: 490px;
-          margin-top: 17px;
-          color: #748083;
-          font-size: 12px;
-          line-height: 1.65;
-        }
-
-        .homeChoices {
-          margin-top: 34px;
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          gap: 10px;
-        }
-
-        .homeChoices > button {
-          min-height: 240px;
-          padding: 23px;
-          position: relative;
-          border-radius: 11px;
-          border: 1px solid rgba(255,255,255,.07);
-          background: #070c0d;
-          color: white;
-          text-align: left;
-          cursor: pointer;
-        }
-
-        .choiceNumber {
-          color: #3e494b;
-          font-size: 8px;
-          font-weight: 900;
-        }
-
-        .choiceIcon {
-          position: absolute;
-          right: 20px;
-          top: 20px;
-          width: 36px;
-          height: 36px;
-          border-radius: 8px;
-        }
-
-        .homeChoices small {
-          display: block;
-          margin-top: 48px;
-          color: var(--aqua);
-          font-size: 7px;
-          font-weight: 900;
-          letter-spacing: 1.1px;
-        }
-
-        .homeChoices strong {
-          display: block;
-          margin-top: 8px;
-          font-size: 19px;
-        }
-
-        .homeChoices p {
-          margin-top: 8px;
-          color: #667274;
-          font-size: 10px;
-        }
-
-        .choiceArrow {
-          position: absolute;
-          right: 20px;
-          bottom: 20px;
-          color: #526063;
-        }
-
-        .loyaltyStrip {
-          width: 100%;
-          min-height: 112px;
-          margin-top: 10px;
-          padding: 20px 25px;
-          border-radius: 11px;
-          border: 1px solid rgba(54,201,190,.15);
+        .plan-500{
           background:
-            radial-gradient(circle at 82% 0%,rgba(54,201,190,.06),transparent 30%),
-            #071011;
-          color: white;
-          display: grid;
-          grid-template-columns: 48px 1fr auto 20px;
-          align-items: center;
-          gap: 17px;
-          text-align: left;
-          cursor: pointer;
+            radial-gradient(circle at 100% 0,rgba(54,201,190,.22),transparent 36%),
+            linear-gradient(145deg,#071311,#070c0d);
+          border-color:rgba(54,201,190,.32)
         }
 
-        .loyaltyStripIcon {
-          width: 46px;
-          height: 46px;
-          border-radius: 10px;
-        }
-
-        .loyaltyStripText small {
-          color: var(--aqua);
-          font-size: 6.5px;
-          font-weight: 900;
-          letter-spacing: 1px;
-        }
-
-        .loyaltyStripText strong {
-          display: block;
-          margin-top: 5px;
-          font-size: 17px;
-        }
-
-        .loyaltyStripText p {
-          margin-top: 4px;
-          color: #6e7a7c;
-          font-size: 9px;
-        }
-
-        .loyaltyTen {
-          color: var(--aqua);
-          font-size: 26px;
-          font-weight: 900;
-        }
-
-        .homeHow {
-          padding: 68px 0;
-          border-top: 1px solid rgba(255,255,255,.055);
-        }
-
-        .homeHowSteps {
-          margin-top: 34px;
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          gap: 9px;
-        }
-
-        .homeHowStep {
-          min-height: 190px;
-          position: relative;
-          padding: 22px;
-          border-radius: 10px;
-          border: 1px solid rgba(255,255,255,.065);
-          background: #070c0d;
-        }
-
-        .howNumber {
-          color: #465153;
-          font-size: 8px;
-          font-weight: 900;
-        }
-
-        .howCheck {
-          position: absolute;
-          top: 18px;
-          right: 18px;
-          width: 32px;
-          height: 32px;
-          border-radius: 8px;
-        }
-
-        .howCheck svg {
-          width: 15px;
-          height: 15px;
-        }
-
-        .homeHowStep h3 {
-          margin-top: 45px;
-          font-size: 17px;
-          letter-spacing: -.5px;
-        }
-
-        .homeHowStep p {
-          margin-top: 9px;
-          color: #6c787a;
-          font-size: 9px;
-          line-height: 1.6;
-        }
-
-        .howExplore {
-          margin-top: 18px;
-          padding: 0;
-          border: 0;
-          background: transparent;
-          color: var(--aqua);
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          font-size: 9px;
-          font-weight: 900;
-          cursor: pointer;
-        }
-
-        .trustBar {
-          min-height: 110px;
-          border-top: 1px solid rgba(255,255,255,.055);
-          border-bottom: 1px solid rgba(255,255,255,.055);
-          display: grid;
-          grid-template-columns: repeat(4,1fr);
-        }
-
-        .trustBar > div,
-        .trustBar > button {
-          min-height: 110px;
-          padding: 25px;
-          border: 0;
-          border-right: 1px solid rgba(255,255,255,.055);
-          background: transparent;
-          color: white;
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .trustBar > button {
-          position: relative;
-          cursor: pointer;
-        }
-
-        .trustBar > :last-child {
-          border-right: 0;
-        }
-
-        .trustBar strong {
-          color: var(--aqua);
-          font-size: 9px;
-          letter-spacing: .8px;
-        }
-
-        .trustBar span {
-          margin-top: 5px;
-          color: #687476;
-          font-size: 8px;
-        }
-
-        .trustBar button .inlineIcon {
-          position: absolute;
-          right: 22px;
-          color: #596567;
-        }
-
-        .premiumFooter {
-          padding: 62px 0 26px;
-        }
-
-        .footerMain {
-          display: grid;
-          grid-template-columns: 1fr 1.5fr;
-          gap: 70px;
-          padding-bottom: 52px;
-        }
-
-        .footerBrand strong {
-          font-size: 21px;
-        }
-
-        .footerIdentity p {
-          margin-top: 12px;
-          color: #596567;
-          font-size: 10px;
-          line-height: 1.6;
-        }
-
-        .footerLinks {
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          gap: 25px;
-        }
-
-        .footerLinks > div {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 11px;
-        }
-
-        .footerLinks span {
-          margin-bottom: 3px;
-          color: #4e5a5c;
-          font-size: 7px;
-          font-weight: 900;
-          letter-spacing: 1px;
-        }
-
-        .footerLinks button {
-          padding: 0;
-          border: 0;
-          background: transparent;
-          color: #899496;
-          font-size: 9px;
-          cursor: pointer;
-        }
-
-        .footerLinks button:hover {
-          color: var(--aqua);
-        }
-
-        .footerBottomNew {
-          padding-top: 22px;
-          border-top: 1px solid rgba(255,255,255,.055);
-          display: flex;
-          justify-content: space-between;
-          color: #465153;
-          font-size: 7px;
-        }
-
-        .viewPage {
-          width: min(calc(100% - 64px),var(--max-width));
-          min-height: calc(100vh - 88px);
-          margin: 0 auto;
-          padding: 48px 0 80px;
-        }
-
-        .viewBack {
-          padding: 8px 0;
-          border: 0;
-          background: transparent;
-          color: #778385;
-          display: inline-flex;
-          align-items: center;
-          gap: 9px;
-          font-size: 10px;
-          font-weight: 800;
-          cursor: pointer;
-        }
-
-        .viewHeading {
-          max-width: 760px;
-          margin-top: 58px;
-        }
-
-        .viewHeading h1,
-        .loyaltyHero h1 {
-          margin-top: 15px;
-          font-size: clamp(48px,6vw,76px);
-          line-height: .94;
-          letter-spacing: -4px;
-        }
-
-        .viewHeading h1 span,
-        .loyaltyHero h1 span {
-          color: var(--aqua);
-        }
-
-        .viewHeading > p,
-        .loyaltyHero > p {
-          max-width: 550px;
-          margin-top: 22px;
-          color: #788486;
-          font-size: 13px;
-          line-height: 1.65;
-        }
-
-        .mainCategoryGrid,
-        .realPlansGrid,
-        .loyaltyPrices {
-          margin-top: 48px;
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-          gap: 10px;
-        }
-
-        .mainCategory,
-        .realPlan,
-        .loyaltyPriceCard,
-        .comingCard,
-        .accountBox,
-        .supportCard,
-        .multiPlanCard {
-          border-radius: 12px;
-          border: 1px solid rgba(255,255,255,.07);
-          background: #070c0d;
-        }
-
-        .mainCategory {
-          min-height: 300px;
-          padding: 27px;
-          color: white;
-          text-align: left;
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .mainCategoryIcon {
-          width: 43px;
-          height: 43px;
-          border-radius: 9px;
-        }
-
-        .mainCategoryTag {
-          margin-top: 38px;
-          color: var(--aqua);
-          font-size: 7px;
-          font-weight: 900;
-        }
-
-        .mainCategory h2 {
-          margin-top: 9px;
-          font-size: 23px;
-        }
-
-        .mainCategory p {
-          margin-top: 11px;
-          color: #697577;
-          font-size: 10px;
-        }
-
-        .mainCategoryAction {
-          margin-top: auto;
-          display: flex;
-          justify-content: space-between;
-          color: #9ca6a7;
-          font-size: 9px;
-        }
-
-        .realPlan {
-          min-height: 455px;
-          padding: 26px;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .realPlanPopular {
-          border-color: rgba(54,201,190,.25);
-        }
-
-        .popularBadge,
-        .discountBadge {
-          padding: 6px 8px;
-          border-radius: 5px;
-          color: var(--aqua);
-          border: 1px solid rgba(54,201,190,.16);
-          font-size: 6px;
-          font-weight: 900;
-        }
-
-        .popularBadge {
-          position: absolute;
-          right: 17px;
-          top: 17px;
-        }
-
-        .planDuration {
-          color: #566164;
-          font-size: 7px;
-          font-weight: 900;
-        }
-
-        .realPlan h2 {
-          margin-top: 24px;
-          font-size: 35px;
-        }
-
-        .planSubtitle {
-          margin-top: 4px;
-          color: var(--aqua);
-          font-size: 9px;
-          font-weight: 900;
-        }
-
-        .planPrice {
-          margin-top: 17px;
-          display: flex;
-          align-items: flex-end;
-          gap: 6px;
-        }
-
-        .planPrice strong {
-          font-size: 26px;
-        }
-
-        .planPrice span {
-          color: #596567;
-          font-size: 8px;
-        }
-
-        .planLine {
-          height: 1px;
-          margin: 23px 0;
-          background: rgba(255,255,255,.055);
-        }
-
-        .planFeatures {
-          display: flex;
-          flex-direction: column;
-          gap: 9px;
-          color: #818d8f;
-          font-size: 9px;
-        }
-
-        .detailsButton {
-          min-height: 39px;
-          margin-top: 20px;
-          padding: 0 14px;
-          border-radius: 7px;
-          border: 1px solid rgba(54,201,190,.18);
-          background: rgba(54,201,190,.035);
-          color: var(--aqua);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 8px;
-          font-weight: 900;
-          cursor: pointer;
-        }
-
-        .selectPlan,
-        .loginLoyalty,
-        .whatsappButton {
-          min-height: 45px;
-          border-radius: 7px;
-          border: 1px solid var(--aqua);
-          background: var(--aqua);
-          color: #02100f;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 9px;
-          font-weight: 900;
-        }
-
-        .selectPlan {
-          margin-top: 8px;
-          padding: 0 15px;
-        }
-
-        .loyaltyHint {
-          padding: 11px 0 0;
-          border: 0;
-          background: transparent;
-          color: #566164;
-          font-size: 7px;
-          cursor: pointer;
-        }
-
-        .loyaltyHint strong {
-          color: var(--aqua);
-        }
-
-        .comingCard {
-          max-width: 580px;
-          min-height: 220px;
-          margin-top: 45px;
-          padding: 30px;
-        }
-
-        .comingCard svg {
-          color: var(--aqua);
-          width: 28px;
-          height: 28px;
-        }
-
-        .comingCard > span {
-          display: block;
-          margin-top: 27px;
-          color: var(--aqua);
-          font-size: 7px;
-        }
-
-        .comingCard h2 {
-          margin-top: 8px;
-          font-size: 25px;
-        }
-
-        .comingCard p {
-          margin-top: 9px;
-          color: #697577;
-          font-size: 10px;
-        }
-
-        .multiPlansGrid {
-          margin-top: 45px;
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
-          gap: 10px;
-        }
-
-        .multiPlanCard {
-          min-height: 365px;
-          padding: 27px;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .multiPlanTop {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .multiPlanTop span {
-          color: var(--aqua);
-          font-size: 8px;
-          font-weight: 900;
-        }
-
-        .multiPlanTop small {
-          color: #586466;
-          font-size: 7px;
-          font-weight: 900;
-        }
-
-        .multiPlanCard h2 {
-          margin-top: 38px;
-          font-size: 31px;
-        }
-
-        .multiTotal {
-          margin-top: 7px;
-          color: var(--aqua);
-          font-size: 15px;
-        }
-
-        .multiPlanDivider {
-          height: 1px;
-          margin: 25px 0;
-          background: rgba(255,255,255,.055);
-        }
-
-        .multiRegular,
-        .multiFinal {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .multiRegular span,
-        .multiFinal span {
-          color: #687476;
-          font-size: 8px;
-        }
-
-        .multiRegular del {
-          color: #697577;
-          font-size: 13px;
-        }
-
-        .multiFinal {
-          margin-top: 12px;
-        }
-
-        .multiFinal strong {
-          color: var(--aqua);
-          font-size: 26px;
-        }
-
-        .multiPlanCard .selectPlan {
-          margin-top: auto;
-        }
-
-        .multiNote,
-        .loyaltyRule {
-          margin-top: 14px;
-          color: #596567;
-          font-size: 8px;
-        }
-
-        .loyaltyHero {
-          max-width: 720px;
-          margin-top: 50px;
-        }
-
-        .loyaltyGift,
-        .accountIcon,
-        .supportIcon {
-          width: 52px;
-          height: 52px;
-          border-radius: 11px;
-        }
-
-        .loyaltyGift {
-          margin-bottom: 24px;
-        }
-
-        .loyaltyUnlock {
-          max-width: 520px;
-          margin-top: 28px;
-          padding: 20px;
-          border-radius: 10px;
-          border: 1px solid rgba(54,201,190,.12);
-          background: #070c0d;
-        }
-
-        .loyaltyUnlock label {
-          display: block;
-          color: #687476;
-          font-size: 7px;
-          font-weight: 900;
-        }
-
-        .loyaltyUnlock input {
-          width: 100%;
-          height: 46px;
-          margin-top: 8px;
-          padding: 0 13px;
-          border-radius: 7px;
-          border: 1px solid rgba(255,255,255,.08);
-          background: #040809;
-          color: white;
-          outline: none;
-        }
-
-        .loyaltyUnlock input:focus {
-          border-color: rgba(54,201,190,.4);
-        }
-
-        .loyaltyUnlock button {
-          width: 100%;
-          min-height: 44px;
-          margin-top: 8px;
-          padding: 0 14px;
-          border: 0;
-          border-radius: 7px;
-          background: rgba(54,201,190,.28);
-          color: #03100f;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 8px;
-          font-weight: 900;
-        }
-
-        .loyaltyUnlock > small {
-          display: block;
-          margin-top: 10px;
-          color: #4f5b5d;
-          font-size: 7px;
-        }
-
-        .loyaltyPriceCard {
-          min-height: 150px;
-          padding: 21px;
-          border-color: rgba(54,201,190,.12);
-        }
-
-        .loyaltyCardTop {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .loyaltyCardTop > span:first-child small {
-          display: block;
-          margin-top: 4px;
-          color: #657174;
-          font-size: 7px;
-        }
-
-        .loyaltyPriceRow {
-          margin-top: 21px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .loyaltyPriceRow del {
-          color: #596567;
-          font-size: 12px;
-        }
-
-        .loyaltyPriceRow strong {
-          color: var(--aqua);
-          font-size: 24px;
-        }
-
-        .loyaltyPriceCard > small {
-          display: block;
-          margin-top: 8px;
-          color: #657174;
-          font-size: 7px;
-        }
-
-        .accountBox {
-          width: min(100%,510px);
-          margin: 55px auto 0;
-          padding: 36px;
-        }
-
-        .accountBox h1 {
-          margin-top: 13px;
-          font-size: 34px;
-        }
-
-        .accountBox > p {
-          margin-top: 12px;
-          color: #758183;
-          font-size: 10px;
-        }
-
-        .accountBox label {
-          display: block;
-          margin-top: 28px;
-          color: #647072;
-          font-size: 7px;
-        }
-
-        .accountBox input {
-          width: 100%;
-          height: 48px;
-          margin-top: 8px;
-          padding: 0 14px;
-          border-radius: 7px;
-          border: 1px solid rgba(255,255,255,.08);
-          background: #050a0b;
-          color: white;
-        }
-
-        .accountContinue {
-          width: 100%;
-          min-height: 46px;
-          margin-top: 10px;
-          padding: 0 14px;
-          border: 0;
-          border-radius: 7px;
-          background: rgba(54,201,190,.28);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .accountBox > small {
-          display: block;
-          margin-top: 13px;
-          color: #4f5b5d;
-          font-size: 7px;
-        }
-
-        .supportCard {
-          max-width: 760px;
-          margin-top: 45px;
-          padding: 28px;
-          display: grid;
-          grid-template-columns: 52px 1fr;
-          gap: 20px;
-        }
-
-        .supportCardCopy > span {
-          color: var(--aqua);
-          font-size: 7px;
-          font-weight: 900;
-        }
-
-        .supportCardCopy h2 {
-          margin-top: 7px;
-          font-size: 22px;
-        }
-
-        .supportCardCopy p {
-          margin-top: 8px;
-          color: #6e7a7c;
-          font-size: 9px;
-        }
-
-        .whatsappButton {
-          grid-column: 2;
-          width: fit-content;
-          margin-top: 4px;
-          padding: 0 17px;
-          gap: 25px;
-        }
-
-        .modalBackdrop {
-          position: fixed;
-          z-index: 5000;
-          inset: 0;
-          padding: 20px;
-          background: rgba(0,0,0,.78);
-          backdrop-filter: blur(12px);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .planModal {
-          width: min(100%,680px);
-          max-height: calc(100vh - 40px);
-          overflow-y: auto;
-          padding: 28px;
-          border-radius: 15px;
-          border: 1px solid rgba(54,201,190,.18);
+        .plan-unlimited{
           background:
-            radial-gradient(circle at 90% 0%,rgba(54,201,190,.07),transparent 28%),
+            radial-gradient(circle at 100% 0,rgba(154,101,255,.18),transparent 35%),
+            linear-gradient(145deg,#0d0a14,#070c0d)
+        }
+
+        .popular,.discount{
+          padding:6px 8px;border-radius:5px;border:1px solid rgba(54,201,190,.2);
+          color:var(--aqua);font-size:6px;font-weight:900
+        }
+
+        .popular{position:absolute;right:17px;top:17px}
+        .planDays{color:#657174;font-size:7px;font-weight:900}
+        .planCard h2{margin:24px 0 0;font-size:36px}
+        .planSubtitle{margin-top:4px;color:var(--aqua);font-size:9px;font-weight:900}
+
+        .price{margin-top:17px;display:flex;align-items:flex-end;gap:6px}
+        .price strong{font-size:27px}
+        .price span{color:#596567;font-size:8px}
+        .divider{height:1px;margin:23px 0;background:rgba(255,255,255,.06)}
+
+        .miniFeatures{display:flex;flex-direction:column;gap:9px;color:#879294;font-size:9px}
+        .miniFeatures span::first-letter{color:var(--aqua)}
+
+        .detailsButton{
+          min-height:40px;margin-top:20px;padding:0 14px;border-radius:7px;
+          border:1px solid rgba(54,201,190,.2);background:rgba(54,201,190,.04);
+          color:var(--aqua);display:flex;align-items:center;justify-content:space-between;
+          font-size:8px;font-weight:900
+        }
+
+        .selectPlan{margin-top:8px;padding:0 15px}
+        .loyaltyHint{padding:11px 0 0;border:0;background:none;color:#596567;font-size:7px}
+        .loyaltyHint strong{color:var(--aqua)}
+
+        .modalBackdrop{
+          position:fixed;z-index:5000;inset:0;padding:20px;
+          background:rgba(0,0,0,.8);backdrop-filter:blur(12px);
+          display:flex;align-items:center;justify-content:center
+        }
+
+        .modal{
+          width:min(100%,720px);max-height:calc(100vh - 40px);overflow-y:auto;
+          padding:28px;border-radius:16px;border:1px solid rgba(54,201,190,.2);
+          background:
+            radial-gradient(circle at 90% 0,rgba(54,201,190,.08),transparent 30%),
             #070c0d;
-          box-shadow: 0 30px 100px rgba(0,0,0,.55);
+          box-shadow:0 30px 100px rgba(0,0,0,.6)
         }
 
-        .modalHeader {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          gap: 20px;
+        .modalHead{display:flex;justify-content:space-between;gap:20px}
+        .modalHead h2{margin:8px 0 0;font-size:35px}
+        .modalHead small{display:block;margin-top:6px;color:#758183;font-size:8px}
+
+        .modalClose{
+          width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.08);
+          background:rgba(255,255,255,.025);color:#899496;font-size:22px
         }
 
-        .modalHeader h2 {
-          margin-top: 8px;
-          font-size: 34px;
+        .tabs{
+          margin-top:26px;border-bottom:1px solid rgba(255,255,255,.07);
+          display:grid;grid-template-columns:repeat(3,1fr)
         }
 
-        .modalHeader small {
-          display: block;
-          margin-top: 6px;
-          color: #748083;
-          font-size: 8px;
+        .tabs button{
+          min-height:44px;border:0;border-bottom:2px solid transparent;
+          background:none;color:#667274;font-size:8px;font-weight:900
         }
 
-        .modalClose {
-          width: 36px;
-          height: 36px;
-          flex: 0 0 auto;
-          border-radius: 8px;
-          border: 1px solid rgba(255,255,255,.08);
-          background: rgba(255,255,255,.025);
-          color: #899496;
-          font-size: 22px;
-          cursor: pointer;
+        .tabs .activeTab{color:var(--aqua);border-bottom-color:var(--aqua)}
+        .modalContent{padding:24px 0 10px}
+
+        .detailGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+        .detail{
+          padding:17px;border-radius:9px;border:1px solid rgba(255,255,255,.06);
+          background:#05090a
         }
 
-        .detailTabs {
-          margin-top: 26px;
-          padding-bottom: 1px;
-          border-bottom: 1px solid rgba(255,255,255,.07);
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
+        .detail span,.sectionLabel{display:block;color:#657174;font-size:7px;font-weight:900}
+        .detail strong{display:block;margin-top:7px;font-size:13px}
+
+        .countrySection{
+          margin-top:14px;padding:20px;border-radius:11px;
+          border:1px solid rgba(54,201,190,.12);background:#05090a
         }
 
-        .detailTabs button {
-          min-height: 43px;
-          border: 0;
-          border-bottom: 2px solid transparent;
-          background: transparent;
-          color: #667274;
-          font-size: 8px;
-          font-weight: 900;
-          cursor: pointer;
+        .countryTitle{display:flex;align-items:center;justify-content:space-between}
+        .countryTitle span{color:#899496;font-size:9px;font-weight:900}
+        .countryTitle strong{color:var(--aqua);font-size:22px}
+
+        .countryGrid{
+          margin-top:17px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px
         }
 
-        .detailTabs .detailTabActive {
-          color: var(--aqua);
-          border-bottom-color: var(--aqua);
+        .countryGrid span{
+          min-height:34px;padding:0 9px;border-radius:6px;background:#080e0f;
+          color:#879294;font-size:8px;display:flex;align-items:center;gap:7px
         }
 
-        .detailContent {
-          min-height: 220px;
-          padding: 26px 0 10px;
+        .countryGrid i{font-style:normal;color:var(--aqua)}
+
+        .moreInfo{display:flex;flex-direction:column;gap:11px}
+        .packageInfo,.apnPanel,.roamingPanel,.fupPanel{
+          padding:19px;border-radius:10px;border:1px solid rgba(255,255,255,.06);
+          background:#05090a
         }
 
-        .detailGrid {
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
-          gap: 9px;
+        .packageInfo strong{display:block;margin-top:9px;font-size:13px}
+        .packageInfo p,.apnPanel p,.roamingPanel p,.fupPanel p{
+          margin:9px 0 0;color:#7c888a;font-size:9px;line-height:1.6
         }
 
-        .detailGrid > div,
-        .moreInformation > div {
-          padding: 17px;
-          border-radius: 9px;
-          border: 1px solid rgba(255,255,255,.06);
-          background: #05090a;
+        .apnPanel{
+          border-color:rgba(54,201,190,.23);
+          background:linear-gradient(145deg,rgba(54,201,190,.07),#05090a)
         }
 
-        .detailGrid span,
-        .moreInformation span {
-          display: block;
-          color: #596567;
-          font-size: 7px;
-          font-weight: 900;
+        .apnPanel .sectionLabel{color:var(--aqua);font-size:10px}
+
+        .apnValue{
+          margin-top:14px;padding:14px;border-radius:8px;
+          border:1px solid rgba(54,201,190,.18);background:#030707
         }
 
-        .detailGrid strong,
-        .moreInformation strong {
-          display: block;
-          margin-top: 7px;
-          font-size: 13px;
+        .apnValue span{display:block;color:#657174;font-size:7px;font-weight:900}
+        .apnValue strong{
+          display:block;margin-top:6px;color:var(--aqua);font-size:17px;
+          word-break:break-all
         }
 
-        .detailList {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 9px;
+        .apnWarning{
+          padding:12px!important;border-radius:7px;
+          border:1px solid rgba(54,201,190,.13);color:#b4bdbf!important
         }
 
-        .detailList span {
-          min-height: 48px;
-          padding: 0 14px;
-          border-radius: 8px;
-          border: 1px solid rgba(255,255,255,.06);
-          background: #05090a;
-          color: #8a9597;
-          display: flex;
-          align-items: center;
-          font-size: 9px;
+        .apnCode{
+          margin-top:10px;padding:13px;border-radius:7px;background:#020505;
+          color:var(--aqua);font-size:14px;font-weight:900;letter-spacing:.2px;
+          text-align:center;word-break:break-all
         }
 
-        .moreInformation {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+        .fupPanel strong{color:var(--aqua)}
+
+        .modalDone{
+          width:100%;min-height:43px;margin-top:10px;border-radius:7px;
+          border:1px solid rgba(54,201,190,.2);background:rgba(54,201,190,.06);
+          color:var(--aqua);font-size:8px;font-weight:900
         }
 
-        .moreInformation p {
-          padding: 15px;
-          border-radius: 8px;
-          background: rgba(54,201,190,.035);
-          color: #7c888a;
-          font-size: 9px;
-          line-height: 1.6;
+        .comingCard{
+          max-width:580px;min-height:220px;margin-top:45px;padding:30px;
+          border-radius:12px;border:1px solid rgba(255,255,255,.07);background:#070c0d
         }
 
-        .modalDone {
-          width: 100%;
-          min-height: 43px;
-          margin-top: 10px;
-          border-radius: 7px;
-          border: 1px solid rgba(54,201,190,.2);
-          background: rgba(54,201,190,.06);
-          color: var(--aqua);
-          font-size: 8px;
-          font-weight: 900;
-          cursor: pointer;
+        .comingCard svg{color:var(--aqua);width:30px;height:30px}
+        .comingCard h2{margin-top:30px;font-size:25px}
+        .comingCard p{color:#697577;font-size:10px}
+
+        .multiGrid{margin-top:45px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+        .multiCard{
+          min-height:365px;padding:27px;border-radius:12px;
+          border:1px solid rgba(54,201,190,.13);
+          background:
+            radial-gradient(circle at 100% 0,rgba(54,201,190,.09),transparent 35%),
+            #070c0d;
+          display:flex;flex-direction:column
         }
 
-        @media (max-width:720px) {
-          .newHeader {
-            width: calc(100% - 28px);
-            height: 74px;
+        .multiTop{display:flex;justify-content:space-between}
+        .multiTop span{color:var(--aqua);font-size:8px;font-weight:900}
+        .multiTop small{color:#586466;font-size:7px}
+        .multiCard h2{margin:38px 0 0;font-size:31px}
+        .multiTotal{margin-top:7px;color:var(--aqua);font-size:15px}
+
+        .priceLine{display:flex;justify-content:space-between;align-items:center}
+        .priceLine span{color:#687476;font-size:8px}
+        .priceLine del{color:#697577;font-size:13px}
+        .finalPrice{margin-top:12px}
+        .finalPrice strong{color:var(--aqua);font-size:26px}
+        .multiCard .selectPlan{margin-top:auto}
+
+        .smallNote{margin-top:14px;color:#596567;font-size:8px}
+
+        .loyaltyHero{max-width:720px;margin-top:50px}
+        .loyaltyHero>.bigIcon{margin-bottom:24px}
+        .loyaltyHero h1 em{color:var(--aqua)}
+
+        .emailBox{
+          max-width:520px;margin-top:28px;padding:20px;border-radius:10px;
+          border:1px solid rgba(54,201,190,.12);background:#070c0d
+        }
+
+        .emailBox label,.accountBox label{
+          display:block;color:#687476;font-size:7px;font-weight:900
+        }
+
+        .emailBox input,.accountBox input{
+          width:100%;height:46px;margin-top:8px;padding:0 13px;border-radius:7px;
+          border:1px solid rgba(255,255,255,.08);background:#040809;color:white;outline:none
+        }
+
+        .emailBox button,.accountBox>button{
+          width:100%;min-height:44px;margin-top:8px;padding:0 14px;border:0;
+          border-radius:7px;background:rgba(54,201,190,.28);color:#03100f;
+          display:flex;align-items:center;justify-content:space-between;
+          font-size:8px;font-weight:900
+        }
+
+        .emailBox>small,.accountBox>small{
+          display:block;margin-top:10px;color:#4f5b5d;font-size:7px
+        }
+
+        .loyaltyCard{
+          min-height:160px;padding:21px;position:relative;border-radius:12px;
+          border:1px solid rgba(54,201,190,.12);background:#070c0d
+        }
+
+        .loyaltyCard>div:first-child>small{
+          display:block;margin-top:4px;color:#657174;font-size:7px
+        }
+
+        .discount{position:absolute;right:20px;top:20px}
+        .loyaltyPrices{margin-top:25px;display:flex;align-items:center;gap:10px}
+        .loyaltyPrices del{color:#596567;font-size:12px}
+        .loyaltyPrices strong{color:var(--aqua);font-size:24px}
+        .loyaltyCard>small{display:block;margin-top:8px;color:#657174;font-size:7px}
+
+        .accountBox{
+          width:min(100%,510px);margin:55px auto 0;padding:36px;border-radius:12px;
+          border:1px solid rgba(255,255,255,.07);background:#070c0d
+        }
+
+        .accountBox>.bigIcon{margin-bottom:22px}
+        .accountBox h1{margin:13px 0 0;font-size:34px}
+        .accountBox p{color:#758183;font-size:10px}
+        .accountBox label{margin-top:28px}
+
+        .supportCard{
+          max-width:760px;margin-top:45px;padding:28px;border-radius:12px;
+          border:1px solid rgba(54,201,190,.12);background:#070c0d;
+          display:grid;grid-template-columns:52px 1fr;gap:20px
+        }
+
+        .supportCard h2{margin:7px 0 0;font-size:22px}
+        .supportCard p{color:#6e7a7c;font-size:9px}
+        .supportCard a{width:230px;margin-top:18px;padding:0 17px}
+
+        .termsGrid{
+          margin-top:45px;display:grid;grid-template-columns:1fr 1fr;gap:10px
+        }
+
+        .termCard{
+          min-height:205px;padding:24px;border-radius:12px;
+          border:1px solid rgba(255,255,255,.07);background:#070c0d
+        }
+
+        .termCard>span{color:var(--aqua);font-size:8px;font-weight:900}
+        .termCard h2{margin:28px 0 0;font-size:18px}
+        .termCard p{margin-top:10px;color:#7a8688;font-size:9px;line-height:1.7}
+
+        .legalNotice{
+          margin-top:10px;padding:20px;border-radius:10px;
+          border:1px solid rgba(54,201,190,.13);
+          background:rgba(54,201,190,.035);
+          color:#7f8b8d;font-size:9px;line-height:1.7
+        }
+
+        @media(max-width:720px){
+          .header{
+            width:calc(100% - 28px);height:74px
           }
 
-          .newAccount {
-            width: 36px;
-            height: 36px;
-            min-height: 36px;
-            padding: 0;
-            justify-content: center;
+          .accountTop{
+            width:36px;padding:0;justify-content:center
           }
 
-          .newAccount span {
-            display: none;
+          .accountTop span{display:none}
+          .language{height:36px;padding:0 7px}
+          .menuButton{width:36px;height:36px}
+          .menuOverlay{top:74px}
+          .menu{width:calc(100% - 28px);padding:32px 0}
+
+          .hero{min-height:600px}
+
+          .heroInner{
+            width:calc(100% - 28px);padding:80px 0 65px
           }
 
-          .languageSwitch {
-            height: 36px;
-            padding: 0 7px;
+          .hero h1{
+            font-size:52px;letter-spacing:-3px
           }
 
-          .menuButton {
-            width: 36px;
-            height: 36px;
+          .hero p{font-size:10px}
+
+          .choiceSection,.compatibilitySection,.trustBar,.footer,.page{
+            width:calc(100% - 28px)
           }
 
-          .menuOverlay {
-            top: 74px;
+          .choiceSection{padding:48px 0}
+          .choiceHeading h2,.compatIntro h2{
+            font-size:34px;letter-spacing:-2px
           }
 
-          .menuInner {
-            width: calc(100% - 28px);
-            padding: 32px 0;
+          .categoryGrid,.plansGrid,.loyaltyGrid,.multiGrid,.termsGrid{
+            grid-template-columns:1fr;margin-top:30px
           }
 
-          .newChoiceSection,
-          .homeHow,
-          .trustBar,
-          .premiumFooter {
-            width: calc(100% - 28px);
+          .category{min-height:190px;padding:19px}
+          .category small{margin-top:27px}
+
+          .loyaltyStrip{
+            min-height:105px;padding:15px;
+            grid-template-columns:40px 1fr auto;gap:11px
           }
 
-          .newChoiceSection {
-            padding: 48px 0 44px;
+          .loyaltyStrip .bigIcon{width:38px;height:38px}
+          .loyaltyStrip b{font-size:20px}
+
+          .compatibilitySection{
+            padding:48px 0;grid-template-columns:1fr;gap:25px
           }
 
-          .newChoiceIntro h2,
-          .homeHowHeading h2 {
-            font-size: 34px;
-            letter-spacing: -1.9px;
+          .compatCard{min-height:190px;padding:21px}
+
+          .trustBar{grid-template-columns:1fr 1fr}
+          .trustBar>div,.trustBar>button{
+            min-height:88px;padding:17px;border-bottom:1px solid rgba(255,255,255,.055)
           }
 
-          .newChoiceIntro > p,
-          .homeHowHeading > p {
-            font-size: 9px;
+          .footer{padding:44px 0 22px}
+          .footerMain{grid-template-columns:1fr;gap:35px;padding-bottom:36px}
+          .footerLinks{grid-template-columns:1fr 1fr}
+
+          .page{
+            min-height:calc(100vh - 74px);padding:30px 0 55px
           }
 
-          .homeChoices,
-          .homeHowSteps {
-            grid-template-columns: 1fr;
+          .pageHeading{margin-top:38px}
+          .pageHeading h1,.loyaltyHero h1{
+            font-size:41px;letter-spacing:-2.5px
           }
 
-          .homeChoices > button {
-            min-height: 155px;
-            padding: 17px;
+          .pageHeading>p,.loyaltyHero>p{font-size:9.5px}
+
+          .planCard{min-height:450px;padding:21px}
+          .multiCard{min-height:330px;padding:21px}
+
+          .modalBackdrop{
+            padding:10px;align-items:flex-end
           }
 
-          .homeChoices small {
-            margin-top: 25px;
+          .modal{
+            width:100%;max-height:90vh;padding:20px 16px;
+            border-radius:16px 16px 9px 9px
           }
 
-          .loyaltyStrip {
-            min-height: 105px;
-            padding: 15px;
-            grid-template-columns: 38px 1fr auto;
-            gap: 11px;
+          .modalHead h2{font-size:28px}
+          .tabs button{font-size:7px}
+          .detailGrid{grid-template-columns:1fr}
+          .countryGrid{grid-template-columns:1fr 1fr}
+
+          .countrySection{padding:15px}
+          .countryGrid span{font-size:7.5px}
+
+          .loyaltyHero{margin-top:37px}
+          .accountBox{margin-top:35px;padding:25px 20px}
+
+          .supportCard{
+            margin-top:30px;padding:20px;
+            grid-template-columns:42px 1fr;gap:14px
           }
 
-          .loyaltyStrip > .inlineIcon {
-            display: none;
+          .supportCard a{
+            width:100%;grid-column:1/-1
           }
 
-          .loyaltyStripIcon {
-            width: 38px;
-            height: 38px;
-          }
+          .termCard{min-height:auto}
+        }
 
-          .loyaltyTen {
-            font-size: 20px;
-          }
-
-          .homeHow {
-            padding: 48px 0;
-          }
-
-          .homeHowSteps {
-            margin-top: 24px;
-            gap: 8px;
-          }
-
-          .homeHowStep {
-            min-height: 145px;
-            padding: 18px;
-          }
-
-          .homeHowStep h3 {
-            margin-top: 30px;
-            font-size: 15px;
-          }
-
-          .homeHowStep p {
-            max-width: 300px;
-            font-size: 8px;
-          }
-
-          .trustBar {
-            grid-template-columns: 1fr 1fr;
-          }
-
-          .trustBar > div,
-          .trustBar > button {
-            min-height: 88px;
-            padding: 17px;
-            border-bottom: 1px solid rgba(255,255,255,.055);
-          }
-
-          .trustBar > :nth-child(2) {
-            border-right: 0;
-          }
-
-          .trustBar > :nth-child(3),
-          .trustBar > :nth-child(4) {
-            border-bottom: 0;
-          }
-
-          .premiumFooter {
-            padding: 44px 0 22px;
-          }
-
-          .footerMain {
-            grid-template-columns: 1fr;
-            gap: 35px;
-            padding-bottom: 36px;
-          }
-
-          .footerLinks {
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-          }
-
-          .footerBottomNew {
-            gap: 20px;
-          }
-
-          .viewPage {
-            width: calc(100% - 28px);
-            min-height: calc(100vh - 74px);
-            padding: 30px 0 55px;
-          }
-
-          .viewHeading {
-            margin-top: 38px;
-          }
-
-          .viewHeading h1,
-          .loyaltyHero h1 {
-            font-size: 41px;
-            letter-spacing: -2.5px;
-          }
-
-          .viewHeading > p,
-          .loyaltyHero > p {
-            font-size: 9.5px;
-          }
-
-          .mainCategoryGrid,
-          .realPlansGrid,
-          .loyaltyPrices,
-          .multiPlansGrid {
-            grid-template-columns: 1fr;
-            margin-top: 30px;
-          }
-
-          .mainCategory {
-            min-height: 220px;
-            padding: 20px;
-          }
-
-          .realPlan {
-            min-height: 405px;
-            padding: 21px;
-          }
-
-          .loyaltyHero {
-            margin-top: 37px;
-          }
-
-          .multiPlanCard {
-            min-height: 330px;
-            padding: 21px;
-          }
-
-          .accountBox {
-            margin-top: 35px;
-            padding: 25px 20px;
-          }
-
-          .supportCard {
-            margin-top: 30px;
-            padding: 20px;
-            grid-template-columns: 42px 1fr;
-            gap: 14px;
-          }
-
-          .whatsappButton {
-            grid-column: 1/-1;
-            width: 100%;
-            justify-content: space-between;
-          }
-
-          .modalBackdrop {
-            padding: 10px;
-            align-items: flex-end;
-          }
-
-          .planModal {
-            width: 100%;
-            max-height: 88vh;
-            padding: 21px 17px;
-            border-radius: 16px 16px 10px 10px;
-          }
-
-          .modalHeader h2 {
-            font-size: 28px;
-          }
-
-          .detailTabs button {
-            font-size: 7px;
-          }
-
-          .detailContent {
-            min-height: 235px;
-            padding-top: 20px;
-          }
-
-          .detailGrid,
-          .detailList {
-            grid-template-columns: 1fr;
-          }
+        @media(max-width:390px){
+          .hero h1{font-size:46px}
+          .countryGrid{grid-template-columns:1fr}
         }
       `}</style>
 
@@ -2827,9 +2222,16 @@ export default function Home() {
         t={t}
       />
 
-      {view === "home" && <HomeView go={go} t={t} />}
+      {view === "home" && (
+        <HomeView go={go} t={t} language={language} />
+      )}
+
       {view === "plans" && <PlansView go={go} t={t} />}
-      {view === "truck" && <TruckView go={go} t={t} language={language} />}
+
+      {view === "truck" && (
+        <TruckView go={go} t={t} language={language} />
+      )}
+
       {view === "country" && <CountryView go={go} t={t} />}
       {view === "multi" && <MultiView go={go} t={t} />}
       {view === "loyalty" && <LoyaltyView go={go} t={t} />}
